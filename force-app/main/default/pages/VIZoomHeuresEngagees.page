@@ -1,0 +1,186 @@
+<apex:page lightningStylesheets="true" docType="html-5.0" controller="VIZoomHeuresEngageesController" title="Hrs  {!lam.affaire__r.Nom_affaire__c } - {!centre.name }">
+  <style type="text/css">
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #999;
+  padding: 0.5rem!important;
+  text-align: right!important;
+}    
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: center!important;
+}    
+
+.noBorder {
+    border:none !important;
+}
+
+p.AlignRight {
+    text-align: right
+}
+ 
+
+  </style>
+  <apex:slds />      
+  <apex:form >
+    <apex:pageMessages id="msgId"></apex:pageMessages>
+      
+      <apex:sectionHeader title="{!$Label.VIHeuresEngagees}" subtitle="" />
+      <p class="slds-text-align_right slds-p-right_large">
+          <a class="slds-button slds-button_neutral" href="/lightning/r/Report/00O3Y00000AIxwkUAD/view?fv0={!lam.affaire__r.Name }&fv1={!Centre.name}" target="_blank" >{!$label.VIOuvrirDansUnRapport}</a>
+      </p>    
+
+       <div class="slds-grid slds-gutters slds-p-around_large">
+           <div class="slds-form-element slds-col slds-size_1-of-5">
+               <label class="slds-form-element__label" for="form-element-01">{!$label.VIAffaire} </label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                      {!lam.affaire__r.Name } {!lam.affaire__r.Nom_affaire__c }
+                   </div>                    
+               </div>
+           </div>
+           <div class="slds-form-element slds-col slds-size_1-of-5">
+               <label class="slds-form-element__label" for="form-element-01">{!$Label.VIDate_de_valeur}</label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                            <apex:param value="{!lam.periode_comptable__r.Date_de_fin__c}" />
+                       </apex:outputText>  
+                   </div>                    
+               </div>
+           </div>
+            <div class="slds-form-element slds-col slds-size_1-of-5">
+               <label class="slds-form-element__label" for="form-element-01">{!$Label.VICentreSection}</label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       {!Centre.name }
+                   </div>                    
+               </div>
+           </div>
+
+           <div class="slds-form-element slds-col slds-size_1-of-5">
+               <label class="slds-form-element__label" for="form-element-01"></label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       <apex:selectList value="{!Valeur}" label="Valeur" multiselect="false" size="1">
+                       <apex:actionSupport event="onchange"  action="{!ReadPointage}" rerender="TableResult"/>
+                            <apex:selectOptions value="{!ValeurOptions}"/>
+                       </apex:selectList>
+                       
+                       
+                   </div>                    
+               </div>
+           </div>
+      </div>
+
+
+
+
+      
+      <apex:outputPanel id="TableResult">
+       <table class="slds-m-around_large"  >
+           <colgroup>
+               <col span="1" style="width: 15%;" />
+               <col span="1" style="width: 5%;" />               
+               <col span="1" style="width: 15%;" />               
+               <col span="1" style="width: 8%;" />
+               <col span="1" style="width: 8%;" />               
+               <col span="1" style="width: 8%;" />                              
+               <col span="1" style="width: 8%;" />               
+               <col span="1" style="width: 8%;" />
+               <col span="1" style="width: 30%;" />                              
+           </colgroup>
+           <thead>
+              <tr> 
+              <th >
+                  <apex:commandLink action="{!sortBySalarie}" reRender="TableResult">
+                     {!$Label.VISalarie}
+                  </apex:commandLink>       
+              </th>
+              <th >
+                  Matricule
+              </th>
+              <th >
+                  Secteur Commercial
+              </th>
+              <th >
+                  <apex:commandLink action="{!sortByDate}" reRender="TableResult">
+                     {!$Label.VIDate}
+                  </apex:commandLink>                                    
+              </th>
+              <th >
+                  <apex:commandLink action="{!sortByDateComptabilisation}" reRender="TableResult">
+                     Date de comptabilisation
+                  </apex:commandLink>                                    
+              </th>
+              <th >
+                  Année / Semaine
+              </th>
+              <th >
+                  {!$Label.VIHeures}
+              </th>
+              <TH >
+                  {!Valeur} {!lam.CurrencyIsoCode}
+              </TH>
+
+               <th class="noBorder">
+               </th>
+               </tr>
+           </thead>           
+           <tbody>
+            <apex:repeat var="a" value="{!ListLigne}">               
+               <tr>
+                 <td > 
+                     <apex:outputPanel rendered="{!a.Date_pointage!=null}">
+                         <apex:outputText value="{!a.salarie}" />
+                     </apex:outputPanel>
+                     <apex:outputPanel rendered="{!a.Date_pointage=null}">
+                         <apex:outputText value="Total" />
+                     </apex:outputPanel>
+                 </td>
+                 <td >
+                      <apex:outputtext value="{!a.matricule}"/>
+                 </td>                          
+                 <td >
+                      <apex:outputtext value="{!a.Secteur_commercial}"/>
+                 </td>                          
+                 <td >                        
+                     <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                         <apex:param value="{!a.Date_pointage}" />
+                     </apex:outputText>                                            
+                 </td>       
+                 <td >                        
+                     <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                         <apex:param value="{!a.Date_Comptabilisation}" />
+                     </apex:outputText>                                            
+                 </td>       
+                 <td >
+                      <apex:outputtext value="{!a.Annee_semaine}"/>
+                 </td>                          
+                 <td >
+                      <apex:outputtext value="{!a.Heure_conv}"/>
+                 </td>                          
+                 <td >
+                      <apex:outputtext value="{!a.Debours_conv}" rendered="{!Valeur='Debours'}"/>
+                      <apex:outputtext value="{!a.PRI_conv}" rendered="{!Valeur='Industriel'}"/>
+                      <apex:outputtext value="{!a.Complet_conv}" rendered="{!Valeur='Complet'}"/>
+                 </td>
+                 <apex:outputpanel rendered="{!lam.CurrencyIsoCode!='EUR'}">                                                  
+                     <td >
+                      <apex:outputtext value="{!a.Debours_E_conv}"  rendered="{!Valeur='Debours'}"/>
+                      <apex:outputtext value="{!a.PRI_E_conv}"  rendered="{!Valeur='Industriel'}"/>
+                      <apex:outputtext value="{!a.Complet_E_conv}"  rendered="{!Valeur='Complet'}"/>
+                     </td>                          
+                   </apex:outputpanel>
+               </tr>       
+               </apex:repeat>                               
+           </tbody>        
+       </table>      
+      </apex:outputPanel>
+   </apex:form>
+
+</apex:page>

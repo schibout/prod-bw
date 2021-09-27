@@ -1,0 +1,156 @@
+<apex:page lightningStylesheets="true" docType="html-5.0" controller="VIZoomFacturesController" title="Fact  {!affaire.Nom_affaire__c } ">
+  <style type="text/css">
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #999;
+  padding: 0.5rem!important;
+  text-align: right!important;
+}    
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: center!important;
+}    
+
+.noBorder {
+    border:none !important;
+}
+
+p.AlignRight {
+    text-align: right
+}
+ 
+
+  </style>
+  <apex:slds />     
+  <apex:form >
+    <apex:pageMessages id="msgId"></apex:pageMessages>
+      
+      <apex:sectionHeader title="{!$Label.VIFacture}" subtitle="" />
+      <p class="slds-text-align_right slds-p-right_large">
+          <a class="slds-button slds-button_neutral" href="/lightning/r/Report/00O3Y00000B5V5jUAF/view?fv0={!affaire.Name}" target="_blank" >{!$label.VIOuvrirDansUnRapport}</a>
+      </p>    
+
+       <div class="slds-grid slds-gutters slds-p-around_large">
+           <div class="slds-form-element slds-col slds-size_1-of-5">
+               <label class="slds-form-element__label" for="form-element-01">{!$Label.VIAffaire}</label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       {!affaire.Name } {!affaire.Nom_affaire__c }
+                   </div>                    
+               </div>
+           </div>
+
+           <div class="slds-form-element slds-col slds-size_2-of-5">
+               <label class="slds-form-element__label" for="form-element-01">Total encaissé :  </label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       <apex:outputpanel rendered="{!affaire.CurrencyIsoCode!='EUR'}">
+                           {!TotalEncaisse_conv }
+                       </apex:outputpanel>
+                       <apex:outputpanel rendered="{!affaire.CurrencyIsoCode='EUR'}">
+                           {!TotalEncaisse_E_conv }
+                       </apex:outputpanel>
+                   </div>                    
+               </div>
+           </div>
+      </div>
+
+      
+      <apex:outputPanel id="TableResult">
+       <table class="slds-m-around_large" >
+           <colgroup>
+               <col span="1" style="width: 10%;" />               
+               <col span="1" style="width: 10%;" />
+               <col span="1" style="width: 10%;" />               
+               <col span="1" style="width: 10%;" />
+               <col span="1" style="width: 10%;" />
+               <col span="1" style="width: 10%;" />               
+               <col span="1" style="width: 10%;" />               
+               <col span="1" style="width: 30%;" />               
+           </colgroup>
+           <thead>
+              <th >
+                  {!$Label.ViNumeroDeFacture}
+              </th>
+
+               <th >
+                  {!$Label.VIDate}
+              </th>
+              <th >
+                  {!$Label.VIDateEcheance}
+              </th>
+
+              <th >
+                     {!$Label.VIMontant_HT} EUR
+              </th>
+              <th >
+                     {!$Label.VIMontant_TTC} EUR
+              </th>
+              <apex:outputpanel rendered="{!affaire.CurrencyIsoCode!='EUR'}">
+                  <th >
+                      {!$Label.VIMontant_HT} {!affaire.CurrencyIsoCode}
+                  </th>
+                  <th >
+                      {!$Label.VIMontant_HT} {!affaire.CurrencyIsoCode}
+                  </th>
+              </apex:outputpanel>
+              <apex:outputpanel rendered="{!affaire.CurrencyIsoCode='EUR'}">
+                  <th Class="noBorder"> 
+                  </th>
+                  <th Class="noBorder"> 
+                  </th>
+              </apex:outputpanel>
+              <th Class="noBorder">
+              </th>
+               
+           </thead>           
+           <tbody>
+            <apex:repeat var="a" value="{!ListLigne}">               
+               <tr>
+                 <td >
+                     {!a.num_facture}                     
+                 </td>    
+                   
+                 <td >                        
+                     <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                         <apex:param value="{!a.Date_facture}" />
+                     </apex:outputText>                                            
+                 </td>       
+                 <td >                        
+                     <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                         <apex:param value="{!a.Date_echeance}" />
+                     </apex:outputText>                                            
+                 </td>       
+
+                 <td >
+                     <apex:outputText value="{!a.HT_conv}" />
+                 </td>    
+                 <td >
+                     <apex:outputText value="{!a.TTC_conv}" />                     
+                 </td>
+                 <apex:outputpanel rendered="{!affaire.CurrencyIsoCode!='EUR'}">                   
+                     <td >
+                         <apex:outputText value="{!a.HT_E_conv}" />                     
+                     </td>    
+                     <td >
+                         <apex:outputText value="{!a.TTC_E_conv}" />                    
+                     </td>                          
+                  </apex:outputpanel>                     
+                 <apex:outputpanel rendered="{!affaire.CurrencyIsoCode='EUR'}">                   
+                     <td Class="noBorder">
+                     </td>    
+                     <td Class="noBorder">
+                     </td>                          
+                  </apex:outputpanel>                     
+               </tr>       
+               </apex:repeat>                               
+           </tbody>        
+       </table>      
+      </apex:outputPanel>
+   </apex:form>
+
+</apex:page>

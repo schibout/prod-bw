@@ -1,0 +1,280 @@
+<apex:page lightningStylesheets="true" docType="html-5.0" controller="VILancementBatchController" title="Lancement batch">
+  <style type="text/css">
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: Right;
+}    
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: Center;
+}    
+
+.noBorder {
+    border:none !important;
+}
+
+
+  </style>
+
+    
+    
+    
+  <apex:form >
+    <apex:pageMessages id="msgId"></apex:pageMessages>
+
+    <apex:sectionHeader title="Etat des batchs en cours" subtitle="" />
+      <h3>
+        <apex:outputText value="{!$Label.VIProcess_pas_en_cours} " rendered="{!if(ListJobsize==0,true,false)}"  />
+        <apex:outputText value="{!$Label.VIProcess_en_cours} : " rendered="{!if(ListJobsize>0,true,false)}"  />   
+        <br/>
+        <apex:repeat var="a" value="{!ListJob}">
+            <tr >
+                <td class="noBorder" >
+                    <apex:outputText value="{!a.ApexClass.name}" styleclass="t" />                 
+                </td>
+                <td class="noBorder" >
+                    <apex:outputText value="{!a.JobItemsProcessed}" styleclass="t" /> 
+                    /
+                    <apex:outputText value="{!a.TotalJobItems}" styleclass="t" /> 
+                    <br/>
+                    <apex:outputText value="Start at {!a.createddate}" styleclass="t" />                       
+                </td>
+               
+            </tr>          
+        </apex:repeat>   
+      </h3>
+      <br/>
+      <br/>
+      <br/>      
+
+      
+
+      
+     <apex:sectionHeader title="Générer les lignes du TdB Gazelle " subtitle="" />
+     <table style="width: 60%;" class="noBorder" >
+           <colgroup>
+               <col span="1" style="width: 25%;" />
+               <col span="1" style="width: 40%;" />
+               <col span="1" style="width: 30%;" />               
+           </colgroup>
+           <tbody>
+               <tr>
+                 <td class="noBorder" style="text-align:right;">
+                    <apex:outputLabel >{!$Label.VIEntite_bw	} : </apex:outputLabel>
+                    <apex:selectList value="{!Entite_bw}" label="Entité BW" multiselect="false" size="1">
+                        <apex:selectOptions value="{!Entite_bwOptions}"/>
+                    </apex:selectList>           
+                     
+                 </td>
+                 <td class="noBorder">
+                     <apex:commandButton value="Lancement"  action="{!CallBatchCalcTDBGazelle}" />                     
+                 </td>
+                 <td class="noBorder" style="text-align:left;">
+                     <apex:outputlabel value="Cette fonction lance immédiatement la génération des lignes du Tdb Gazelle." />
+                 </td>
+               </tr>
+         </tbody>
+      </table>
+      
+     <apex:sectionHeader title="{!$Label.VILancement_generation_ecriture} " subtitle="" />
+     <table style="width: 60%;" class="noBorder" >
+           <colgroup>
+               <col span="1" style="width: 12%;" />
+               <col span="1" style="width: 13%;" />
+               <col span="1" style="width: 40%;" />
+               <col span="1" style="width: 30%;" />               
+           </colgroup>
+           <tbody>
+               <tr>
+                 <td class="noBorder" style="text-align:right;">
+                    <apex:outputLabel >Code affaire : </apex:outputLabel> <apex:inputtext size="10" value="{!AffaireAGenerer1}" />
+                 </td>
+                 <td class="noBorder" style="text-align:right;">                     
+                    <apex:outputLabel >{!$Label.VIEntite_bw	} : </apex:outputLabel>
+                    <apex:selectList value="{!Entite_bw1}" label="Entité BW" multiselect="false" size="1">
+                        <apex:selectOptions value="{!Entite_bwOptions}"/>
+                    </apex:selectList>           
+                     
+                 </td>
+                   
+                 <td class="noBorder">
+                     <apex:commandButton value="{!$label.VILancement }"  action="{!callBatchGenerate}" />                     
+                 </td>
+                 <td class="noBorder" style="text-align:left;">
+                     <apex:outputlabel value="{!$Label.VILancement_generation_ecriture_explication}" />
+                 </td>
+               </tr>
+         </tbody>
+      </table>
+
+     <apex:sectionHeader title="{!$Label.VILancementEnvoiEcritures} " subtitle="" />
+     <table style="width: 60%;" class="noBorder" >
+           <colgroup>
+               <col span="1" style="width: 12%;" />
+               <col span="1" style="width: 13%;" />               
+               <col span="1" style="width: 40%;" />
+               <col span="1" style="width: 30%;" />               
+           </colgroup>
+           <tbody>
+               <tr>
+                 <td class="noBorder" style="text-align:right;">
+                    <apex:selectList value="{!EcrituresAEnvoyer}" multiselect="False" size="1">
+                       <apex:selectOption itemLabel="Avancement" itemValue="Avancement"/>
+                       <apex:selectOption itemLabel="Reprise de garantie" itemValue="Reprise de garantie"/>                        
+                    </apex:selectList><p/> 
+                   </td>
+                 <td class="noBorder" style="text-align:right;">                     
+                    <apex:outputLabel >{!$Label.VIEntite_bw	} : </apex:outputLabel>
+                    <apex:selectList value="{!Entite_bw}" label="Entité BW" multiselect="false" size="1">
+                        <apex:selectOptions value="{!Entite_bwOptions}"/>
+                    </apex:selectList>           
+                     
+                 </td>
+                 <td class="noBorder">
+                     <apex:commandButton value="{!$label.VILancement }"  action="{!callBatchEnvoiEcriture}" />                     
+                 </td>
+                 <td class="noBorder" style="text-align:left;">
+                     <apex:outputlabel value="{!$Label.VILancementEnvoiEcritures_explication }" />
+                 </td>
+               </tr>
+         </tbody>
+      </table>
+               
+      <apex:sectionHeader title="{!$Label.VILancement_cloture_mensuelle}" subtitle="" />
+        
+       <table style="width: 60%;" class="noBorder" >
+           <colgroup>
+               <col span="1" style="width: 35%;" />
+               <col span="1" style="width: 35%;" />
+               <col span="1" style="width: 30%;" />
+           </colgroup>
+           <tbody>
+               <tr>
+                 <td class="noBorder">
+                   <table style="width: 80%;" >
+                       <colgroup>
+                           <col span="1" style="width: 40%;" />
+                           <col span="1" style="width: 40%;" />
+                       </colgroup>
+                       <thead>
+                           <tr>  
+                               <th >
+                                   {!$label.VIEntite_bw	}
+                               </th>      
+                               <th >
+                                   {!$label.VIPeriode_en_cours}
+                               </th>      
+                           </tr>    
+                      </thead>
+                      <tbody>
+                          <apex:repeat var="a" value="{!ListPeriode}">
+                              <tr>
+                                  <td style="text-align:left;"> 
+                                      <apex:outputText value="{!a.Entite_BW__c}" />
+                                  </td>
+                                  <td style="text-align:left;"> 
+                                      <apex:outputText value="{!a.name}" />
+                                  </td>
+                              </tr>           
+                          </apex:repeat>
+                      </tbody>
+                  </table>      
+              </td>
+              <td class="noBorder">
+                  <apex:outputLabel >{!$Label.VIEntite_bw} : </apex:outputLabel>
+                  <apex:selectList value="{!PeriodeEntite_bw}" label="Entite Bw" multiselect="false" size="1">
+                      <apex:selectOptions value="{!PeriodeEntite_bwOptions}"/>
+                  </apex:selectList>           
+
+                  <apex:commandButton value="{!$label.VILancement }"  action="{!callBatchCloture}" />
+              </td>      
+              <td class="noBorder" style="text-align:left;">
+                  <apex:outputlabel value="{!$Label.VILancement_cloture_explication}" />
+              </td>
+                   
+              </tr>       
+           </tbody>        
+       </table>      
+    <apex:sectionHeader title="{!$Label.VILancement_recalcul_devise} " subtitle="" />
+      <table style="width: 60%;" class="noBorder" >
+           <colgroup>
+               <col span="1" style="width: 25%;" />
+               <col span="1" style="width: 25%;" />               
+               <col span="1" style="width: 30%;" />               
+
+          </colgroup>
+           <tbody>
+               <tr>
+                   <td class="noBorder" style="text-align:left;">
+                       {!$label.VIDate_minimum } :<apex:input type="date"  value="{!date_minimum}"  />
+                   </td>
+                   <td class="noBorder" style="text-align:left;">
+                       {!$label.VIDate_maximum } :<apex:input type="date" value="{!date_maximum}" />
+                   </td>
+                   <td class="noBorder" style="text-align:left;">
+                       <apex:commandButton value="{!$Label.VIRecalcul}"  action="{!callRecalcul}" rerender="msgId"/>
+                   </td>
+                 <td class="noBorder" style="text-align:left;">
+                     <apex:outputlabel value="Par exemple, du 01/01/20XX au 31/05/20XX. Il faut que les taux horaires soient changés à la date qui suit la date max." />
+                 </td>
+
+               </tr>
+          </tbody>
+      </table>
+      
+     <apex:sectionHeader title="Import d'une affaire " subtitle="" />
+     <table style="width: 60%;" class="noBorder" >
+           <colgroup>
+               <col span="1" style="width: 12%;" />
+               <col span="1" style="width: 13%;" />
+               <col span="1" style="width: 40%;" />
+               <col span="1" style="width: 30%;" />               
+           </colgroup>
+           <tbody>
+               <tr>
+                 <td class="noBorder" style="text-align:right;">
+                    <apex:outputLabel >Code affaire : </apex:outputLabel> <apex:input type="text" size="10" value="{!AffaireAGenerer}" />
+                 </td>
+                 <td class="noBorder" style="text-align:right;">                     
+                 </td>
+                   
+                 <td class="noBorder">
+                     <apex:commandButton value="{!$label.VILancement }"  action="{!callImportAffaire}" />                     
+                 </td>
+                 <td class="noBorder" style="text-align:left;">
+                 </td>
+               </tr>
+         </tbody>
+      </table>
+
+      
+     <apex:sectionHeader title="Générer les autorisations de dépenses " subtitle="" />
+     <table style="width: 60%;" class="noBorder" >
+           <colgroup>
+               <col span="1" style="width: 25%;" />
+               <col span="1" style="width: 40%;" />
+               <col span="1" style="width: 30%;" />               
+           </colgroup>
+           <tbody>
+               <tr>
+                 <td class="noBorder" style="text-align:right;">
+                 </td>
+                 <td class="noBorder">
+                     <apex:commandButton value="Lancement"  action="{!callBatchGenereAutorisation}" />                     
+                 </td>
+                 <td class="noBorder" style="text-align:left;">
+                     <apex:outputlabel value="Cette fonction lance immédiatement la génération des autorisations de dépenses. Par la suite, le traitement sera lancé automatiquement toutes les heures." />
+                 </td>
+               </tr>
+         </tbody>
+      </table>      
+      
+   </apex:form>
+
+</apex:page>

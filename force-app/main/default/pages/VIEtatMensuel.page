@@ -1,0 +1,578 @@
+<apex:page lightningStylesheets="true" action="{!Chargement}" standardcontroller="VIAffaire__c"  extensions="VIEtatMensuelController" title="{!lam.Nom_de_l_affaire__c} " >
+  <style type="text/css">
+table {
+  border-collapse: collapse;
+}
+      
+td {
+  border: 1px solid #999;
+  text-align: Right!important;
+  padding: 3px!important;      
+      
+}    
+th {
+  border: 1px solid #999;
+  padding: 2px!important;
+  text-align: Center!important;
+  font-weight: bold; 
+  height: 10px!important;      
+}    
+tfoot {
+  border: 1px solid #999;
+  padding: 2px!important;
+  font-weight: bold;      
+}    
+
+.noBorder {
+    border:none !important;
+}
+
+.color_COUT_A_TERMINAISON {
+    color: #390099  ;
+    font-weight: bold;        
+}      
+
+.color_GAR {
+    color: #9e0059 ;
+    font-weight: bold;  
+}
+      
+.color_RED {
+    color: Red ;
+    font-weight: bold;  
+}      
+.slds-theme_backgroundColor-lightsteelblue {
+    background-color: lightsteelblue;
+}      
+  </style>
+  <apex:slds />  
+  <apex:form >
+    <apex:pageMessages ></apex:pageMessages>
+    <apex:outputpanel id="Panel">
+           <!--table style="width: 100%;" >
+              <colgroup>
+                <col span="1" style="width: 20%;" />
+                <col span="1" style="width: 25%;" />                  
+                <col span="1" style="width: 39%;" />                  
+                <col span="1" style="width: 8%;" />
+                <col span="1" style="width: 8%;" />                
+                <col span="1" style="width: 10%;" />                
+
+              </colgroup>
+             <thead>     
+             <th class="noBorder" style="text-align:left;">
+               <apex:commandButton value="{!$Label.VIPrecedent}" action="{!Precedent}" Disabled="{!idPrecedent=null}" />
+                 
+               <apex:selectList value="{!LigneMensuelleID}" label="Mois" multiselect="false" size="1">
+               <apex:actionSupport event="onchange"  action="{!ReRead}" rerender="Panel"/>
+                        <apex:selectOptions value="{!LAMOptions}"/>
+               </apex:selectList>
+                 
+                 
+               <apex:commandButton value="{!$Label.VIsuivant}" action="{!Suivant}"  Disabled="{!idSuivant=null}" />
+               <br/>
+               <apex:outputPanel Rendered="{!idSuivant=null && idPrecedent!=null}" style="color: Red  ; font-weight: bold;  ">
+                   {!$Label.VIAttentionPeriodeSuivante}
+               </apex:outputPanel>
+             </th-->
+             <div class="slds-scope slds-m-bottom_large">
+                 <div class="slds-grid slds-m-bottom_small">
+                     <div class="slds-col slds-col_bump-right">
+                         <apex:commandButton value="{!$Label.VIPrecedent}" action="{!Precedent}" Disabled="{!idPrecedent=null}" />
+                           <apex:selectList value="{!LigneMensuelleID}" label="Mois" multiselect="false" size="1">
+                           <apex:actionSupport event="onchange"  action="{!ReRead}" rerender="Panel"/>
+                                    <apex:selectOptions value="{!LAMOptions}"/>
+                           </apex:selectList>
+                           <apex:commandButton value="{!$Label.VIsuivant}" action="{!Suivant}"  Disabled="{!idSuivant=null}" />
+                           <br/>
+                           <!--apex:outputPanel Rendered="{!idSuivant=null && idPrecedent!=null}" style="color: Red  ; font-weight: bold;  ">
+                               {!$Label.VIAttentionPeriodeSuivante}
+                           </apex:outputPanel-->
+                     </div>
+                     <div class="slds-m-horizontal_small" style="text-align:left;font-weight:normal; ">
+                         <div>
+                             
+                         </div>         
+                     </div>
+                     <apex:outputPanel id="devise" rendered="{!CurrencyOptions.size>1}">  
+                        <div class="slds-m-horizontal_small">
+                           <apex:selectList value="{!CurrencyType}" label="Devise" multiselect="false" size="1">
+                           <apex:actionSupport event="onchange"  action="{!ReRead}" rerender="Panel"/>
+                                <apex:selectOptions value="{!CurrencyOptions}"/>
+                           </apex:selectList>
+                        </div>
+                     </apex:outputPanel>
+                     <div class="slds-m-horizontal_small">            
+                           <apex:selectList value="{!Valeur}" label="Valeur" multiselect="false" size="1">
+                           <apex:actionSupport event="onchange"  action="{!ReRead}" rerender="Panel"/>
+                                    <apex:selectOptions value="{!ValeurOptions}"/>
+                           </apex:selectList>
+                     </div>
+                     <apex:outputpanel rendered="{!Etat_affaire}">
+                        <div class="slds-m-horizontal_small">
+                            <apex:commandButton value="{!$Label.ViEnregistrer}" action="{!SaveData}" rerender="Panel"/>
+                        </div>
+                     </apex:outputpanel>
+                     <div class="slds-m-horizontal_small">
+                         <!--apex:commandButton value="Refresh"  rendered="{!Etat_affaire}" rerender="Panel" /-->
+                         <apex:commandButton value="Refresh" action="{!Refresh}"  />                         
+                     </div>
+                 </div>
+                 <div class="slds-grid slds-gutters ">
+                     <div class="slds-form-element slds-col slds-size_1-of-7 slds-theme_backgroundColor-lightsteelblue">
+                         <label class="slds-form-element__label" for="form-element-01">{!$Label.VIPourcentagedavancement} (<apex:outputText value="{!left(lam.affaire__r.Mode_de_calcul_de_l_avancement__c,1) }"  />)</label>
+                         <div class="slds-form-element__control  ">
+                              <div class="slds-form-element__static">                                
+                                <apex:outputtext value="{0, number, ###,##0}" >
+                                  <apex:param value="{!lam.Total_Pourcentage_d_avancement__c }"/>
+                                </apex:outputtext>  %
+                             </div>                    
+                         </div>
+                     </div>
+                     <div class="slds-form-element slds-col slds-size_1-of-7 slds-theme_backgroundColor-lightsteelblue">
+                         <label class="slds-form-element__label" for="form-element-01">{!$Label.VICAalavancement}</label>
+                         <div class="slds-form-element__control">
+                              <div class="slds-form-element__static">
+                                <apex:outputtext value="{!Total_CA_a_l_avancement_converti}" />
+                             </div>                    
+                         </div>
+                     </div>
+                     <div class="slds-form-element slds-col slds-size_1-of-7">
+                         <label class="slds-form-element__label" for="form-element-01"> {!$ObjectType.VIAffaire__c.fields.Etat_de_l_affaire__c.label}</label>
+                         <div class="slds-form-element__control">
+                             <div>
+                                 <apex:inputField value="{!aff.Etat_de_l_affaire__c}" rendered="{!aff.Date_de_SAV_reelle__c==null && (IsControleurGestion || IsChefDeProjet)}"/>
+                                 <apex:outputField value="{!aff.Etat_de_l_affaire__c}" rendered="{!!(aff.Date_de_SAV_reelle__c==null && (IsControleurGestion || IsChefDeProjet))}"/>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="slds-form-element slds-col slds-size_1-of-7">
+                         <label class="slds-form-element__label" for="form-element-01"> {!$ObjectType.VIAffaire__c.fields.Date_de_livraison__c.label}</label>
+                         <div class="slds-form-element__control">
+                             <div>
+                                 <apex:inputField showDatePicker="false" value="{!aff.Date_de_livraison__c}" rendered="{!aff.Date_de_SAV_reelle__c==null && (IsControleurGestion || IsChefDeProjet)}"/>
+                                 <apex:outputField value="{!aff.Date_de_livraison__c}" rendered="{!!(aff.Date_de_SAV_reelle__c==null && (IsControleurGestion || IsChefDeProjet))}"/>
+                             </div>
+                         </div>
+                     </div>
+                     <div class="slds-form-element slds-col slds-size_1-of-7">
+                         <label class="slds-form-element__label" for="form-element-01"> {!$ObjectType.VIAffaire__c.fields.Date_de_SAV_previsionnelle__c.label}</label>
+                         <div class="slds-form-element__control">
+                             <div>
+                                 <apex:inputField showDatePicker="false" value="{!aff.Date_de_SAV_previsionnelle__c}" rendered="{!aff.Date_de_SAV_reelle__c==null && (IsControleurGestion || IsChefDeProjet)}"/>
+                                 <apex:outputField value="{!aff.Date_de_SAV_previsionnelle__c}" rendered="{!!(aff.Date_de_SAV_reelle__c==null && (IsControleurGestion || IsChefDeProjet))}"/>
+                             </div>            
+                         </div>
+                     </div>
+                     <div class="slds-form-element slds-col slds-size_1-of-7   ">
+                         <label class="slds-form-element__label" for="form-element-01"> {!$ObjectType.VIAffaire__c.fields.Date_de_SAV_reelle__c.label}</label>
+                         <div class="slds-form-element__control">
+                             <apex:outputField value="{!aff.Date_de_SAV_reelle__c}" />
+                             <apex:outputPanel rendered="{!IsControleurGestion && aff.Date_de_SAV_reelle__c=null}">    
+                                 <apex:inputCheckbox value="{!ValSav}" />    
+                                 <apex:commandButton value="SAV"  action="{!SAV}" rerender="Panel"  />
+                             </apex:outputPanel>   
+                             <apex:outputPanel rendered="{! aff.Date_de_SAV_reelle__c!=null}">    
+                                 <span class="slds-icon_container slds-icon-action-priority" >
+                                     <svg aria-hidden="true" class="slds-icon  slds-icon--x-small">
+                                       <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                                             xlink:href="/apexpages/slds/latest/assets/icons/action-sprite/svg/symbols.svg#goal ">
+                                       </use>
+                                     </svg>
+                                  </span>
+                             </apex:outputPanel>                                    
+                         </div>
+                     </div>
+                     <div class="slds-form-element slds-col slds-size_1-of-7">   
+                         <label class="slds-form-element__label" for="form-element-01"> {!$ObjectType.VIAffaire__c.fields.Date_de_derniere_revue__c .label}</label>
+                         <div class="slds-form-element__control">                         
+                             <apex:outputText value="{0,date,dd/MM/yyyy}">
+                                 <apex:param value="{!lam.affaire__r.Date_de_derniere_revue__c}" />                                         
+                             </apex:outputText>   
+                         </div>                                                  
+                     </div>                         
+                 </div>                  
+             </div>
+             <!--th style="text-align:left;font-weight:normal; "  class="noBorder"> 
+                 {!$Label.VIPourcentagedavancement} :  
+                 <apex:outputtext value="{0, number, ###,##0}" >
+                      <apex:param value="{!lam.Total_Pourcentage_d_avancement__c }"/>
+                 </apex:outputtext>  %  
+                 <br/>
+                 (Mode de calcul : <apex:outputField value="{!lam.affaire__r.Mode_de_calcul_de_l_avancement__c }"  />)
+                 <br/>
+                 {!$label.VICAalavancement } : <apex:outputtext value="{!Total_CA_a_l_avancement_converti}" />
+                <apex:outputtext value="{0, number, ###,##0.00}" >
+                    <apex:param value="{!lam.Total_CA_a_l_avancement__c}"/>
+                </apex:outputtext> 
+                 
+             </th-->     
+             <!--th style="text-align:left;font-weight:normal;" class="noBorder"> 
+                 <apex:outputPanel rendered="{!lam.affaire__r.Date_de_SAV_reelle__c!=null && lam.affaire__r.Date_de_SAV_reelle__c>today() }">
+                     {!$Label.VIGarantieinitiale} :  <apex:outputtext value="{!lam.Garantie_dotation__c }"  />   
+                     <br/>
+                     {!$label.VIGarantiereprise } : <apex:outputtext value="{!lam.Garantie_dotation__c  }"   />
+                 </apex:outputPanel>
+                 {!$ObjectType.VIAffaire__c.fields.Etat_de_l_affaire__c.label} :                  
+                     <apex:inputField value="{!aff.Etat_de_l_affaire__c}" rendered="{!aff.Date_de_SAV_reelle__c==null && (IsControleurGestion || IsChefDeProjet)}"/>
+                     <apex:outputField value="{!aff.Etat_de_l_affaire__c}" rendered="{!aff.Date_de_SAV_reelle__c!=null || !IsControleurGestion || !IsChefDeProjet}"/>  
+                 <br/>
+                 {!$ObjectType.VIAffaire__c.fields.Date_de_SAV_previsionnelle__c.label} : 
+                     <apex:inputField showDatePicker="false" value="{!aff.Date_de_SAV_previsionnelle__c}" rendered="{!aff.Date_de_SAV_reelle__c==null && (IsControleurGestion || IsChefDeProjet)}"/>
+                     <apex:outputField value="{!aff.Date_de_SAV_previsionnelle__c}" rendered="{!aff.Date_de_SAV_reelle__c!=null || !IsControleurGestion || !IsChefDeProjet}"/>                 
+                 <br/>
+                 {!$ObjectType.VIAffaire__c.fields.Date_de_livraison__c.label} : 
+                     <apex:inputField showDatePicker="false" value="{!aff.Date_de_livraison__c}" rendered="{!aff.Date_de_SAV_reelle__c==null && (IsControleurGestion || IsChefDeProjet)}"/>
+                     <apex:outputField value="{!aff.Date_de_livraison__c}" rendered="{!aff.Date_de_SAV_reelle__c!=null || !IsControleurGestion || !IsChefDeProjet}"/>                 
+                 <br/>
+                 {!$ObjectType.VIAffaire__c.fields.Date_de_SAV_reelle__c.label} : 
+                 <apex:outputField value="{!aff.Date_de_SAV_reelle__c}" />
+                 <apex:outputPanel rendered="{!IsControleurGestion && aff.Date_de_SAV_reelle__c=null}">    
+                     <apex:inputCheckbox value="{!ValSav}" />    
+                     <apex:commandButton value="SAV"  action="{!SAV}" rerender="Panel"  />
+                 </apex:outputPanel>    
+             </th>      
+             <th  class="noBorder" >
+               <apex:outputPanel id="devise1" rendered="{!CurrencyOptions.size>1}">  
+                   <apex:selectList value="{!CurrencyType}" label="Devise" multiselect="false" size="1">
+                   <apex:actionSupport event="onchange"  action="{!ReRead}" rerender="Panel"/>
+                        <apex:selectOptions value="{!CurrencyOptions}"/>
+                   </apex:selectList>
+               </apex:outputPanel>    
+             </th>
+             <th class="noBorder" valign="top">            
+               <apex:selectList value="{!Valeur}" label="Valeur" multiselect="false" size="1">
+               <apex:actionSupport event="onchange"  action="{!ReRead}" rerender="Panel"/>
+                        <apex:selectOptions value="{!ValeurOptions}"/>
+               </apex:selectList>
+             </th>
+             <th class="noBorder" valign="top">             
+               <apex:outputpanel rendered="{!Etat_affaire}">
+                   <apex:commandButton value="{!$Label.ViEnregistrer}" action="{!SaveData}" rerender="Panel"  />  
+               </apex:outputpanel>
+               <br/>
+               <div style="text-align:left;font-weight:normal; ">
+                 <apex:outputText value="{0,date,dd/MM/yyyy}">
+                   <apex:param value="{!lam.affaire__r.Date_de_derniere_revue__c}" />                                         
+                 </apex:outputText>                 
+               </div>  
+                 <apex:commandButton value="Refresh"  rendered="{!Etat_affaire}" rerender="Panel" />
+             </th>             
+             </thead>
+           </table>
+       <br/-->
+
+      <!----- Table Detail ------>
+      <table style="width: 100%;">
+         <colgroup>
+            <col span="1" style="width: 2%;" />
+             
+            <col span="1" style="width: 16%;" />
+            <col span="1" style="width: 14%;" />
+
+            <col span="1" style="width: 5%;" />
+            <col span="1" style="width: 7%;" />
+
+            <col span="1" style="width: 8%;" />
+
+            <col span="1" style="width: 5%;" />
+            <col span="1" style="width: 7%;" />
+
+            <col span="1" style="width: 5%;" />
+            <col span="1" style="width: 7%;" />
+
+            <col span="1" style="width: 5%;" />
+            <col span="1" style="width: 7%;" />
+
+            <col span="1" style="width: 5%;" />
+            <col span="1" style="width: 7%;" />
+
+
+         </colgroup>
+       
+         <thead>
+            <tr>
+               <th rowspan="2">T</th>
+               <th  rowspan="2">
+                   <apex:commandLink action="{!sortCentre}" reRender="Panel">
+                      {!$Label.VICentreSection}
+                   </apex:commandLink>
+                </th>
+               <th rowspan="2">
+                   <apex:commandLink action="{!sortDepense}" reRender="Panel">
+                       {!$Label.VITypeDeDepense}
+                   </apex:commandLink>                       
+                </th>               
+               <th colspan="2">{!$Label.VIDevis} </th>
+               <th rowspan="2">{!$Label.VIEngageBrut} </th>
+               <th colspan="2">{!$Label.VIDontComptaibilise} </th>
+               <th colspan="2">{!$Label.VIEcartCAF}</th>
+               <th colspan="2" class="color_COUT_A_TERMINAISON">{!$Label.VICoutATerminaison} </th>
+               <th colspan="2">{!$Label.VIEcartRAD}</th>
+               
+           </tr>
+           <tr>
+               <th>{!$Label.VIHeures}</th>
+               <th>{!$Label.VIMontant}</th>               
+               <th>{!$Label.VIHeures}</th>
+               <th>{!$Label.VIMontant}</th>               
+               <th>{!$Label.VIHeures}</th>
+               <th>{!$Label.VIMontant}</th>               
+               <th class="color_COUT_A_TERMINAISON">{!$Label.VIHeures}</th>
+               <th class="color_COUT_A_TERMINAISON">{!$Label.VIMontant}</th>               
+               <th>{!$Label.VIHeures}</th>
+               <th>{!$Label.VIMontant}</th>               
+
+           </tr>
+         </thead>
+         <tbody >
+            <apex:repeat var="a" value="{!ListLigne}">
+            <tr class="{!if(a.type='G' || a.type='C' ,'color_GAR','')}">
+               <td style="text-align:center!important;" >
+                  <apex:outputText value="{!a.type}" />
+               </td>
+                <td style="text-align:left!important;" >
+                  <apex:outputText value="{!left(a.Centre_Section,20)}"  />
+               </td>
+               <td style="text-align:left!important;" >
+                  <apex:outputText value="{!a.Type_depense}" />
+               </td>
+               <td >
+                  <apex:outputtext value="{0, number, #####0}" rendered="{!a.Devis_Heure!=0}">
+                      <apex:param value="{!a.Devis_Heure}"/>
+                  </apex:outputtext> 
+                   
+               </td>
+               <td >
+                  <a target="_blank" href="/apex/VIZoomBudget?lam={!lam.id}&centre={!a.centre_section_id}&td={!a.type_depense_id}"  >
+                      <apex:outputtext value="{!a.Devis_Montant_conv}" rendered="{!a.Devis_Montant!=0}" />
+                  </a>
+               </td>
+               <td>
+                  <apex:outputpanel rendered="{!a.Engage_brut_arrete_Heure=0 && a.Engage_brut_arrete_Montant!=0}" >
+                      <a target="_blank" href="/apex/VIZoomAchats?lam={!lam.id}&centre={!a.centre_section_id}&td={!a.type_depense_id}"  class="{!if(a.type='G' || a.type='C' ,'color_GAR','')}">
+                          <apex:outputtext value="{!a.Engage_brut_arrete_Montant_conv}"  />
+                      </a>
+                   </apex:outputpanel>
+                   <!--apex:outputtext value="{!a.Engage_brut_arrete_Montant_conv}" rendered="{!(a.Engage_brut_arrete_Heure=0 && a.Engage_brut_arrete_Montant!=0)}" /--> 
+                   
+               </td>
+               <td >
+                  <a target="_blank" href="/apex/VIZoomHeuresEngagees?lam={!lam.id}&centre={!a.centre_section_id}" class="{!if(a.type='G' || a.type='C' ,'color_GAR','')}">
+                     <apex:outputtext value="{0, number, #####0}" rendered="{!a.Engage_brut_arrete_Heure!=0}">
+                          <apex:param value="{!a.Engage_brut_arrete_Heure}"/>
+                      </apex:outputtext> 
+                  </a>
+               </td>
+                
+               <td >
+                   <apex:outputpanel rendered="{!left(a.type_depense,3)!='MO '}" >
+                       <a target="_blank" href="/apex/VIZoomAchats?lam={!lam.id}&centre={!a.centre_section_id}&td={!a.type_depense_id}"  class="{!if(a.type='G' || a.type='C' ,'color_GAR','')}">                   
+                           <apex:outputtext value="{!a.Dont_comptabilise_conv}" rendered="{!a.Dont_comptabilise!=0}" />
+                       </a>
+                   </apex:outputpanel>                        
+                   <apex:outputpanel rendered="{!left(a.type_depense,3)=='MO '}" >
+                       <a target="_blank" href="/apex/VIZoomHeuresEngagees?lam={!lam.id}&centre={!a.centre_section_id}"  class="{!if(a.type='G' || a.type='C' ,'color_GAR','')}">                   
+                           <apex:outputtext value="{!a.Dont_comptabilise_conv}" rendered="{!a.Dont_comptabilise!=0}" />
+                       </a>
+                   </apex:outputpanel>                        
+               </td>
+               <td >
+                   <apex:outputtext value="{!a.Ecart_C_A_F_Heure}"  rendered="{!(!Etat_affaire && left(a.type_depense,3)=='MO ')}" />
+                   <apex:inputtext value="{!a.Ecart_C_A_F_Heure}" size="3" style="text-align:right;min-height:1rem;height:2em;"    rendered="{!(Etat_affaire && left(a.type_depense,3)=='MO ' && left(a.type,1)!='G' && left(a.type,1)!='C')}"/>
+
+               </td>
+                <td >
+                   <apex:outputtext value="{!a.Ecart_C_A_F_Montant_conv}" rendered="{!!(Etat_affaire && left(a.type_depense,3)!='MO ' && left(a.type_depense,3)!='GAR' && left(a.type,1)!='G' && left(a.type,1)!='C')}" />
+                   <apex:inputtext value="{!a.Ecart_C_A_F_Montant}" size="6" style="text-align:right;min-height:1rem;height:2em;"    rendered="{!(Etat_affaire && left(a.type_depense,3)!='MO ' && left(a.type_depense,3)!='GAR' && left(a.type,1)!='G' && left(a.type,1)!='C')}" />
+               </td>
+               <td class="color_COUT_A_TERMINAISON">
+                  <apex:outputtext value="{0, number, #####0}" rendered="{!a.Cout_terminaison_Heure!=0}" >
+                     <apex:param value="{!a.Cout_terminaison_Heure}"/>
+                  </apex:outputtext> 
+               </td>
+               <td class="color_COUT_A_TERMINAISON">
+                   <apex:outputtext value="{!a.Cout_terminaison_Montant_conv}" rendered="{!a.Cout_terminaison_Montant!=0}" />
+               </td>
+               <td >
+                  <apex:outputtext value="{0, number, #####0}" rendered="{!a.Ecart_RAD_Heure!=0}">
+                      <apex:param value="{!a.Ecart_RAD_Heure}"/>
+                  </apex:outputtext>                    
+               </td>
+               <td >
+                   <apex:outputtext value="{!a.Ecart_RAD_Montant_conv}" rendered="{!a.Ecart_RAD_Montant!=0}" />
+               </td>
+
+            </tr>
+            </apex:repeat>
+         </tbody>
+         <tr style="font-weight: bold">
+               <td colspan="3">
+                   {!$Label.VITotauxjusquaumoisde} {!right(left(lam.Periode_comptable__r.name,6),2)}/{!left(lam.Periode_comptable__r.name,4)}
+               </td>
+               <td>
+                  <apex:outputtext value="{0, number, #####0}" rendered="{!LigneTotal.Devis_Heure!=0}">
+                      <apex:param value="{!LigneTotal.Devis_Heure}"/>
+                  </apex:outputtext>                    
+               </td>
+               <td>
+                   <apex:outputtext value="{!LigneTotal.Devis_Montant_conv}" rendered="{!LigneTotal.Devis_Montant!=0}" />
+               </td>
+               <td>
+                   <apex:outputtext value="{!LigneTotal.Engage_brut_arrete_Montant_conv}" rendered="{!LigneTotal.Engage_brut_arrete_Montant!=0}" />
+               </td>
+               <td>
+                  <apex:outputtext value="{0, number, #####0}" rendered="{!LigneTotal.Engage_brut_arrete_Heure!=0}">
+                      <apex:param value="{!LigneTotal.Engage_brut_arrete_Heure}"/>
+                  </apex:outputtext>                    
+               </td>
+               <td>
+                   <apex:outputtext value="{!LigneTotal.Dont_comptabilise_conv}" rendered="{!LigneTotal.Dont_comptabilise!=0}" />
+               </td>
+               <td>
+                  <apex:outputtext value="{0, number, #####0}" rendered="{!LigneTotal.Ecart_C_A_F_Heure!=0}">
+                      <apex:param value="{!LigneTotal.Ecart_C_A_F_Heure}"/>
+                  </apex:outputtext>                    
+               </td>
+               <td>
+                   <apex:outputtext value="{!LigneTotal.Ecart_C_A_F_Montant_conv}" rendered="{!LigneTotal.Ecart_C_A_F_Montant!=0}" />
+               </td>
+               <td class="color_COUT_A_TERMINAISON">
+                  <apex:outputtext value="{0, number, #####0}" rendered="{!LigneTotal.Cout_terminaison_Heure!=0}">
+                      <apex:param value="{!LigneTotal.Cout_terminaison_Heure}"/>
+                  </apex:outputtext>                    
+               </td>
+               <td class="color_COUT_A_TERMINAISON">
+                   <apex:outputtext value="{!LigneTotal.Cout_terminaison_Montant_conv}" rendered="{!LigneTotal.Cout_terminaison_Montant!=0}" />
+               </td>
+               <td>
+                  <apex:outputtext value="{0, number, #####0}" rendered="{!LigneTotal.Ecart_RAD_Heure!=0}">
+                      <apex:param value="{!LigneTotal.Ecart_RAD_Heure}"/>
+                  </apex:outputtext>                    
+               </td>
+               <td>
+                   <apex:outputtext value="{!LigneTotal.Ecart_RAD_Montant_conv}" rendered="{!LigneTotal.Ecart_RAD_Montant!=0}" />
+               </td>
+ 
+         </tr>  
+
+        </table>
+<br/>
+
+      <!----- Table Total ------>      
+      <table style="width: 100%">
+         <colgroup>
+            <col span="1" style="width: 32%;" />
+            <col span="1" style="width: 12%;" />
+            <col span="1" style="width: 8%;" />
+            <col span="1" style="width: 12%;" />
+            <col span="1" style="width: 12%;" />
+            <col span="1" style="width: 12%;" />
+            <col span="1" style="width: 12%;" />
+
+         </colgroup>
+       
+         <thead>
+            <tr>
+               <th></th>
+               <th>{!$label.VIDevis}</th>
+               <th>{!$label.VIPVFacture}</th>
+               <th>{!$label.VIPVEncaisse}</th>
+               <th>{!$label.VIEcartCAF}</th>
+               <th>{!$label.VIPVaTerminaison}</th>
+               <th>{!$label.VIEcartRAD}</th>
+
+           </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <td>
+                  {!$label.VITotalPV}
+               </td>
+               <td>
+                   <apex:outputtext value="{!PiedTotal.PVA_T_Conv}" / >
+               </td>
+               <td>
+                  <a target="_blank" href="/apex/VIZoomFactures?aff={!lam.affaire__c}&per={!lam.periode_comptable__r.name}&lam={!lam.id}" > 
+                      <apex:outputtext value="{!PiedTotal.PVF_T_conv}" />
+                  </a>    
+               </td>
+               <td>
+                   <apex:outputtext value="{!PiedTotal.PVE_T_conv}" />                   
+               </td>
+               <td>
+                  <!--apex:outputtext value="{0, number, ###,##0}">                   
+                      <apex:param value="{!PiedTotal.ECA_T}"  />
+                  </apex:outputtext-->                                             
+               </td>
+               <td>
+                   <apex:outputtext value="{!PiedTotal.PVT_T_conv}" />                   
+               </td>
+               <td>
+                   <apex:outputtext value="{!PiedTotal.ERAD_T_conv}" />                   
+               </td> 
+            </tr>
+            <tr>
+               <td>
+                  {!$Label.VIMarges}
+               </td>
+               <td class="{!if(PiedTotal.PVA_M<0,'color_RED','')}">
+                   <apex:outputtext value="{!PiedTotal.PVA_M_conv}" />                   
+               </td>
+               <td class="{!if(PiedTotal.PVF_M<0,'color_RED','')}">
+                   <apex:outputtext value="{!PiedTotal.PVF_M_conv}" />                   
+               </td>
+               <td style="text-align:left;" rowspan="2">
+                   <apex:outputtext value="{!$Label.VISur}"   /> <br/>
+                  <apex:outputtext value="{!$Label.VIComptabilise}"  /> 
+               </td>
+               <td class="{!if(PiedTotal.ECA_M<0,'color_RED','')}">
+                   <apex:outputtext value="{!PiedTotal.ECA_M_conv}" />                   
+               </td>
+               <td class="{!if(PiedTotal.PVT_M<0,'color_RED','')}">
+                   <apex:outputtext value="{!PiedTotal.PVT_M_conv}" />                   
+               </td>
+               <td class="{!if(PiedTotal.ERAD_M<0,'color_RED','')}">
+                   <apex:outputtext value="{!PiedTotal.ERAD_M_conv}" />                   
+               </td>
+            </tr>
+            <tr>
+               <td>
+                  {!$Label.VIPourCentMargeSurPV}
+               </td>
+               <td class="{!if(PiedTotal.PVA_P<0,'color_RED','')}">
+                  <apex:outputtext value="{0, number, #####0}">                   
+                      <apex:param value="{!PiedTotal.PVA_P}"  />
+                  </apex:outputtext>                                             
+               </td>
+               <td class="{!if(PiedTotal.PVF_P<0,'color_RED','')}">
+                  <apex:outputtext value="{0, number, #####0}">                   
+                      <apex:param value="{!PiedTotal.PVF_P}"  />
+                  </apex:outputtext>                                             
+               </td>
+               <!--td style="text-align:left;" >
+                  <apex:outputtext value="{!$Label.VIComptabilise}"  />
+               </td-->
+               <td>
+                  <!--apex:outputtext value="{0, number, #####0.00}">                   
+                      <apex:param value="{!PiedTotal.ECA_P}"  />
+                  </apex:outputtext-->                                             
+               </td>
+               <td class="{!if(PiedTotal.PVT_P<0,'color_RED','')}">
+                  <apex:outputtext value="{0, number, #####0}">                   
+                      <apex:param value="{!PiedTotal.PVT_P}"  />
+                  </apex:outputtext>                                             
+               </td>
+               <td class="{!if(PiedTotal.ERAD_P<0,'color_RED','')}">
+                  <apex:outputtext value="{0, number, #####0}">                   
+                      <apex:param value="{!PiedTotal.ERAD_P}"  />
+                  </apex:outputtext>                                             
+               </td> 
+            </tr>
+         </tbody>
+      </table>
+      
+      
+    </apex:outputpanel>      
+  </apex:form>
+</apex:page>

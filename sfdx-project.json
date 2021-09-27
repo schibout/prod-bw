@@ -1,0 +1,13 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "name": "prod",
+  "namespace": "",
+  "sfdcLoginUrl": "https://babcock-wanson.my.salesforce.com",
+  "sourceApiVersion": "52.0",
+  "signupTargetLoginUrl": "schibout@babcok-wanson.com"
+}

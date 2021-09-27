@@ -1,0 +1,3 @@
+<apex:page standardController="OrderItem" extensions="VFC01_GenereEquipment" action="{!createAsset}" lightningStylesheets="true">
+  <apex:pageMessages />
+</apex:page>

@@ -1,0 +1,7 @@
+<apex:page standardController="Account" tabStyle="Account" standardStylesheets="false" showHeader="false" sidebar="false">
+    <apex:stylesheet value="{https://c.eu9.visual.force.com/resource/1529929398000/SF1Flow?isdtp=p1}" />     
+    <apex:includeScript value="{https://c.eu9.visual.force.com/resource/1529929664000/Datehandler?isdtp=p1}" />
+    <flow:interview name="Astreinte_01"  finishLocation="{!URLFOR('/' + account.Id)}">
+       <apex:param name="Id" value="{!account}"/>
+    </flow:interview>
+</apex:page>

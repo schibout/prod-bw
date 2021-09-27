@@ -1,0 +1,60 @@
+<apex:page lightningStylesheets="true" docType="html-5.0" controller="VIPeriodeEnCoursController" title="Periode En Cours">
+  <style type="text/css">
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #999;
+  text-align: left;
+  padding: 0.1rem;    
+  height: 1px;      
+}    
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: Center;
+}    
+
+.noBorder {
+    border:none !important;
+}
+
+.t{
+    font-weight: bold;
+    font-size: 18px;      
+}
+
+  </style>
+  <apex:form >
+    <apex:pageMessages id="msgId"></apex:pageMessages>
+
+                       
+       <table  class="noBorder" >
+           <colgroup>
+               <col span="1" style="width: 40%;" />
+               <col span="1" style="width: 40%;" />
+               <col span="1" style="width: 20%;" />               
+           </colgroup>
+           <tbody >
+             <apex:repeat var="a" value="{!ListPeriode}">
+               <tr >
+                 <td class="noBorder" >
+                        <apex:outputText value="{!a.Entite_BW__c}" styleclass="t" />                 
+                 </td>
+                 <td class="noBorder" >
+                       <apex:outputText value="{0, date, dd'/'MM'/'yyyy }" styleclass="t">
+                            <apex:param value="{!a.Date_de_debut__c}" />
+                       </apex:outputText>                       
+                     
+                 </td>
+                 <td class="noBorder">
+                 </td>
+              </tr>
+             </apex:repeat>              
+           </tbody>        
+       </table>      
+
+   </apex:form>
+
+</apex:page>

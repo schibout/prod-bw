@@ -1,0 +1,5 @@
+<apex:page standardController="Quote"
+     extensions="VFE001_CloneQuoteQLI"
+     action="{!cloneQuoteWithQLI}">
+     <apex:pageMessages />
+</apex:page>

@@ -1,0 +1,3 @@
+<apex:page standardcontroller="Opportunity" action="{!ShowError}" extensions="VFC01_Opp_ADDError">
+    <apex:pageMessages ></apex:pageMessages>
+</apex:page>

@@ -1,0 +1,117 @@
+<apex:page lightningStylesheets="true"  standardcontroller="VIAffaire__c"  extensions="VIAffaireListUpdateController" title="{!lam.Nom_de_l_affaire__c} " >
+  <style type="text/css">
+table {
+  border-collapse: collapse;
+}
+      
+td {
+  border: 1px solid #999;
+  text-align: Right;
+  padding: 3px;      
+      
+}    
+th {
+  border: 1px solid #999;
+  padding: 2px;
+  text-align: Center;
+  font-weight: bold; 
+  height: 10px;      
+}    
+tfoot {
+  border: 1px solid #999;
+  padding: 2px;
+  font-weight: bold;      
+}    
+
+.noBorder {
+    border:none !important;
+}
+
+.color_COUT_A_TERMINAISON {
+    color: #390099  ;
+    font-weight: bold;        
+}      
+
+.color_GAR {
+    color: #9e0059 ;
+    font-weight: bold;  
+}
+      
+.color_RED {
+    color: Red ;
+    font-weight: bold;  
+}      
+
+      
+  </style>
+  <apex:form >
+    <apex:outputpanel id="Panel">
+  
+      <!----- Table Detail ------>
+      <table style="width: 80%;">
+         <colgroup>
+
+            <col span="1" style="width: 25%;" />
+            <col span="1" style="width: 15%;" />
+
+            <col span="1" style="width: 5%;" />
+            <col span="1" style="width: 10%;" />
+            <col span="1" style="width: 10%;" />
+
+            <col span="1" style="width: 15%;" />
+
+         </colgroup>
+       
+         <thead>
+            <tr>
+               <th colspan="1">{!$Label.VICentreSection } </th>
+               <th colspan="1">{!$Label.VITypeDeDepense } </th>
+               <th rowspan="1">{!$Label.VIChamp} </th>
+               <th colspan="1">{!$Label.VIAncienneValeur}</th>
+               <th colspan="1">{!$Label.VINouvelleValeur}</th>                
+               <th colspan="1">{!$Label.VIModifiePar}</th>                
+               <th colspan="1">{!$Label.VIDate} GMT</th>                                
+               
+           </tr>
+         </thead>
+         <tbody >
+            <apex:repeat var="a" value="{!ListLigne}">
+            <tr >
+               <td style="text-align:left;" >
+                  <apex:outputText value="{!a.centre_section}" />
+               </td>
+                <td style="text-align:left;" >
+                  <apex:outputText value="{!a.type_depense}"  />
+               </td>
+               <td style="text-align:left;" >
+                  <apex:outputText value="{!a.Field}" />
+               </td>
+               <td style="text-align:right;" >
+                  <apex:outputtext value="{0, number, ###,##0.00}" >
+                      <apex:param value="{!a.OldValue}"/>
+                  </apex:outputtext> 
+               </td>
+               <td style="text-align:right;" >
+                  <apex:outputtext value="{0, number, ###,##0.00}" >
+                      <apex:param value="{!a.NewValue}"/>
+                  </apex:outputtext> 
+               </td>
+               <td style="text-align:left;" >
+                  <apex:outputText value="{!a.CreatedByName}" />
+               </td>
+               <td style="text-align:left;" >
+                 <apex:outputText value="{0,date,dd/MM/yyyy hh:mm}">
+                   <apex:param value="{!a.CreatedDate}" />                                         
+                 </apex:outputText>                 
+               </td>
+            </tr>
+            </apex:repeat>
+         </tbody>
+
+        </table>
+      <br/>
+
+      
+    </apex:outputpanel>      
+  </apex:form>
+</apex:page>
