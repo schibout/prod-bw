@@ -1,3 +1,10 @@
+/**
+ * @description       : 
+ * @author            : SCHIBOUT
+ * @group             : 
+ * @last modified on  : 27-09-2021
+ * @last modified by  : SCHIBOUT
+**/
 //
 //   This batch send the ecriture
 //  
@@ -13,12 +20,11 @@ global class Batch_AccCaluculateRevenu implements Database.Batchable<sObject>,  
         else {
             previousRundate = Date.today()-1 ; }
 
-        return Database.getQueryLocator([SELECT Id, ACC_Revenu_n__c, ACC_revenu_n_1__c,ACC_revenu_n_2__c FROM Account WHERE LastModifiedDate >= :previousRundate ]);
+        //return Database.getQueryLocator([SELECT Id, ACC_Revenu_n__c, ACC_revenu_n_1__c,ACC_revenu_n_2__c FROM Account WHERE LastModifiedDate >= :previousRundate ]);
+        return Database.getQueryLocator([SELECT Id, ACC_Revenu_n__c, ACC_revenu_n_1__c,ACC_revenu_n_2__c FROM Account ]);
     } 
 
 global void execute(Database.BatchableContext BC, List<Account> accountList){
-
-//UserInfo.USER_ByPassRegleValidation__c = true ;
 
 
 Date  lowDate =date.valueOf(((System.now().year())-2)+'-01-01');
@@ -26,7 +32,7 @@ Map<Id, Account> accountMap = new Map<Id,Account>(accountList);
 Set<Id> accountIds = accountMap.keySet();
 
 
-List<Order> orderList = [SELECT TotalAmount,ORD_MontantHT_ERP__c, ORD_MontantERP__c,EffectiveDate,AccountId,ORD_SousDomaine__c,ORD_BusinessUnit__c  
+List<Order> orderList = [SELECT TotalAmount,ORD_MontantHT_ERP__c, ORD_MontantERP__c,EffectiveDate,AccountId,ORD_SousDomaine__c,ORD_BusinessUnit__c,Ord_Domaine__c  
                          FROM Order WHERE AccountId IN :accountIds  AND EffectiveDate >= :lowDate Order by AccountId ];
  Integer numberElement = orderList.size();
  Double revenu_n = 0 , revenu_n_1=0, revenu_n_2=0, erpAmount=0;
@@ -35,6 +41,7 @@ List<Order> orderList = [SELECT TotalAmount,ORD_MontantHT_ERP__c, ORD_MontantERP
  Integer  count = 0 ; 
  List<Account> accountListToUpdate = new List<Account>();
 for (Order ord : orderList) {
+    if (!BwUtils.usedcutomerSegment(ord)) continue ;
     if (count == 0) currentAccountId = ord.AccountId ;
     if (ord.ORD_MontantHT_ERP__c !=null){erpAmount = ord.ORD_MontantHT_ERP__c ;} else{erpAmount =0 ;} 
     Account acct = (Account)accountMap.get(currentAccountId);
