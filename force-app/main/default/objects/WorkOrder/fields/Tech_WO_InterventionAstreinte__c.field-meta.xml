@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tech_WO_InterventionAstreinte__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Cette case est cochée lorsque l&apos;intervention est généré par le flux dédié à l&apos;astreinte, et permet de ne pas déclencher les processus des interventions classiques.</description>
+    <externalId>false</externalId>
+    <label>Intervention ss Astreinte</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

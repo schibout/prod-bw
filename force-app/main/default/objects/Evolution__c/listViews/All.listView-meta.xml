@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>EVOL_Description_Evolution__c</columns>
+    <columns>EVOL_Application__c</columns>
+    <columns>EVOL_Date_Heure_Installation_en_PROD__c</columns>
+    <columns>EVOL_Langue_de_traduction__c</columns>
+    <columns>PRODUCTION__c</columns>
+    <columns>PREPROD__c</columns>
+    <columns>Statut__c</columns>
+    <columns>EVOL_Type_de_composant__c</columns>
+    <columns>EVOL_Nom_composant__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Tout</label>
+</ListView>

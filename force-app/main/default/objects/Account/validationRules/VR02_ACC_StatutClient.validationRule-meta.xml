@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR02_ACC_StatutClient</fullName>
+    <active>false</active>
+    <description>Règle de validation pour empêcher la modification manuelle du champ &quot;type&quot; de Prospect à Client actif ou à Pré-client</description>
+    <errorConditionFormula>AND(				ISPICKVAL(Type,&quot;Pré-client&quot;),
+ISPICKVAL( PRIORVALUE ( Type ), &quot;Prospect&quot;),
+ISCHANGED( Type), 
+ $User.USER_ByPassRegleValidation__c = FALSE,
+  $User.Username &lt;&gt; &apos;api@bw.com&apos;)</errorConditionFormula>
+    <errorMessage>Attention, vous n&apos;êtes pas autorisé à modifier le type de votre client en &quot;Pré-client&quot; ou &quot;client actif&quot;.
+Cette modification est faite par automatisme.</errorMessage>
+</ValidationRule>

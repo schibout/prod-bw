@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_RemiseEnServiceDeconseillee__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Remise en service déconseillée et relève, le cas échéant, de la responsabilité de l&apos;exploitant</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Remise en service déconseillée et relève, le cas échéant, de la responsabilité de l&apos;exploitant</inlineHelpText>
+    <label>Remise en service déconseillée</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

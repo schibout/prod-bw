@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPP_Categorie__c</fullName>
+    <description>Ce champ est utilisé pour la modélisation du process de remplacement de pièce sur les équipements par les techniciens.
+NE PAS SUPPRIMER</description>
+    <externalId>false</externalId>
+    <label>Catégorie</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Intervention de service</fullName>
+                <default>false</default>
+                <label>Devis Technicien</label>
+            </value>
+            <value>
+                <fullName>Autre</fullName>
+                <default>false</default>
+                <label>Autre</label>
+            </value>
+            <value>
+                <fullName>Proposition commerciale</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proposition commerciale</label>
+            </value>
+            <value>
+                <fullName>Proposition de contrat</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proposition de contrat</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_ServiceResources</fullName>
+    <columns>Name</columns>
+    <columns>RelatedRecord</columns>
+    <columns>ResourceType</columns>
+    <columns>SR_Type_de_contrat__c</columns>
+    <columns>IsActive</columns>
+    <columns>IsOptimizationCapable</columns>
+    <columns>IsCapacityBased</columns>
+    <columns>CreatedDate</columns>
+    <filterScope>Mine</filterScope>
+    <label>Mes ressources de service</label>
+</ListView>

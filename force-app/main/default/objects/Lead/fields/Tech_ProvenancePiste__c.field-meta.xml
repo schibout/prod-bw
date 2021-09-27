@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tech_ProvenancePiste__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Cette case à cocher permet de signaler sur le compte que le compte provient d&apos;une piste.</description>
+    <externalId>false</externalId>
+    <label>Tech_ProvenancePiste</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

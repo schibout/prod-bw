@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CON_ContactERP__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Ce champ permet de signaler que le contact a été créé automatiquement lors de l&apos;interface DEVIS GPIC vers Salesforce</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Ce champ permet de signaler que le contact a été créé automatiquement lors de l&apos;interface DEVIS GPIC vers Salesforce</inlineHelpText>
+    <label>Contact ERP</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

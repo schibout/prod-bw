@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPP_Concurrent__c</fullName>
+    <externalId>false</externalId>
+    <label>Concurrent</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>OPP_Type_de_concurrent__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Autres</fullName>
+                <default>false</default>
+                <label>Autres</label>
+            </value>
+            <value>
+                <fullName>LTS - Atlas Copco</fullName>
+                <default>false</default>
+                <label>LTS - Atlas Copco</label>
+            </value>
+            <value>
+                <fullName>Tibbloc</fullName>
+                <default>false</default>
+                <label>Tibbloc</label>
+            </value>
+            <value>
+                <fullName>BWT</fullName>
+                <default>false</default>
+                <label>BWT</label>
+            </value>
+            <value>
+                <fullName>Suez</fullName>
+                <default>false</default>
+                <label>Suez</label>
+            </value>
+            <value>
+                <fullName>Kurita</fullName>
+                <default>false</default>
+                <label>Kurita</label>
+            </value>
+            <value>
+                <fullName>Nalco</fullName>
+                <default>false</default>
+                <label>Nalco</label>
+            </value>
+            <value>
+                <fullName>Tresch</fullName>
+                <default>false</default>
+                <label>Tresch</label>
+            </value>
+            <value>
+                <fullName>Axima</fullName>
+                <default>false</default>
+                <label>Axima</label>
+            </value>
+            <value>
+                <fullName>Ciat</fullName>
+                <default>false</default>
+                <label>Ciat</label>
+            </value>
+            <value>
+                <fullName>Bono</fullName>
+                <default>false</default>
+                <label>Bono</label>
+            </value>
+            <value>
+                <fullName>ICI Caldaie</fullName>
+                <default>false</default>
+                <label>ICI Caldaie</label>
+            </value>
+            <value>
+                <fullName>LCI - Bosch</fullName>
+                <default>false</default>
+                <label>LCI - Bosch</label>
+            </value>
+            <value>
+                <fullName>Saacke</fullName>
+                <default>false</default>
+                <label>Saacke</label>
+            </value>
+            <value>
+                <fullName>Secat</fullName>
+                <default>false</default>
+                <label>Secat</label>
+            </value>
+            <value>
+                <fullName>Clayton</fullName>
+                <default>false</default>
+                <label>Clayton</label>
+            </value>
+            <value>
+                <fullName>Viessmann</fullName>
+                <default>false</default>
+                <label>Viessmann</label>
+            </value>
+            <value>
+                <fullName>Weishaupt</fullName>
+                <default>false</default>
+                <label>Weishaupt</label>
+            </value>
+            <value>
+                <fullName>HAMON STEIN</fullName>
+                <default>false</default>
+                <label>HAMON STEIN</label>
+            </value>
+            <value>
+                <fullName>Dalkia - EDF</fullName>
+                <default>false</default>
+                <label>Dalkia - EDF</label>
+            </value>
+            <value>
+                <fullName>Engie - Cofely</fullName>
+                <default>false</default>
+                <label>Engie - Cofely</label>
+            </value>
+            <value>
+                <fullName>Hervé Thermique</fullName>
+                <default>false</default>
+                <label>Hervé Thermique</label>
+            </value>
+            <value>
+                <fullName>Idex</fullName>
+                <default>false</default>
+                <label>Idex</label>
+            </value>
+            <value>
+                <fullName>CMI</fullName>
+                <default>false</default>
+                <label>CMI</label>
+            </value>
+            <value>
+                <fullName>Cometi</fullName>
+                <default>false</default>
+                <label>Cometi</label>
+            </value>
+            <value>
+                <fullName>Le Nerrant</fullName>
+                <default>false</default>
+                <label>Le Nerrant</label>
+            </value>
+            <value>
+                <fullName>CORETEC</fullName>
+                <default>false</default>
+                <label>CORETEC</label>
+            </value>
+            <value>
+                <fullName>Capingelec</fullName>
+                <default>false</default>
+                <label>Capingelec</label>
+            </value>
+            <value>
+                <fullName>Utilities Performance</fullName>
+                <default>false</default>
+                <label>Utilities Performance</label>
+            </value>
+            <value>
+                <fullName>Technip</fullName>
+                <default>false</default>
+                <label>Technip</label>
+            </value>
+            <value>
+                <fullName>ADF</fullName>
+                <default>false</default>
+                <label>ADF</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Autres divers (loueur/TE/TA...)</controllingFieldValue>
+            <controllingFieldValue>Constructeur</controllingFieldValue>
+            <controllingFieldValue>Exploitant</controllingFieldValue>
+            <controllingFieldValue>Installateur/Engineering</controllingFieldValue>
+            <valueName>Autres</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Autres divers (loueur/TE/TA...)</controllingFieldValue>
+            <valueName>LTS - Atlas Copco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Autres divers (loueur/TE/TA...)</controllingFieldValue>
+            <valueName>Tibbloc</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Autres divers (loueur/TE/TA...)</controllingFieldValue>
+            <valueName>BWT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Autres divers (loueur/TE/TA...)</controllingFieldValue>
+            <valueName>Suez</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Autres divers (loueur/TE/TA...)</controllingFieldValue>
+            <valueName>Kurita</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Autres divers (loueur/TE/TA...)</controllingFieldValue>
+            <valueName>Nalco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Autres divers (loueur/TE/TA...)</controllingFieldValue>
+            <valueName>Tresch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Autres divers (loueur/TE/TA...)</controllingFieldValue>
+            <valueName>Axima</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Autres divers (loueur/TE/TA...)</controllingFieldValue>
+            <valueName>Ciat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Constructeur</controllingFieldValue>
+            <valueName>Bono</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Constructeur</controllingFieldValue>
+            <valueName>ICI Caldaie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Constructeur</controllingFieldValue>
+            <valueName>LCI - Bosch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Constructeur</controllingFieldValue>
+            <valueName>Saacke</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Constructeur</controllingFieldValue>
+            <valueName>Secat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Constructeur</controllingFieldValue>
+            <valueName>Clayton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Constructeur</controllingFieldValue>
+            <valueName>Viessmann</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Constructeur</controllingFieldValue>
+            <valueName>Weishaupt</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Constructeur</controllingFieldValue>
+            <valueName>HAMON STEIN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Exploitant</controllingFieldValue>
+            <valueName>Dalkia - EDF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Exploitant</controllingFieldValue>
+            <valueName>Engie - Cofely</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Exploitant</controllingFieldValue>
+            <valueName>Hervé Thermique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Exploitant</controllingFieldValue>
+            <valueName>Idex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Installateur/Engineering</controllingFieldValue>
+            <valueName>CMI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Installateur/Engineering</controllingFieldValue>
+            <valueName>Cometi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Installateur/Engineering</controllingFieldValue>
+            <valueName>Le Nerrant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Installateur/Engineering</controllingFieldValue>
+            <valueName>CORETEC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Installateur/Engineering</controllingFieldValue>
+            <valueName>Capingelec</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Installateur/Engineering</controllingFieldValue>
+            <valueName>Utilities Performance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Installateur/Engineering</controllingFieldValue>
+            <valueName>Technip</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Installateur/Engineering</controllingFieldValue>
+            <valueName>ADF</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

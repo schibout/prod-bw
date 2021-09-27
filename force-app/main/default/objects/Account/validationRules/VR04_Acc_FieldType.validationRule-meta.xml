@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR04_Acc_FieldType</fullName>
+    <active>true</active>
+    <description>Type est une liste de sélection standard alors on restreint cette liste à ces valeurs par cette règle de validation.</description>
+    <errorConditionFormula>AND ($User.LastName =$Label.API, NOT(OR(ISPICKVAL(Type,&quot;&quot;), ISPICKVAL(Type,&quot;1&quot;),  ISPICKVAL(Type,&quot;2&quot;), ISPICKVAL(Type,&quot;3&quot;), ISPICKVAL(Type,&quot;4&quot;))))</errorConditionFormula>
+    <errorMessage>Type: valeur incorrecte pour le champ de liste de sélection restreinte</errorMessage>
+</ValidationRule>

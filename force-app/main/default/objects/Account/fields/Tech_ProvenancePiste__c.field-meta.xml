@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tech_ProvenancePiste__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Cette case à cocher permet de définir qu&apos;un compte provient de la conversion d&apos;une piste.</description>
+    <externalId>false</externalId>
+    <label>Tech_ProvenancePiste</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

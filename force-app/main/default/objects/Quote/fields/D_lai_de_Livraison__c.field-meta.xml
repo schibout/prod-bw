@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>D_lai_de_Livraison__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT( DEV_DelaisLivraison__c) + &quot; - &quot; +  IF(ISPICKVAL(DEV_DescrDelaisLivraison__c,&apos;01&apos;), $Label.DEV_delaiLivraison01,$Label.DEV_delaiLivraison02)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Délai de Livraison</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

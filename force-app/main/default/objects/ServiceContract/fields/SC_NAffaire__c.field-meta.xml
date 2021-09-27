@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SC_NAffaire__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Renseigner l&apos;Opportunité associée au CAT</inlineHelpText>
+    <label>Opportunité</label>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>Contrats d&apos;assistance technique</relationshipLabel>
+    <relationshipName>Contrats_d_assistance_technique_opp</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

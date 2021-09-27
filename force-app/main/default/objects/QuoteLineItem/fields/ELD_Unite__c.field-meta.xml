@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELD_Unite__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(text(Product2.QuantityUnitOfMeasure)==&apos;Unité&apos;, $Label.DEV_unite_unite,
+IF(text(Product2.QuantityUnitOfMeasure)==&apos;Mètre&apos;,$Label.DEV_unite_Metre,
+IF(text(Product2.QuantityUnitOfMeasure)==&apos;Fût&apos;,$Label.DEV_unite_Fut,
+IF(text(Product2.QuantityUnitOfMeasure)==&apos;Heure&apos;,$Label.DEV_unite_Heure,
+IF(text(Product2.QuantityUnitOfMeasure)==&apos;Bidon&apos;,$Label.DEV_unite_Bidon,
+IF(text(Product2.QuantityUnitOfMeasure)==&apos;Sac&apos;,$Label.DEV_unite_Sac,
+IF(text(Product2.QuantityUnitOfMeasure)==&apos;Tonneau&apos;,$Label.DEV_unite_Tonneau,text(Product2.QuantityUnitOfMeasure))))))) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Unité</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

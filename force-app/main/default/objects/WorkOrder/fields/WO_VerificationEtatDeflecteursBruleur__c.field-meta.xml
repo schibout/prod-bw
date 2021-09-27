@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_VerificationEtatDeflecteursBruleur__c</fullName>
+    <description>Vérification de l&apos;état des déflecteurs brûleur.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Vérification de l&apos;état des déflecteurs brûleur.</inlineHelpText>
+    <label>Vérification état déflecteurs brûleur</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Oui</fullName>
+                <default>false</default>
+                <label>Oui</label>
+            </value>
+            <value>
+                <fullName>Non</fullName>
+                <default>false</default>
+                <label>Non</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

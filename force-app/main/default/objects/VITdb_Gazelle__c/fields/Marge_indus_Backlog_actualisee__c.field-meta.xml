@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marge_indus_Backlog_actualisee__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(left(Affaire__r.Name,1)=&apos;L&apos;,
+   0,
+   if( isblank(Affaire__r.Date_de_SAV_reelle__c) || 
+       Affaire__r.Date_de_SAV_reelle__c&gt; Periode_comptable__r.Date_de_fin__c  ,
+
+       Affaire__r.Marge_indus_Backlog_Annee_1__c + Marge_indus_devis__c + Ajustement_Marge_indus__c  -  
+         Marge_indus_avancement__c,
+       0
+   )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Marge indus Backlog actualisée</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

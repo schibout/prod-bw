@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR02_MP_VerificationDuStatutDuCATActif</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($User.USER_ByPassRegleValidation__c = FALSE, 
+/*AND(NOT(ISNEW()),*/ 
+/*NOT(ISBLANK(Id)),*/ 
+NOT(ISBLANK(ServiceContractId)), 
+NOT(ISPICKVAL(ServiceContract.SC_Statut__c,&quot;3&quot;)), 
+/*ISPICKVAL(WorkOrderGenerationStatus, &quot;complete&quot;)*/ 
+ISCHANGED(WorkOrderGenerationStatus) 
+/*NOT(ISPICKVAL(WorkOrderGenerationStatus, &quot;complete&quot;))*/ 
+)</errorConditionFormula>
+    <errorDisplayField>WorkOrderGenerationStatus</errorDisplayField>
+    <errorMessage>la génération d&apos;intervention est impossible si le contrat n&apos;est pas Actif</errorMessage>
+</ValidationRule>

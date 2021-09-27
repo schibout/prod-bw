@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Pourcentage_d_avancement__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( or(isblank(Affaire__r.Date_de_SAV_reelle__c),Periode_comptable__r.Date_de_fin__c&lt;Affaire__r.Date_de_SAV_reelle__c)  ,
+
+
+case(  Affaire__r.Produit_SousDomaine__r.Mode_de_calcul_de_l_avancement__c , 
+
+&apos;1&apos;,
+Total_Pourcentage_d_avanc_par_les_couts__c,
+
+&apos;2&apos;,
+if( and(PV_Total__c !=0,PV_Facture__c&lt;PV_Total__c) ,Round( (PV_Facture__c /PV_Total__c )*100,2),100),
+
+&apos;3&apos;,
+if(Periode_comptable__r.Date_de_fin__c&gt;Affaire__r.Date_de_SAV_previsionnelle__c, 100, 
+    (( Periode_comptable__r.Date_de_fin__c   -   Affaire__r.Date_de_livraison__c  ) /  (  
+    Affaire__r.Date_de_SAV_previsionnelle__c  - Affaire__r.Date_de_livraison__c +1 )) * 100) 
+   ,100)
+
+, 
+100)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Pourcentage d&apos;avancement</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

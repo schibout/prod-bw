@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_InspectionNettoyageOrganesDuBruleur__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Inspection et nettoyage des organes du brûleur</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Inspection et nettoyage des organes du brûleur</inlineHelpText>
+    <label>Inspection nettoyage organes du bruleur</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commande_traiter_par_Service_Export</fullName>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>ORD_ReferenceCommande__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORDER.SHIPPING_COUNTRY</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>ORDERS.CREATED_DATE</columns>
+    <columns>ORD_MontantHT_ERP__c</columns>
+    <columns>ORD_MontantERP__c</columns>
+    <columns>ORDERS.STATUS</columns>
+    <columns>ORD_EquipementCree__c</columns>
+    <columns>ORD_InterventionCree__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ORD_SousDomaine__c</field>
+        <operation>equals</operation>
+        <value>1,2,3,4,6,7,8,9,10,11,12,13,14,15,17,23,24,25,26,27,28,30,31,32,33,34,53,36,37,38,39,40,42,45,46,47,51,52,54,49</value>
+    </filters>
+    <filters>
+        <field>ORDER.SHIPPING_COUNTRY</field>
+        <operation>notContain</operation>
+        <value>France,Spain,United Kingdom,Italy,Belgium,Poland,Netherlands,Portugal</value>
+    </filters>
+    <filters>
+        <field>ORD_EquipementCree__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>ORD_InterventionCree__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>ORDERS.STATUS</field>
+        <operation>equals</operation>
+        <value>2,3</value>
+    </filters>
+    <filters>
+        <field>ORD_ReferenceCommande__c</field>
+        <operation>notContain</operation>
+        <value>PRO</value>
+    </filters>
+    <filters>
+        <field>ORDER.SHIPPING_COUNTRY</field>
+        <operation>notContain</operation>
+        <value>Luxembourg</value>
+    </filters>
+    <label>Commande à traiter par Service Export</label>
+</ListView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_SiretFormatAuto__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Ce champ permet un affichage formaté du SIRET (espace entre le 9e et 10e chiffre) afin de mettre en valeur le SIREN.</description>
+    <externalId>false</externalId>
+    <formula>TRIM(LEFT( ELLISPHERE__ELLI_IdRegisterestb2__c ,9)) &amp; &quot; &quot; 
+
+&amp;TRIM(RIGHT( ELLISPHERE__ELLI_IdRegisterestb2__c ,5))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>The SIRET number is a company ID of 14-digit numeric identifier (first 9 numbers = SIREN number of the legal unit to which the SIRET unit belongs).</inlineHelpText>
+    <label>SIRET</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_Intervention_refuse_cause_COVID19__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>L&apos;intervention a été refusée par le client à cause des mesures sanitaires liées au COVID19</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Cocher cette case si l&apos;intervention a été refusée par le client à cause des mesures sanitaires liées au COVID19</inlineHelpText>
+    <label>Intervention refusée cause COVID19</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

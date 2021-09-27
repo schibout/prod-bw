@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ControleElectrodesdAllumage__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contrôle électrodes d’allumage, cellule et nettoyage du verre</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contrôle électrodes d’allumage, cellule et nettoyage du verre</inlineHelpText>
+    <label>Contrôle électrodes d’allumage</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

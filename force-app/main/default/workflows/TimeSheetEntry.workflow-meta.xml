@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>MAJ_Soumis</fullName>
+        <field>Status</field>
+        <literalValue>Soumis</literalValue>
+        <name>MAJ_Soumis</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_TravailHeureFin</fullName>
+        <field>EndTime</field>
+        <formula>NOW()</formula>
+        <name>MAJ_TravailHeureFin</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>WF14_EntreeFeuilleTemps_MAJTravail</fullName>
+        <actions>
+            <name>MAJ_TravailHeureFin</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND($User.LastName != $Label.API , NOT(ISNEW()), ISPICKVAL(Status, &apos;Nouveau&apos;), ISPICKVAL( TSE_NatureDuTemps__c, &apos;2&apos;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF15_EntreeFeuilleTemps_MAJSoumis</fullName>
+        <actions>
+            <name>MAJ_Soumis</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>OR(AND($User.LastName != $Label.API , 
+/*DATEVALUE(TSE_RendezVousDeService__r.SchedStartTime) &lt;&gt; DATEVALUE(TSE_RendezVousDeService__r.SchedEndTime),*/ 
+NOT(ISNEW()), ISPICKVAL(Status, &apos;Nouveau&apos;), ISCHANGED(EndTime)), 
+AND($User.LastName != $Label.API , 
+ISNEW(), ISPICKVAL( TSE_NatureDuTemps__c , &apos;1&apos;), 
+NOT(ISBLANK( EndTime ))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

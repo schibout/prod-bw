@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ControleDelEnsembleDesParametres__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contrôle de l’ensemble des paramètres de fonctionnement</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contrôle de l’ensemble des paramètres de fonctionnement</inlineHelpText>
+    <label>Ctrle de l’ensemble des paramètres</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

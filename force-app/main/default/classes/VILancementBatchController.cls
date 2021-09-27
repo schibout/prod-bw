@@ -67,15 +67,6 @@ public /*with sharing*/ class VILancementBatchController {
     }     
 
 
-    public void callBatchGenereAutorisation(){
-        if(VIutils.isBatchRunning()==null && !Test.isRunningTest()) {        
-            VIBatchGenereAutorisation b = new VIBatchGenereAutorisation(); 
-            database.executebatch(b,VIBatchGenereAutorisation.NBR_LOT);  
-        } else {
-            ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR,Label.VIErreur013 ));            
-        }
-    }     
-
     public void callImportAffaire(){
         if(VIutils.isBatchRunning()==null || Test.isRunningTest()) {        
             VISchedImportAffaire v = new VISchedImportAffaire(AffaireAGenerer, true, false,1);
@@ -90,6 +81,14 @@ public /*with sharing*/ class VILancementBatchController {
         if(VIutils.isBatchRunning()==null || Test.isRunningTest()) {        
             VIBatchEnvoiEcriture b = new VIBatchEnvoiEcriture(EcrituresAEnvoyer, entite_bw); 
             database.executebatch(b,VIBatchEnvoiEcriture.NBR_LOT);  
+            
+            if(EcrituresAEnvoyer=='Reprise de garantie') {
+                Database.executeBatch(new VIBatchGenereAutorisation(true),VIBatchGenereAutorisation.NBR_LOT);
+                Database.executeBatch(new VIBatchGenereAutorisationPointage(true),VIBatchGenereAutorisationPointage.NBR_LOT);
+            }
+            
+            
+            
         } else {
             ApexPages.addmessage(new ApexPages.message(ApexPages.severity.ERROR,Label.VIErreur013 ));            
         }

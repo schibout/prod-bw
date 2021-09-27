@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ligne_d_affaire_mens_exercice_precedent__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Ligne d&apos;affaire mens exercice précédent</label>
+    <referenceTo>VILigne_d_affaire_mensuelle__c</referenceTo>
+    <relationshipLabel>Lignes d&apos;affaire mensuelles (Ligne d&apos;affaire mens exercice précédent)</relationshipLabel>
+    <relationshipName>Lignes_d_affaire_mensuelles1</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_LogoElli__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF( 
+  NOT(ISBLANK(ELLISPHERE__Elli_IdSrc__c)),
+  IMAGE(&apos;/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/Logos/20181205_Logo_Ellisphere_2015_long_officiel_30x180.jpg&apos;,&apos;Ellisphere&apos;,20,120),
+  &apos;Compte non suivi par Ellisphere&apos;
+)</formula>
+    <label>Suivi par</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

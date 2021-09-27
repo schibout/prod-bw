@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DEV_Charg_daffaire__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Permet d&apos;indiquer le nom du chargé d&apos;affaire</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indiquer le nom du chargé d&apos;affaire lorsque vous accepté un Devis</inlineHelpText>
+    <label>Chargé d&apos;affaire</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Devis1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Lookup</type>
+</CustomField>

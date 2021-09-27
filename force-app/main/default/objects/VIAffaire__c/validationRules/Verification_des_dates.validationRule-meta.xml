@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verification_des_dates</fullName>
+    <active>false</active>
+    <errorConditionFormula>and(
+  $Setup.VIParametres__c.Sans_Calcul_de_PRI__c=false,
+
+or(
+ Date_ouverture_affaire__c &gt; Date_de_SAV_previsionnelle__c ,
+
+ Date_ouverture_affaire__c &gt; Date_de_SAV_reelle__c ,
+
+ if(Date_de_fin_de_garantie__c!=null, Date_de_SAV_previsionnelle__c&gt; Date_de_fin_de_garantie__c,false) ,
+
+ if(Date_de_fin_de_garantie__c!=null &amp;&amp; Date_de_SAV_reelle__c!=null ,Date_de_SAV_reelle__c&gt; Date_de_fin_de_garantie__c,false )
+)
+)</errorConditionFormula>
+    <errorMessage>Problème sur les dates. L&apos;ordre des dates d&apos;&apos;ouverture, de sav, de garantie n&apos;est pas respecté</errorMessage>
+</ValidationRule>

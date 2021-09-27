@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_d_imputation_Libelle__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Type_d_imputation__c , 
+    &apos;1&apos;, &apos;Recherche &amp; Développement&apos;, 
+    &apos;2&apos;, &apos;Sinistres&apos;,
+    &apos;3&apos;, &apos;Projets&apos;,
+    &apos;4&apos;, &apos;Clients&apos;,
+    &apos;5&apos;, &apos;Cinq&apos;,
+    &apos;6&apos;, &apos;Six&apos;,
+    &apos;7&apos;, &apos;Investissements&apos;,
+    &apos;8&apos;, &apos;Stocks&apos;,
+    &apos;9&apos;, &apos;Frais Généraux&apos;,
+   &apos;inconnu&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Type d&apos;imputation - Libellé</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

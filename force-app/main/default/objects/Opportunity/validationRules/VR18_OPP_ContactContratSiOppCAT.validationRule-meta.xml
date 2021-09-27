@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR18_OPP_ContactContratSiOppCAT</fullName>
+    <active>true</active>
+    <description>Cette règle oblige la saisie d&apos;un contact de type contrat si l&apos;opportunité est de type contrat, afin de permettre la génération d&apos;un CAT</description>
+    <errorConditionFormula>AND($User.USER_ByPassRegleValidation__c = FALSE,
+OR( 
+ISPICKVAL(OPP_SousDomaine__c ,&quot;16&quot;), 
+ISPICKVAL(OPP_SousDomaine__c ,&quot;18&quot;), 
+ISPICKVAL(OPP_SousDomaine__c ,&quot;19&quot;), 
+ISPICKVAL(OPP_SousDomaine__c ,&quot;20&quot;), 
+ISPICKVAL(OPP_SousDomaine__c ,&quot;21&quot;)), 
+OPP_Contact__c = Null)</errorConditionFormula>
+    <errorMessage>Au niveau de l&apos;opportunité, veuillez sélectionner un Contact</errorMessage>
+</ValidationRule>

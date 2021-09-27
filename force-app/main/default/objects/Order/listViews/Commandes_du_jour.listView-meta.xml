@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commandes_du_jour</fullName>
+    <columns>ORD_BusinessUnit__c</columns>
+    <columns>SALES.ACCOUNT.NAME</columns>
+    <columns>ORD_SousDomaine__c</columns>
+    <columns>ORDERS.ORDER_NUMBER</columns>
+    <columns>ORD_ReferenceCommande__c</columns>
+    <columns>ORDERS.CREATED_DATE</columns>
+    <columns>ORDERS.EFFECTIVE_DATE</columns>
+    <columns>ORD_MontantHT_ERP__c</columns>
+    <columns>ORD_MontantERP__c</columns>
+    <columns>ORDER.SHIPPING_ZIP</columns>
+    <columns>ORDER.SHIPPING_CITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ORDERS.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>Account_Entit_BW__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>BWF_Commandes du jour</label>
+</ListView>

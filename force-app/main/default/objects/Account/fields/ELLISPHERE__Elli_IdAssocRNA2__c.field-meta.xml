@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_IdAssocRNA2__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Numéro d’identification au Répertoire National des Associations. Fourni lors de la déclaration de création en préfecture.Le greffe des associations procède à l&apos;inscription dans le répertoire national des associations (RNA).Cette inscription donne lieu à une première immatriculation sous la forme d&apos;un numéro RNA (appelé parfois par l&apos;administration &quot;numéro de dossier&quot;), composé d&apos;un W suivi de 9 chiffres. Uniquement en France.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Official ID of associations registered in the National Register of Associations (RNA).</inlineHelpText>
+    <label>Numéro  RNA</label>
+    <length>10</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ComposantEquipement</fullName>
+    <active>true</active>
+    <description>Composant d&apos;un équipement installé</description>
+    <label>Composant d&apos;équipement</label>
+    <picklistValues>
+        <picklist>ASS_Combustible__c</picklist>
+        <values>
+            <fullName>Autres</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Autres mixtes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biogaz</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Combustible spécifique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electricité</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FOD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fioul Lourd</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaz Butane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaz Propane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaz liquefié</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gaz naturel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mix fod%2FGaz</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ASS_Debit__c</picklist>
+        <values>
+            <fullName>Débit 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Débit 2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ASS_Disponibilite__c</picklist>
+        <values>
+            <fullName>Dispo 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dispo 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dispo 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ASS_GarantieMateriel__c</picklist>
+        <values>
+            <fullName>Brûleur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Corps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Economiseur</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Total</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ASS_Marque__c</picklist>
+        <values>
+            <fullName>Babcock Wanson</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ASS_ModedExploitation__c</picklist>
+        <values>
+            <fullName>Autres</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Horizontal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mode d%27exploitation Spécifique</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PHP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPHP %2824h%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPHP %282h%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPHP %283J%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPHP %28720h%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPHP %287J%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPHP %288h%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SPHP %28Autocontrôle%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vertical</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ASS_MotifArret__c</picklist>
+        <values>
+            <fullName>Demande client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Installation défectueuse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Installation non conforme</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Organisme de contrôle</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ASS_PrioriteDeMaintenance__c</picklist>
+        <values>
+            <fullName>Priorité 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Priorité 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Priorité 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ASS_Rendement__c</picklist>
+        <values>
+            <fullName>Rendement 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rendement 2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rendement 3</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ASS_TypeEmplacement__c</picklist>
+        <values>
+            <fullName>Buanderie</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bâtiment</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Automate__c</picklist>
+        <values>
+            <fullName>Rockwell</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schneider</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Siemens</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wago</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BMS__c</picklist>
+        <values>
+            <fullName>Autres BMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIREYE %E2%80%93 BP110</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FIREYE %E2%80%93 BP230</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAMTEC - BT300</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAMTEC - CMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAMTEC - Etamatic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LAMTEC - FMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIEMENS  - LGK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIEMENS %E2%80%93 LFL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIEMENS %E2%80%93 LMO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIEMENS %E2%80%93 LOK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIEMENS - LAL</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>En_cours_d_installation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>En_service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>sous_famille_produit__c</picklist>
+        <values>
+            <fullName>Chaudière</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Chauffage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Traitement eau</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

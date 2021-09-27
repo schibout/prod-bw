@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Equipement_cree__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>La case est cochée automatiquement quand un équipment est créé sur le produit commandé</description>
+    <externalId>false</externalId>
+    <label>Equipement créé</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

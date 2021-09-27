@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_CommentsOnActivities__c</fullName>
+    <deprecated>false</deprecated>
+    <description>L&apos;objet social désigne l&apos;ensemble des activités qu&apos;une société entend exercer. L&apos;objet social est défini dans les statuts de la société au moment de la création de celle-ci (peut être modifié ultérieurement par le biais d&apos;une modification des statuts).</description>
+    <externalId>false</externalId>
+    <label>Objet social</label>
+    <length>6000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

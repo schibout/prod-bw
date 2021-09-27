@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pas_de_modif_si_periode_close</fullName>
+    <active>true</active>
+    <errorConditionFormula>and(
+$Setup.VIParametres__c.Sans_Calcul_de_PRI__c=false,
+
+or(
+left(text( Periode_comptable__r.Statut__c ),2) = &apos;30&apos;,
+left(text( Periode_comptable__r.Statut__c ),2) = &apos;90&apos;
+)
+)</errorConditionFormula>
+    <errorMessage>Il n&apos;est pas possible de modifier un avenant sur une période close</errorMessage>
+</ValidationRule>

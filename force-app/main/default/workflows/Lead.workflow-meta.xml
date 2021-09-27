@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>MAJNomSociete</fullName>
+        <field>Company</field>
+        <formula>UPPER(Company)</formula>
+        <name>MAJ Nom Societe</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Mise_A_jour_Proprietaire</fullName>
+        <field>OwnerId</field>
+        <lookupValue>ctetard@babcock-wanson.com</lookupValue>
+        <lookupValueType>User</lookupValueType>
+        <name>Mise A jour Proprietaire</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Proprietaire %2B Mise A jour Entite BW</fullName>
+        <actions>
+            <name>Mise_A_jour_Proprietaire</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND (  $User.USER_ByPassRegleWorkflow__c = False,  NOT(TEXT(LD_EntiteBW__c ) == $Label.BW_ITA) )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF09_LD_MAJNomDuCompte</fullName>
+        <actions>
+            <name>MAJNomSociete</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Lead.Company</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.USER_ByPassRegleWorkflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR02_LD_EmailObligatoireConversion</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+				IsConverted = TRUE,
+	   ISBLANK( Email ),
+				 $User.USER_ByPassRegleValidation__c = FALSE)</errorConditionFormula>
+    <errorDisplayField>Email</errorDisplayField>
+    <errorMessage>Attention, pour convertir votre piste en contact vous devez obligatoirement renseigner une adresse email.</errorMessage>
+</ValidationRule>

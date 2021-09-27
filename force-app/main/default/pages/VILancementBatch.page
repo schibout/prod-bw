@@ -254,27 +254,6 @@ th {
       </table>
 
       
-     <apex:sectionHeader title="Générer les autorisations de dépenses " subtitle="" />
-     <table style="width: 60%;" class="noBorder" >
-           <colgroup>
-               <col span="1" style="width: 25%;" />
-               <col span="1" style="width: 40%;" />
-               <col span="1" style="width: 30%;" />               
-           </colgroup>
-           <tbody>
-               <tr>
-                 <td class="noBorder" style="text-align:right;">
-                 </td>
-                 <td class="noBorder">
-                     <apex:commandButton value="Lancement"  action="{!callBatchGenereAutorisation}" />                     
-                 </td>
-                 <td class="noBorder" style="text-align:left;">
-                     <apex:outputlabel value="Cette fonction lance immédiatement la génération des autorisations de dépenses. Par la suite, le traitement sera lancé automatiquement toutes les heures." />
-                 </td>
-               </tr>
-         </tbody>
-      </table>      
-      
    </apex:form>
 
 </apex:page>

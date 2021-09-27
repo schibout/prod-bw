@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR01_DEV_MotifDeRefusObligatoire</fullName>
+    <active>true</active>
+    <description>Cette règle de validation oblige l&apos;utilisateur à insérer un motif de refus lorsqu&apos;il qualifie un devis de &quot;refusé&quot;.</description>
+    <errorConditionFormula>AND( 
+$User.USER_ByPassRegleValidation__c = FALSE, 
+ISPICKVAL(Status, &apos;4&apos;), 
+OR( 
+ISPICKVAL( DEV_MotifDeRefus__c, &quot;&quot;), 
+ISBLANK(DEV_CommentaireDeRefus__c )))</errorConditionFormula>
+    <errorMessage>Merci de renseigner un motif de refus et un commentaire de refus, lorsque vous qualifiez votre devis de &quot;refusé&quot;.</errorMessage>
+</ValidationRule>

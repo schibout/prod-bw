@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPP_CRMId__c</fullName>
+    <description>Clef d&apos;identification Salesforce unique</description>
+    <displayFormat>OPP-{000000}</displayFormat>
+    <externalId>true</externalId>
+    <label>CRM Id</label>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

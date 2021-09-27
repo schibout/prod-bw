@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>MAJ_Code_Postal_Expedition</fullName>
+        <field>ShippingPostalCode</field>
+        <formula>Account.ShippingPostalCode</formula>
+        <name>MAJ Code Postal Expedition</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Code_Postal_Facturation</fullName>
+        <field>BillingPostalCode</field>
+        <formula>IF (ISBLANK(SC_NomDuCompteDeFacturation__c),  Account.BillingPostalCode, SC_NomDuCompteDeFacturation__r.BillingPostalCode)</formula>
+        <name>MAJ Code Postal Facturation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_DureeAnnee</fullName>
+        <field>Term</field>
+        <formula>CEILING(( EndDate - StartDate ) / 365)</formula>
+        <name>MAJ_DureeAnnee</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Nom_du_Contrat</fullName>
+        <field>Name</field>
+        <formula>UPPER(&quot;CO-&quot;&amp;LEFT(Account.Name, 6)&amp;&quot;-&quot;&amp;SC_NAffaire__r.TrigrammeSSDomaine__c&amp;&quot;-&quot;&amp;ContractNumber)</formula>
+        <name>MAJ_Nom du Contrat</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Pays_Expedition</fullName>
+        <field>ShippingCountry</field>
+        <formula>Account.ShippingCountry</formula>
+        <name>MAJ Pays Expedition</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Pays_Facturation</fullName>
+        <field>BillingCountry</field>
+        <formula>IF (ISBLANK(SC_NomDuCompteDeFacturation__c),  Account.BillingCountry, SC_NomDuCompteDeFacturation__r.BillingCountry)</formula>
+        <name>MAJ Pays Facturation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_RueFacturation</fullName>
+        <field>BillingStreet</field>
+        <formula>IF (ISBLANK(SC_NomDuCompteDeFacturation__c),  Account.BillingStreet, SC_NomDuCompteDeFacturation__r.BillingStreet)</formula>
+        <name>MAJ Rue Facturation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Rue_Expedition</fullName>
+        <field>ShippingStreet</field>
+        <formula>Account.ShippingStreet</formula>
+        <name>MAJ Rue Expedition</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Statut_CAT_vers_Suspendu</fullName>
+        <field>SC_Statut__c</field>
+        <literalValue>Suspendu</literalValue>
+        <name>MAJ Statut CAT vers Suspendu</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Tech_Talend_Export_Devis</fullName>
+        <field>Tech_Talend_Export_Contrat__c</field>
+        <literalValue>1</literalValue>
+        <name>MAJ_Tech_Talend_Export_Devis</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Ville_Expedition</fullName>
+        <field>ShippingCity</field>
+        <formula>Account.ShippingCity</formula>
+        <name>MAJ Ville Expedition</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Ville_Facturation</fullName>
+        <field>BillingCity</field>
+        <formula>IF (ISBLANK(SC_NomDuCompteDeFacturation__c),  Account.BillingCity, SC_NomDuCompteDeFacturation__r.BillingCity)</formula>
+        <name>MAJ Ville Facturation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>WF17_SC_MAJ_AdresseFacturationCompteFacturation</fullName>
+        <actions>
+            <name>MAJ_Code_Postal_Facturation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>MAJ_Pays_Facturation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>MAJ_RueFacturation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>MAJ_Ville_Facturation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Ce workflow permet de mettre à jour l&apos;adresse de facturation automatiquement à la création et à la modification d&apos;un contrat d&apos;assistance technique avec l&apos;adresse du compte de facturation associé.</description>
+        <formula>AND ( $User.USER_ByPassRegleWorkflow__c = False,
+					OR (ISNEW(), ISCHANGED(SC_NomDuCompteDeFacturation__c)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF18_SC_MAJ_AdresseExpeditionCompte</fullName>
+        <actions>
+            <name>MAJ_Code_Postal_Expedition</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>MAJ_Pays_Expedition</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>MAJ_Rue_Expedition</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>MAJ_Ville_Expedition</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Ce workflow permet de mettre à jour l&apos;adresse d&apos;expédition automatiquement à la création et à la modification d&apos;un contrat d&apos;assistance technique avec l&apos;adresse du compte associé.</description>
+        <formula>AND ( $User.USER_ByPassRegleWorkflow__c = False,
+OR (ISNEW(), ISCHANGED( AccountId )))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF19_SC_CalculDeLaDureeEnAnneeDunCAT</fullName>
+        <actions>
+            <name>MAJ_DureeAnnee</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Ce workflow permet de calculer la durée en années entre la date de début et la date de fin d&apos;un contrat d&apos;assistance technique.</description>
+        <formula>AND ( $User.USER_ByPassRegleWorkflow__c = False,
+					OR (AND(ISNEW(), StartDate != Null, EndDate != Null), 
+									OR(ISCHANGED(StartDate), ISCHANGED(EndDate))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF20_SC_MiseAJourNom</fullName>
+        <actions>
+            <name>MAJ_Nom_du_Contrat</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND ( $User.USER_ByPassRegleWorkflow__c = False, OR(ISNEW(), ISCHANGED(Name)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF20_SC_StatutCATMisAJourSuspenduSiDateDeValiditeDepassee</fullName>
+        <actions>
+            <name>MAJ_Statut_CAT_vers_Suspendu</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Ce workflow permet de mettre à jour le statut &quot;Actif&quot; vers &quot;Suspendu&quot; d&apos;un contrat d&apos;assistance technique si la date de fin de ce dernier est dépassée.</description>
+        <formula>(ISPICKVAL( SC_Statut__c,&quot;Actif&quot;) )&amp;&amp; 
+(EndDate  &lt;  TODAY()) &amp;&amp; 
+($User.USER_ByPassRegleWorkflow__c = FALSE)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF_Contrat_Service_MAJ_ChampTechTalendExport</fullName>
+        <actions>
+            <name>MAJ_Tech_Talend_Export_Devis</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND( $User.USER_ByPassRegleWorkflow__c = False,
+$User.LastName != $Label.API , ISPICKVAL(SC_Statut__c, &apos;2&apos;))</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>MAJ_Nom_Table_de_Trancodage</fullName>
+        <description>Le nom du champ Nom de table doit etre Serie_Code</description>
+        <field>Name</field>
+        <formula>IF( Code__c != null, TEXT(Serie__c) &amp;&quot;_&quot;&amp; Code__c, TEXT(Serie__c))</formula>
+        <name>MAJ_Nom_Table_de_Trancodage</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>WF27_TDT_ChampNom</fullName>
+        <actions>
+            <name>MAJ_Nom_Table_de_Trancodage</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>A la création des enregistrements  le champ Nom est automatiquement renseigné</description>
+        <formula>AND( $User.USER_ByPassRegleWorkflow__c = false, IF(  TEXT(Serie__c ) !=null , true, false) )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

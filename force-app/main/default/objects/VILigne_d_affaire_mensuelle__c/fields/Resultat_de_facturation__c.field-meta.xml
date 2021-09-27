@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Resultat_de_facturation__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( PV_Facture__c &gt; Total_CA_a_l_avancement__c ,&apos;Excédent de facturation&apos;,if( PV_Facture__c &lt; Total_CA_a_l_avancement__c ,&apos;Défaut de facturation&apos;,&apos;Egal&apos; )  )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Résultat de facturation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

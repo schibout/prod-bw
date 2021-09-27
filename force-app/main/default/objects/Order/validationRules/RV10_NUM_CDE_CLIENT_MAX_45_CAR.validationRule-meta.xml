@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RV10_NUM_CDE_CLIENT_MAX_45_CAR</fullName>
+    <active>false</active>
+    <errorConditionFormula>LEN( PoNumber ) &gt; 45</errorConditionFormula>
+    <errorDisplayField>PoNumber</errorDisplayField>
+    <errorMessage>Le numéro de commande client ne peut pas dépasser 45 caractères</errorMessage>
+</ValidationRule>

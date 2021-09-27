@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LD_ProvenanceWeb__c</fullName>
+    <description>Ce champ sera alimenté par le formulaire web présent sur le Site Web de Babcock-Wanson.</description>
+    <externalId>false</externalId>
+    <label>Provenance Web</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_StockExchangeListed__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Indique le libellé du marché boursier sur lequel l&apos;entreprise est côtée en bourse. Si l&apos;entreprise n&apos;est pas côtée, indique &quot;Non côtée&quot;.</description>
+    <externalId>false</externalId>
+    <label>Cotation en bourse</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

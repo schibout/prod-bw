@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EVOL_Type_de_composant__c</fullName>
+    <externalId>false</externalId>
+    <label>Type de composant</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Application</fullName>
+                <default>false</default>
+                <label>Application</label>
+            </value>
+            <value>
+                <fullName>Champ Personnalisé</fullName>
+                <default>false</default>
+                <label>Champ Personnalisé</label>
+            </value>
+            <value>
+                <fullName>Classe APEX</fullName>
+                <default>false</default>
+                <label>Classe APEX</label>
+            </value>
+            <value>
+                <fullName>Filtre</fullName>
+                <default>false</default>
+                <label>Filtre</label>
+            </value>
+            <value>
+                <fullName>Flux ou Process Builder</fullName>
+                <default>false</default>
+                <label>Flux ou Process Builder</label>
+            </value>
+            <value>
+                <fullName>Page Visualforce</fullName>
+                <default>false</default>
+                <label>Page Visualforce</label>
+            </value>
+            <value>
+                <fullName>PickList</fullName>
+                <default>false</default>
+                <label>PickList</label>
+            </value>
+            <value>
+                <fullName>Présentation de page</fullName>
+                <default>false</default>
+                <label>Présentation de page</label>
+            </value>
+            <value>
+                <fullName>Règle de duplication</fullName>
+                <default>false</default>
+                <label>Règle de duplication</label>
+            </value>
+            <value>
+                <fullName>Règle de validation</fullName>
+                <default>false</default>
+                <label>Règle de validation</label>
+            </value>
+            <value>
+                <fullName>Setup SF ou FSL</fullName>
+                <default>false</default>
+                <label>Setup SF ou FSL</label>
+            </value>
+            <value>
+                <fullName>Workflow</fullName>
+                <default>false</default>
+                <label>Workflow</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR04_DEV_PasDeNouveauDevisSurOppGagnee</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(Compteur_Devis_Accepte__c &gt;1, 
+$User.USER_ByPassRegleValidation__c = FALSE , 
+IsWon = TRUE)</errorConditionFormula>
+    <errorMessage>Attention, vous ne pouvez pas passer un nouveau devis &apos;Accepté&apos; sur la même opportunité gagnée. Il existe déjà un devis qui a été accepté sur cette opportunité gagnée.</errorMessage>
+</ValidationRule>

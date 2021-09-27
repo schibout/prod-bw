@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SC_NDevis__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>N° devis</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Quote.OpportunityId</field>
+            <operation>equals</operation>
+            <valueField>$Source.SC_NAffaire__c</valueField>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Quote</referenceTo>
+    <relationshipLabel>Contrats d&apos;Assistance Technique</relationshipLabel>
+    <relationshipName>Service_Contracts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

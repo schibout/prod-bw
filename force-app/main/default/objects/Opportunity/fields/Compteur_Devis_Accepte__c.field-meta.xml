@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Compteur_Devis_Accepte__c</fullName>
+    <externalId>false</externalId>
+    <label>Compteur_Devis_Accepte</label>
+    <summaryFilterItems>
+        <field>Quote.Status</field>
+        <operation>equals</operation>
+        <value>Accepté</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Quote.OpportunityId</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

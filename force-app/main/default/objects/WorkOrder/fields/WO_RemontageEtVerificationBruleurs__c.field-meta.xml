@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_RemontageEtVerificationBruleurs__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Remontage et vérification brûleurs</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Remontage et vérification brûleurs</inlineHelpText>
+    <label>Remontage et vérification brûleurs</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

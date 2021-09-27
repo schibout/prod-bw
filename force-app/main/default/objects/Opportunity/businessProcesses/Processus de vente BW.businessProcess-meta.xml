@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Processus de vente BW</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Devis</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Fermée gagnée</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Fermée perdue</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>In Approval</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Qualification</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Request to Technical Dept%2E</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Sans Suite</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

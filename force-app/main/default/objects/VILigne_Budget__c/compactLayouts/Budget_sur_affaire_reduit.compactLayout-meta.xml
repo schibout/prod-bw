@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Budget_sur_affaire_reduit</fullName>
+    <fields>Name</fields>
+    <fields>Centre_Section__c</fields>
+    <fields>Type_de_depense__c</fields>
+    <label>Budget sur affaire réduit</label>
+</CompactLayout>

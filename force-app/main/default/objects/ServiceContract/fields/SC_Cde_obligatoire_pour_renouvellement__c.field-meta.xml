@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SC_Cde_obligatoire_pour_renouvellement__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Si cette case à coche est cochée vous devez renégocier ou obtenir une commande de votre client</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Si cette case à coche est cochée vous devez renégocier ou obtenir une commande de votre client</inlineHelpText>
+    <label>Commande obligatoire pour renouvellement</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_FermetureEauEtFeuRefectionJoints__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Fermeture côté eau et côté feur, réfection des joints et remplissage</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Fermeture côté eau et côté feur, réfection des joints et remplissage</inlineHelpText>
+    <label>Fermeture eau et feu réfection joints</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

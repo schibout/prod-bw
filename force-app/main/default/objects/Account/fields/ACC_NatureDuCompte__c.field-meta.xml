@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACC_NatureDuCompte__c</fullName>
+    <externalId>false</externalId>
+    <label>Nature du compte</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Administration publique</fullName>
+                <default>false</default>
+                <label>Administration publique</label>
+            </value>
+            <value>
+                <fullName>SARL société à responsabilité limitée</fullName>
+                <default>false</default>
+                <label>SARL société à responsabilité limitée</label>
+            </value>
+            <value>
+                <fullName>EURL entreprise unipersonnelle à responsabilité limitée</fullName>
+                <default>false</default>
+                <label>EURL entreprise unipersonnelle à responsabilité limitée</label>
+            </value>
+            <value>
+                <fullName>SELARL société d&apos;exercice libéral à responsabilité limitée</fullName>
+                <default>false</default>
+                <label>SELARL société d&apos;exercice libéral à responsabilité limitée</label>
+            </value>
+            <value>
+                <fullName>SA société anonyme</fullName>
+                <default>false</default>
+                <label>SA société anonyme</label>
+            </value>
+            <value>
+                <fullName>SAS société par actions simplifiée</fullName>
+                <default>false</default>
+                <label>SAS société par actions simplifiée</label>
+            </value>
+            <value>
+                <fullName>SASU société par actions simplifiée unipersonnelle</fullName>
+                <default>false</default>
+                <label>SASU société par actions simplifiée unipersonnelle</label>
+            </value>
+            <value>
+                <fullName>SCP société civile professionnelle</fullName>
+                <default>false</default>
+                <label>SCP société civile professionnelle</label>
+            </value>
+            <value>
+                <fullName>SNC société en nom collectif</fullName>
+                <default>false</default>
+                <label>SNC société en nom collectif</label>
+            </value>
+            <value>
+                <fullName>Particulier</fullName>
+                <default>false</default>
+                <label>Particulier</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

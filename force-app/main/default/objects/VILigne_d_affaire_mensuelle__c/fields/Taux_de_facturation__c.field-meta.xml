@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Taux_de_facturation__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( PV_Total__c &lt; PV_Facture__c ,
+100,
+if(
+PV_Total__c!=0,
+PV_Facture__c / PV_Total__c ,
+0
+) * 100
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Taux de facturation</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

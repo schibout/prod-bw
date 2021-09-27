@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ControleVentilateurEtEtatCourroies__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contrôle du ventilateur et de l’état des courroies</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contrôle du ventilateur et de l’état des courroies</inlineHelpText>
+    <label>Contrôle ventilateur et état courroies</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

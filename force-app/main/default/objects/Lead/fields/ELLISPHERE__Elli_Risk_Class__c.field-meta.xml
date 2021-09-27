@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_Risk_Class__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF( $Organization.Id == &apos;00D1t000000q8Z4&apos;,
+
+
+CASE (ELLISPHERE__Elli_Risk__c,
+&apos;A&apos;,IF( $Label.ellisphere__elli_currentlanguage == &apos;fr&apos;,IMAGE(&apos;/resource/Ellisphere/Ellisphere/risque_faible_nul.png&apos;,&apos;Risque faible à quasi-nul&apos;,16,161),
+IMAGE(&apos;/resource/Ellisphere/Ellisphere/EN/risque_faible_nul_A.png&apos;,&apos;Low to non existant risk&apos;,16,161)),
+&apos;B&apos;,IF( $Label.ellisphere__elli_currentlanguage == &apos;fr&apos;,IMAGE(&apos;/resource/Ellisphere/Ellisphere/risque_moyen_faible.png&apos;,&apos;Risque moyen à faible&apos;,16,161),
+IMAGE(&apos;/resource/Ellisphere/Ellisphere/EN/risque_moyen_faible_A.png&apos;,&apos;Average to low risk&apos;,16,161)),
+&apos;C&apos;,IF( $Label.ellisphere__elli_currentlanguage == &apos;fr&apos;,IMAGE(&apos;/resource/Ellisphere/Ellisphere/risque_moyen_eleve.png&apos;,&apos;risque moyen à élevé&apos;,16,161),
+IMAGE(&apos;/resource/Ellisphere/Ellisphere/EN/risque_moyen_eleve_A.png&apos;,&apos;Average to high risk&apos;,16,161)),
+&apos;D&apos;,IF( $Label.ellisphere__elli_currentlanguage == &apos;fr&apos;,IMAGE(&apos;/resource/Ellisphere/Ellisphere/risque_tres_eleve.png&apos;,&apos;risque très avéré&apos;,16,161),
+IMAGE(&apos;/resource/Ellisphere/Ellisphere/risque_tres_eleve_A.png&apos;,&apos;High risk level&apos;,16,161)),
+&apos;E&apos;,IF( $Label.ellisphere__elli_currentlanguage == &apos;fr&apos;,IMAGE(&apos;/resource/Ellisphere/Ellisphere/risque_avere.png&apos;,&apos;Risque avéré&apos;,16,161),
+IMAGE(&apos;/resource/Ellisphere/Ellisphere/EN/risque_avere_A.png&apos;,&apos;Proven risk&apos;,16,161)),
+&quot;n/a&quot;)
+
+,
+
+CASE (ELLISPHERE__Elli_Risk__c,
+&apos;A&apos;,IF( $Label.ellisphere__elli_currentlanguage == &apos;fr&apos;,IMAGE(&apos;/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_faible_nul.png&apos;,&apos;Risque faible à quasi nul&apos;,16,161),
+IMAGE(&apos;/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/EN/risque_faible_nul_A.png&apos;,&apos;Low to non existant risk&apos;,16,161)),
+&apos;B&apos;,IF( $Label.ellisphere__elli_currentlanguage == &apos;fr&apos;,IMAGE(&apos;/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_moyen_faible.png&apos;,&apos;Risque moyen à faible&apos;,16,161),
+IMAGE(&apos;/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/EN/risque_moyen_faible_A.png&apos;,&apos;Average to low risk&apos;,16,161)),
+&apos;C&apos;,IF( $Label.ellisphere__elli_currentlanguage == &apos;fr&apos;,IMAGE(&apos;/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_moyen_eleve.png&apos;,&apos;risque moyen à élevé&apos;,16,161),
+IMAGE(&apos;/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/EN/risque_moyen_eleve_A.png&apos;,&apos;Average to high risk&apos;,16,161)),
+&apos;D&apos;,IF( $Label.ellisphere__elli_currentlanguage == &apos;fr&apos;,IMAGE(&apos;/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_tres_eleve.png&apos;,&apos;risque très avéré&apos;,16,161),
+IMAGE(&apos;/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_tres_eleve_A.png&apos;,&apos;High risk level&apos;,16,161)),
+&apos;E&apos;,IF( $Label.ellisphere__elli_currentlanguage == &apos;fr&apos;,IMAGE(&apos;/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/risque_avere.png&apos;,&apos;Risque avéré&apos;,16,161),
+IMAGE(&apos;/resource/ELLISPHERE__ImagesEllisphere/Ellisphere_images/EN/risque_avere_A.png&apos;,&apos;Proven risk&apos;,16,161)),
+&quot;n/a&quot;)
+
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Classe de Risque</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

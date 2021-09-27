@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR03_DEV_AccepteUniquementSiSIRET</fullName>
+    <active>true</active>
+    <description>Cette règle permet de forcer l&apos;utilisateur à renseigner le SIRET avant de qualifier le devis de &quot;Accepté&quot; sur un Compte Prospect</description>
+    <errorConditionFormula>AND($User.USER_ByPassRegleValidation__c = FALSE,
+OR(ISPICKVAL(Opportunity.Account.Type, &quot;1&quot;),AND(ISPICKVAL(Opportunity.Account.Type, &quot;2&quot;),TEXT(Opportunity.Account.ACC_Entite_BW__c ) == $Label.BW_ITA)), 
+				ISPICKVAL(Status, &apos;3&apos;))</errorConditionFormula>
+    <errorMessage>Merci de passer le compte au statut Pré-client avant de passer le devis au statut Accepté.</errorMessage>
+</ValidationRule>

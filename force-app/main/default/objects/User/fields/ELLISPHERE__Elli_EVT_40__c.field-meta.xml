@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_EVT_40__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Abonnement aux alertes Ellisphere de type Modification de l&apos;objet social.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Subscription to Ellisphere alerts such as Modification of the corporate purpose.</inlineHelpText>
+    <label>Modification de l&apos;objet social</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

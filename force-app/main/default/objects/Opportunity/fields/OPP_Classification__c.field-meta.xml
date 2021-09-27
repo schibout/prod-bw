@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPP_Classification__c</fullName>
+    <externalId>false</externalId>
+    <label>Classification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ACD Achèvement Commande</fullName>
+                <default>false</default>
+                <label>ACD Achèvement Commande</label>
+            </value>
+            <value>
+                <fullName>AGC Achèvement Commande sous garantie</fullName>
+                <default>false</default>
+                <label>AGC Achèvement Commande sous garantie</label>
+            </value>
+            <value>
+                <fullName>AUD Audit Chaufferie</fullName>
+                <default>false</default>
+                <label>AUD Audit Chaufferie</label>
+            </value>
+            <value>
+                <fullName>CIL Cde interne location</fullName>
+                <default>false</default>
+                <label>CIL Cde interne location</label>
+            </value>
+            <value>
+                <fullName>CIM Cde interne entretien Matériels loc/occ</fullName>
+                <default>false</default>
+                <label>CIM Cde interne entretien Matériels loc/occ</label>
+            </value>
+            <value>
+                <fullName>CLT Location TEMPORAIRE</fullName>
+                <default>false</default>
+                <label>CLT Location TEMPORAIRE</label>
+            </value>
+            <value>
+                <fullName>CON CONTRAT</fullName>
+                <default>false</default>
+                <label>CON CONTRAT</label>
+            </value>
+            <value>
+                <fullName>CRI COMPTE RENDU D&apos;INTERVENTION</fullName>
+                <default>false</default>
+                <label>CRI COMPTE RENDU D&apos;INTERVENTION</label>
+            </value>
+            <value>
+                <fullName>FOR FORMATION</fullName>
+                <default>false</default>
+                <label>FOR FORMATION</label>
+            </value>
+            <value>
+                <fullName>GAR GARANTIE</fullName>
+                <default>false</default>
+                <label>GAR GARANTIE</label>
+            </value>
+            <value>
+                <fullName>GLO OFFRE GLOBALE</fullName>
+                <default>false</default>
+                <label>GLO OFFRE GLOBALE</label>
+            </value>
+            <value>
+                <fullName>INV Investissement avec lancement en fabrica</fullName>
+                <default>false</default>
+                <label>INV Investissement avec lancement en fabrica</label>
+            </value>
+            <value>
+                <fullName>LOC LOCATION</fullName>
+                <default>false</default>
+                <label>LOC LOCATION</label>
+            </value>
+            <value>
+                <fullName>PFI PRODUITS FINIS</fullName>
+                <default>false</default>
+                <label>PFI PRODUITS FINIS</label>
+            </value>
+            <value>
+                <fullName>PRE PIÈCES DE RECHANGE</fullName>
+                <default>false</default>
+                <label>PRE PIÈCES DE RECHANGE</label>
+            </value>
+            <value>
+                <fullName>PRO PRODUITS CONDITIONNEMENT</fullName>
+                <default>false</default>
+                <label>PRO PRODUITS CONDITIONNEMENT</label>
+            </value>
+            <value>
+                <fullName>REG RÉGIE</fullName>
+                <default>false</default>
+                <label>REG RÉGIE</label>
+            </value>
+            <value>
+                <fullName>TFG GROS TRAVAUX</fullName>
+                <default>false</default>
+                <label>TFG GROS TRAVAUX</label>
+            </value>
+            <value>
+                <fullName>TFP TRAVAUX FORFAITAIRES PETIT TRAVAUX</fullName>
+                <default>false</default>
+                <label>TFP TRAVAUX FORFAITAIRES PETIT TRAVAUX</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

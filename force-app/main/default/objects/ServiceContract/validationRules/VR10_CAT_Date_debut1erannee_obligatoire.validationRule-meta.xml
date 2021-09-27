@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR10_CAT_Date_debut1erannee_obligatoire</fullName>
+    <active>true</active>
+    <description>Vous devez renseigner la date de début 1ère année pour le passage 
+au statut &quot;Pour validation ERP&quot;.</description>
+    <errorConditionFormula>AND( 
+    ISPICKVAL(SC_Statut__c ,&quot;2&quot;)
+,$User.USER_ByPassRegleValidation__c = FALSE
+, ISBLANK( TEXT( SC_DebutAnnee1__c ) )
+    )</errorConditionFormula>
+    <errorDisplayField>SC_DebutAnnee1__c</errorDisplayField>
+    <errorMessage>Vous devez renseigner la date de début 1ère année pour le passage 
+au statut &quot;Pour validation ERP&quot;.</errorMessage>
+</ValidationRule>

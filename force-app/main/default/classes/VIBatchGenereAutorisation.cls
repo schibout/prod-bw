@@ -2,6 +2,10 @@
 *
 *  This batch generate the Autorisation lines for open and close affaire
 
+The parameter GenereCas3 indicates if we need to generate the lines for the Cas 3.
+This case is only use once per month
+
+
 Exemple de scenario
  Case 1   Ouverture d’une affaire client (reçue de  Gpic) => Envoi Affaire/00/00 Ouvert
  Case 2   SAV de l’affaire                                => Envoi Affaire/00/00 Fermé
@@ -38,13 +42,11 @@ global class VIBatchGenereAutorisation implements Schedulable,Database.Batchable
     Global String IDLog ='';    
     Global Date DateLimite;
     
- //   private string AffaireAGenerer; 
- //   private boolean Enchaine ;
+    global boolean GenereCas3 ;
     
- //    public VIBatchGenereAutorisation(String Param1,Boolean Param2 ) {
- //       AffaireAGenerer = Param1;        
- //       Enchaine = Param2;                
- //   }
+    public VIBatchGenereAutorisation(Boolean Param1 ) {
+        GenereCas3 = Param1;        
+    }
 
     
     global Database.QueryLocator start(Database.BatchableContext BC){
@@ -137,7 +139,7 @@ global class VIBatchGenereAutorisation implements Schedulable,Database.Batchable
             }
             
             // Case 3
-            if(aff.Date_de_fin_de_garantie__c<=System.today() ||Test.isRunningTest()  ) {
+            if(GenereCas3 && (aff.Date_de_fin_de_garantie__c<=System.today() ||Test.isRunningTest())  ) {
                 string key = aff.id+'/Close/99-98/'+string.valueof(aff.Date_de_fin_de_garantie__c).left(10);                
                 if(!MapAutorisation.containskey(Key)) {
                     VIAutorisation_depense__c autor = new VIAutorisation_depense__c (
@@ -227,13 +229,12 @@ global class VIBatchGenereAutorisation implements Schedulable,Database.Batchable
 
     global void finish(Database.BatchableContext BC){
         IDLog=VIUtils.LogWrite('VIBatchGenereAutorisation','1 Normal',IDLog,'End '+num_record);
-        Database.executeBatch(new VIBatchGenereAutorisationPointage(),VIBatchGenereAutorisationPointage.NBR_LOT);        
+        Database.executeBatch(new VIBatchGenereAutorisationPointage(false),VIBatchGenereAutorisationPointage.NBR_LOT);        
         
     }
 
     global void execute(SchedulableContext scon) {
-        Database.executeBatch(new VIBatchGenereAutorisation(),VIBatchGenereAutorisation.NBR_LOT);
-        
+        Database.executeBatch(new VIBatchGenereAutorisation(false),VIBatchGenereAutorisation.NBR_LOT);
     }
     
     public static final integer NBR_LOT = 200;

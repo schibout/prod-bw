@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR12_WO_VerificationDuStatutDuCATActif</fullName>
+    <active>true</active>
+    <description>Cette règle de validation permet de vérifier le statut &quot;Actif&quot; du Contrat d&apos;Assistance Technique si  renseigné pour une intervention.</description>
+    <errorConditionFormula>AND($User.USER_ByPassRegleValidation__c = FALSE, 
+ISNEW(), 
+NOT(ISBLANK(MaintenancePlanId)),	
+NOT(ISBLANK(ServiceContractId)), 
+NOT(ISPICKVAL(ServiceContract.SC_Statut__c,&quot;3&quot;))
+)</errorConditionFormula>
+    <errorMessage>Afin de générer des interventions, le contrat d&apos;assistance technique doit être au statut &quot;Actif&quot;</errorMessage>
+</ValidationRule>

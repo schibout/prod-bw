@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__TCH_Elli_isFromEllisphereLead__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Champs technique permettant de déterminer si le compte provient d&apos;une conversion d&apos;une piste créée via le connecteur Ellisphere</description>
+    <externalId>false</externalId>
+    <label>Converti depuis Piste Ellisphere</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

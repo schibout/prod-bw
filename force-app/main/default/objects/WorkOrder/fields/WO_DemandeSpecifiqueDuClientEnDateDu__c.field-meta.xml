@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_DemandeSpecifiqueDuClientEnDateDu__c</fullName>
+    <externalId>false</externalId>
+    <formula>Case.Contact.FirstName 
+&amp;&quot; &quot;&amp;
+Case.Contact.LastName 
+&amp;&quot;,&quot;&amp;&quot; &quot;&amp;
+TEXT(Case.Origin)
+&amp;&quot;,&quot;&amp;&quot; &quot;&amp;
+LEFT(TEXT(Case.CreatedDate), 10)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Date requête client</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

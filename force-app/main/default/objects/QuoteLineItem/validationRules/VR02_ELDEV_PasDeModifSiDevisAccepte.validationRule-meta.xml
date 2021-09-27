@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR02_ELDEV_PasDeModifSiDevisAccepte</fullName>
+    <active>true</active>
+    <description>Cette règle de validation permet de bloquer l&apos;ajout ou la modification d&apos;une ligne de devis lorsque celui-ci est au statut &quot;Envoyé&quot;</description>
+    <errorConditionFormula>AND(
+					LastModifiedBy.USER_ByPassRegleValidation__c = FALSE,
+					 ISPICKVAL(Quote.Status,&quot;Presented&quot;),
+						 ISCHANGED(LastModifiedDate),
+				NOT(ISCHANGED( ELD_Tech_Commande__c )))</errorConditionFormula>
+    <errorMessage>Votre devis a été présenté au client, vous n’êtes plus autorisé à ajouter des lignes de devis. Si vous souhaitez modifier son contenu, merci de créer un nouveau devis sur l&apos;opportunité pour générer une nouvelle itération.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR03_OPP_FermeePerdueFaceConcurrent</fullName>
+    <active>true</active>
+    <description>Oblige l&apos;utilisateur à renseigner le nom du concurrent lorsque le motif de la perte est &quot;Perdu face à la concurrence&quot;</description>
+    <errorConditionFormula>AND( 
+ISPICKVAL(OPP_MotifDeLaPerte__c,&quot;Perdu face à la concurrence&quot;), 
+ISPICKVAL(StageName, &quot;Fermée/Perdue&quot;),
+ISBLANK(OPP_NomDuConcurrent__c),
+$User.USER_ByPassRegleValidation__c = FALSE)</errorConditionFormula>
+    <errorMessage>Vous avez indiqué que l&apos;opportunité a été perdu face à la concurrence, merci de renseigner le nom du concurrent. Si vous ne le connaissez pas vous pouvez indiquer &quot;N/A&quot;</errorMessage>
+</ValidationRule>

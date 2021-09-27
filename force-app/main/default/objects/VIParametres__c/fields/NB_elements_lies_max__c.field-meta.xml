@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NB_elements_lies_max__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>L&apos;application a été testé avec 35000 éléments liés à une affaire. Ici, on met le nombre max (par exemple 20.000) car il n&apos;est pas normal d&apos;aller au delà</inlineHelpText>
+    <label>NB elements liés max</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

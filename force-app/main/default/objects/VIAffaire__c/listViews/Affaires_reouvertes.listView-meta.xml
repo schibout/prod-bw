@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Affaires_reouvertes</fullName>
+    <columns>NAME</columns>
+    <columns>Compte__c</columns>
+    <columns>Nom_affaire__c</columns>
+    <columns>Date_ouverture_affaire__c</columns>
+    <columns>Date_de_SAV_previsionnelle__c</columns>
+    <columns>Date_de_SAV_reelle__c</columns>
+    <columns>Date_de_fin_de_garantie__c</columns>
+    <columns>Produit_SousDomaine__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Affaire_reouverte__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Affaires ré-ouvertes</label>
+</ListView>

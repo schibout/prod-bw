@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR06_ACC_SIRET_OBLIG_NEW_V1</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+          $User.USER_ByPassRegleValidation__c = FALSE
+        , NOT(ISPICKVAL(ACC_Region__c, &quot;6&quot;))
+        , NOT(ISPICKVAL( Industry, &quot;S17&quot;))
+        , NOT(ISPICKVAL( Industry, &quot;S18&quot;))
+        , NOT(TEXT(ACC_Entite_BW__c ) == $Label.BW_ITA)
+        ,OR( AND(  ISPICKVAL(Type,&quot;2&quot;)
+                          , ISBLANK( ACC_Siret__c)
+                          , ISPICKVAL (ShippingCountryCode,&quot;FR&quot;)
+                         )
+               )
+          )</errorConditionFormula>
+    <errorMessage>VR06 Attention, Concernant la France, vous devez obligatoirement renseigner le SIREN pour un &quot;Lead/Prospect&quot; et renseigner le SIREN/SIRET lorsque le Compte passe au statut &quot;Pré-client&quot;</errorMessage>
+</ValidationRule>

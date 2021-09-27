@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR08_DEV_CA_OBLIG_SI_DEVIS_ACCEPTE</fullName>
+    <active>true</active>
+    <description>Cette règle de validation oblige l&apos;utilisateur à insérer un Chargé d&apos;affaire lorsqu&apos;il qualifie un devis  &quot;Accepté&quot;.</description>
+    <errorConditionFormula>AND( 
+$User.USER_ByPassRegleValidation__c = FALSE, 
+$User.LastName != $Label.API,
+ISPICKVAL(Status, &apos;3&apos;), 
+ISBLANK( DEV_Charg_daffaire__c))</errorConditionFormula>
+    <errorDisplayField>DEV_Charg_daffaire__c</errorDisplayField>
+    <errorMessage>VR08 : Merci de renseigner un Chargé d&apos;affaire, lorsque vous qualifiez votre devis &quot;Accepté&quot;.</errorMessage>
+</ValidationRule>

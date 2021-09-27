@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_UltimateParent__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Lien vers le compte situé au rang 1 (le plus haut niveau) de la hiérarchie des comptes dans SF.  Le compte ultimate de la hiérarchie des comptes peut être différente de celle indiquée dans le bloc Actionnaire car elle dépend de la présence ou non de cette entreprise en tant que &quot;compte&quot; dans le CRM Salesforce.</description>
+    <externalId>false</externalId>
+    <formula>IF( LEN(Parent.Name)&lt;1 ,HYPERLINK(&quot;/&quot;&amp;Id, Name,&quot;_parent&quot;), IF( LEN( Parent.Parent.Name )&lt;1 ,HYPERLINK(&quot;/&quot;&amp;Parent.Id,Parent.Name,&quot;_parent&quot;), IF( LEN( Parent.Parent.Parent.Name )&lt;1 ,HYPERLINK(&quot;/&quot;&amp;Parent.Parent.Id,Parent.Parent.Name,&quot;_parent&quot;), IF( LEN( Parent.Parent.Parent.Parent.Name )&lt;1 ,HYPERLINK(&quot;/&quot;&amp;Parent.Parent.Parent.Id,Parent.Parent.Parent.Name,&quot;_parent&quot;), IF( LEN( Parent.Parent.Parent.Parent.Parent.Name )&lt;1 ,HYPERLINK(&quot;/&quot;&amp;Parent.Parent.Parent.Parent.Id,Parent.Parent.Parent.Parent.Name,&quot;_parent&quot;), IF( LEN( Parent.Parent.Parent.Parent.Parent.Parent.Name )&lt;1 ,HYPERLINK(&quot;/&quot;&amp;Parent.Parent.Parent.Parent.Parent.Id,Parent.Parent.Parent.Parent.Parent.Name,&quot;_parent&quot;), IF( LEN( Parent.Parent.Parent.Parent.Parent.Parent.Parent.Name )&lt;1 ,HYPERLINK(&quot;/&quot;&amp;Parent.Parent.Parent.Parent.Parent.Parent.Id,Parent.Parent.Parent.Parent.Parent.Parent.Name,&quot;_parent&quot;), IF( LEN( Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Name )&lt;1 ,HYPERLINK(&quot;/&quot;&amp;Parent.Parent.Parent.Parent.Parent.Parent.Parent.Id,Parent.Parent.Parent.Parent.Parent.Parent.Parent.Name,&quot;_parent&quot;), IF( LEN( Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Name )&lt;1 ,HYPERLINK(&quot;/&quot;&amp;Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Id,Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Name,&quot;_parent&quot;), IF( LEN( Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Name )&lt;1 ,HYPERLINK(&quot;/&quot;&amp;Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Id,Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Parent.Name,&quot;_parent&quot;), &quot;Ultimate Parent Beyond 10 Levels&quot;))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Link to the top account of the account hierarchy in SF. The ultimate account of the account hierarchy may be different from the one in the Shareholder block because it depends on whether or not this company is present as an &quot;account&quot; in the CRM.</inlineHelpText>
+    <label>Compte ultimate</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

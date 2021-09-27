@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recemment_modifiees</fullName>
+    <columns>NAME</columns>
+    <columns>Compte__c</columns>
+    <columns>Nom_affaire__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Mine</filterScope>
+    <label>Récemment modifiées</label>
+</ListView>

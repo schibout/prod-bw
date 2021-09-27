@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ControleNiveauxPressionEtTemperature__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contrôle des niveaux, de pression et de température</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contrôle des niveaux, de pression et de température</inlineHelpText>
+    <label>Contrôle niveaux,press et température</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

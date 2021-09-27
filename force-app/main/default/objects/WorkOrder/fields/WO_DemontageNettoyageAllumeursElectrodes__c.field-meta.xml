@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_DemontageNettoyageAllumeursElectrodes__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Démontage et nettoyage des allumeurs et électrodes d&apos;allumage</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Démontage et nettoyage des allumeurs et électrodes d&apos;allumage</inlineHelpText>
+    <label>Démontage nettoyage allumeurs,électrodes</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_EssaiEnTestReelDeLaChaudiere__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Essai en test réel, avec arrêt de la chaudière, des sondes de détection de niveau, de conductivité détection de flamme et du pressostat de sécurité</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Essai en test réel, avec arrêt de la chaudière, des sondes de détection de niveau, de conductivité détection de flamme et du pressostat de sécurité</inlineHelpText>
+    <label>Essai en test réel de la chaudière</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

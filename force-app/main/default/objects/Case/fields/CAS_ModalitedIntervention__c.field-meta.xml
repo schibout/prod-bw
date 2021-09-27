@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CAS_ModalitedIntervention__c</fullName>
+    <description>Permet d&apos;indiquer si l&apos;actif est couvert par une garantie ou un contrat.</description>
+    <externalId>false</externalId>
+    <label>Modalité d&apos;intervention</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Equipement sous-garantie</fullName>
+                <default>false</default>
+                <label>Equipement sous-garantie</label>
+            </value>
+            <value>
+                <fullName>Equipement hors-garantie</fullName>
+                <default>false</default>
+                <label>Equipement hors-garantie</label>
+            </value>
+            <value>
+                <fullName>Equipement sous-contrat</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Equipement sous-contrat</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ControleDesSecuritesDeSurchauffe__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contrôle des sécurités de surchauffe</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contrôle des sécurités de surchauffe</inlineHelpText>
+    <label>Contrôle des sécurités de surchauffe</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

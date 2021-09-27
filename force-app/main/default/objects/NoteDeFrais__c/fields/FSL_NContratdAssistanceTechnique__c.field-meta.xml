@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL_NContratdAssistanceTechnique__c</fullName>
+    <description>Renseigne automatiquement le numéro de contrat d&apos;assistance technique associé à l&apos;intervention</description>
+    <externalId>false</externalId>
+    <formula>NDF_Intervention__r.ServiceContractId</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Renseigne automatiquement le numéro de contrat d&apos;assistance technique associé à l&apos;intervention</inlineHelpText>
+    <label>N° Contrat d&apos;assistance technique</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

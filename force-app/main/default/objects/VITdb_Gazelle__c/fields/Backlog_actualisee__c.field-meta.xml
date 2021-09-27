@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Backlog_actualisee__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( Affaire__r.Date_de_SAV_reelle__c &lt;= Periode_comptable__r.Date_de_fin__c ,
+    0,
+    Affaire__r.Backlog_Annee_1__c +  PV_Devis__c -  CA_avancement_annee__c
+  )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Backlog actualisé</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

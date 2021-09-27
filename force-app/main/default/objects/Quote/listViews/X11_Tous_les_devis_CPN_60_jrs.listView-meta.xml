@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X11_Tous_les_devis_CPN_60_jrs</fullName>
+    <columns>QUOTE.NAME</columns>
+    <columns>DEV_NumVersionGPIC__c</columns>
+    <columns>DEV_TypeDeDevis__c</columns>
+    <columns>QUOTE.DESCRIPTION</columns>
+    <columns>QUOTE.EXPIRATIONDATE</columns>
+    <columns>QUOTE.TOTALPRICE</columns>
+    <columns>DEV_Montant__c</columns>
+    <columns>Owner</columns>
+    <columns>DEV_DateDeCreation__c</columns>
+    <columns>DEV_DateDeRelance__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>11 - Tous les devis CPN</label>
+</ListView>

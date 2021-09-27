@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agence_Regionale_Est_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Agence Régionale Est</label>
+    <queue>Agence_Regionale_Est</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

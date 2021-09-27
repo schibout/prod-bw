@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TSE_HeuresDeTrajetMatin__c</fullName>
+    <description>Ne pas supprimer ce champ technique permettant la remontée des temps depuis l&apos;app mobile FSL.</description>
+    <externalId>false</externalId>
+    <label>Heure(s) de trajet matin</label>
+    <precision>5</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

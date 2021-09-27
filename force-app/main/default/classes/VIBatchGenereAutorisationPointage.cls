@@ -1,6 +1,9 @@
 /*
 *  This batch generate the Autorisation pointage lines for open and close affaire
 
+The parameter GenereCas3 indicates if we need to generate the lines for the Cas 3.
+This case is only use once per month
+
 Exemple de scenario
  Case 1   Ouverture d’une affaire client (reçue de  Gpic) => Envoi Affaire/00/00 Ouvert
  Case 2   SAV de l’affaire                                => Envoi Affaire/00/00 Fermé
@@ -21,11 +24,11 @@ Exemple de scenario
 *
 *
 *  for running by hand : 
- VIBatchGenereAutorisationPointage v = new VIBatchGenereAutorisationPointage();
+ VIBatchGenereAutorisationPointage v = new VIBatchGenereAutorisationPointage(false);
  v.execute(null);
 *
 *  for running every hour at xx:16
-     VIBatchGenereAutorisationPointage m = new VIBatchGenereAutorisationPointage();
+     VIBatchGenereAutorisationPointage m = new VIBatchGenereAutorisationPointage(false);
      String sch = '0 16 * * * ?';
      String jobID = system.schedule('VIBatchGenereAutorisationPointage', sch, m);
 *
@@ -36,6 +39,12 @@ global class VIBatchGenereAutorisationPointage implements Schedulable,Database.B
     Global double num_record = 0;
     Global String IDLog ='';    
     Global Date DateLimite;
+
+    private boolean GenereCas3 ;
+    
+    public VIBatchGenereAutorisationPointage(Boolean Param1 ) {
+        GenereCas3 = Param1;        
+    }
 
     
     global Database.QueryLocator start(Database.BatchableContext BC){
@@ -129,7 +138,7 @@ global class VIBatchGenereAutorisationPointage implements Schedulable,Database.B
             }
             
             // Case 3
-            if(aff.Date_de_fin_de_garantie__c<=System.today() ||Test.isRunningTest()  ) {
+            if(GenereCas3 && (aff.Date_de_fin_de_garantie__c<=System.today() ||Test.isRunningTest())  ) {
                 string key = aff.id+'/Close/99-98/'+string.valueof(aff.Date_de_fin_de_garantie__c).left(10);                
                 if(!MapAutorisation.containskey(Key)) {
                     VIAutorisation_pointage__c autor = new VIAutorisation_pointage__c (
@@ -223,7 +232,7 @@ global class VIBatchGenereAutorisationPointage implements Schedulable,Database.B
     }
 
     global void execute(SchedulableContext scon) {
-        Database.executeBatch(new VIBatchGenereAutorisationPointage(),VIBatchGenereAutorisationPointage.NBR_LOT);
+        Database.executeBatch(new VIBatchGenereAutorisationPointage(false),VIBatchGenereAutorisationPointage.NBR_LOT);
     }
     
     public static final integer NBR_LOT = 200;

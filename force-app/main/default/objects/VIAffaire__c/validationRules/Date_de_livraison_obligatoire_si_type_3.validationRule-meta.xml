@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_de_livraison_obligatoire_si_type_3</fullName>
+    <active>false</active>
+    <errorConditionFormula>and(  
+    $Setup.VIParametres__c.Sans_Calcul_de_PRI__c=false,
+text(Produit_SousDomaine__r.Mode_de_calcul_de_l_avancement__c)=&apos;3&apos;,
+    isblank(Date_de_livraison__c)
+    )</errorConditionFormula>
+    <errorMessage>La date de livraison est obligatoire si le type d&apos;affaire est 3</errorMessage>
+</ValidationRule>

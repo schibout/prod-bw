@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fin_d_autorisation_d_astreinte__c</fullName>
+    <description>il s&apos;agit de la fin de l&apos;autorisation temporaire accordé aux utilisateurs durant leurs périodes d&apos;astreinte.</description>
+    <externalId>false</externalId>
+    <label>Fin d&apos;autorisation d&apos;astreinte</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

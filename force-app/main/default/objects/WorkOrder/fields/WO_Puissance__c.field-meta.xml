@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_Puissance__c</fullName>
+    <description>Puissance / débit de l&apos;équipement.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Puissance / débit de l&apos;équipement.</inlineHelpText>
+    <label>Puissance</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

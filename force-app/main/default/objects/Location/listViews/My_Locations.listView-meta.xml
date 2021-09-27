@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Locations</fullName>
+    <columns>Name</columns>
+    <columns>LocationType</columns>
+    <columns>VisitorAddress</columns>
+    <filterScope>Mine</filterScope>
+    <label>Mes stocks associés</label>
+</ListView>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tech_Amount_OPP_status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL( StageName , &apos;fermée perdue&apos;),Amount,
+IF(ISPICKVAL( StageName , &apos;Sans Suite&apos;),  Amount , Forecast_amount__c))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tech_Amount OPP status</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

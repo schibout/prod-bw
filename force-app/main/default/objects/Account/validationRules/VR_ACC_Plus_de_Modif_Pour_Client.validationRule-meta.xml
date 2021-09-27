@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_ACC_Plus_de_Modif_Pour_Client</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+$User.USER_ByPassRegleValidation__c = FALSE,
+$User.LastName != $Label.API,
+RecordType.Name = &apos;Compte Actif&apos;,
+OR(ISCHANGED(Name),ISCHANGED( BillingAddress ),ISCHANGED( ShippingAddress), ISCHANGED(ACC_CRMId__c),ISCHANGED(ACC_Type_Client_SDI__c),ISCHANGED(ACC_Code_SDI__c),ISCHANGED(ACC_Langue_Documentation__c),ISCHANGED(ACC_Courrier_electronique_certifie__c),ISCHANGED(ACC_CodeBlocage__c),ISCHANGED(ACC_ERPIdITA__c),ISCHANGED(ACC_EtatDuCompte__c), ISCHANGED(ACC_SecteurCommercial__c), ISCHANGED(Phone), ISCHANGED(ACC_Siret__c), ISCHANGED(ACC_SIREN__c), ISCHANGED(Type), ISCHANGED(ACC_NTVAIntracommunautaire__c), ISCHANGED(ACC_Entite_BW__c), ISCHANGED(ACC_Region__c), ISCHANGED(ACC_DelaisDePaiement__c),
+ISCHANGED(ACC_ModeDePaiement__c), ISCHANGED(ACC_Encours__c), ISCHANGED(ACC_Creances__c), ISCHANGED(ACC_CreancesEchues__c),
+ISCHANGED(ACC_ERPIdFRA__c), ISCHANGED(ACC_ERPIdESP__c), ISCHANGED(ACC_ERPIdGBR__c), ISCHANGED(ACC_ERPIdPOL__c), ISCHANGED(ACC_ERPIdNLD__c), ISCHANGED( ACC_ERPIdPRT__c),
+ISCHANGED( BillingStateCode ),
+ISCHANGED( ACC_ERPIdUSA__c),
+ISCHANGED( ShippingCountry ), ISCHANGED( ShippingStreet), ISCHANGED( ShippingCity ), ISCHANGED( ShippingPostalCode),
+ISCHANGED( BillingCity ), ISCHANGED( BillingCountry ), ISCHANGED( BillingStreet ), ISCHANGED( BillingPostalCode)),
+AND(NOT(ISNEW())))</errorConditionFormula>
+    <errorMessage>Vous ne pouvez pas modifier les informations propres au Client issues de GPIC</errorMessage>
+</ValidationRule>

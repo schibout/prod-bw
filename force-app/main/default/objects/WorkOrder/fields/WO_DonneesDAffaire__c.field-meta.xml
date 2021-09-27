@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_DonneesDAffaire__c</fullName>
+    <description>Ce champ affiche automatiquement la Donnée d&apos;Affaire du CAT si un CAT est renseigné, ou affichera à contrario la Donnée d&apos;Affaire de la Commande.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+				NOT(ISBLANK(ServiceContractId)),ServiceContract.SC_DonneesDAffaire__c,FSL_WO_Commande__r.ORD_DonneesDAffaire__c
+				)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Ce champ affiche automatiquement la Donnée d&apos;Affaire du CAT si un CAT est renseigné, ou affichera à contrario la Donnée d&apos;Affaire de la Commande.</inlineHelpText>
+    <label>Données d&apos;affaire</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

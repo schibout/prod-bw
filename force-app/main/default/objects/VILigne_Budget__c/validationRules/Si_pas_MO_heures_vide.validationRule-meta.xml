@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Si_pas_MO_heures_vide</fullName>
+    <active>true</active>
+    <errorConditionFormula>and(
+$Setup.VIParametres__c.Sans_Calcul_de_PRI__c=false,
+left(Type_de_depense__r.Name,3)!=&apos;MO &apos;,
+!isblank(Heures__c )
+)</errorConditionFormula>
+    <errorMessage>Si le type de dépense n&apos;est pas &apos;MO &apos;, les heures doivent être vides</errorMessage>
+</ValidationRule>

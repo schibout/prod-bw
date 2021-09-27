@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_CreancesEchues__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( NOT(ISBLANK(FSL_WO_Commande__c)), FSL_WO_Commande__r.ORD_CompteFacture__r.ACC_CreancesEchues__c,  ServiceContract.SC_NomDuCompteDeFacturation__r.ACC_CreancesEchues__c )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Créances échues de la commande ou du CAT lié(e) à l&apos;intervention.</inlineHelpText>
+    <label>Créances échues</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

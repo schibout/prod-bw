@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>MAJClientSousContrat</fullName>
+        <field>WO_ClientSousCAT__c</field>
+        <literalValue>1</literalValue>
+        <name>MAJClientSousContrat</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Description_Intervention</fullName>
+        <description>Mise à jour du descriptif de l&apos;intervention depuis la description de la requête.</description>
+        <field>Description</field>
+        <formula>Case.Description</formula>
+        <name>MAJ Description Intervention</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Objet_Intervention</fullName>
+        <description>Mise à jour de l&apos;objet de l&apos;intervention depuis l&apos;objet de la requête</description>
+        <field>Subject</field>
+        <formula>Case.Subject</formula>
+        <name>MAJ Objet Intervention</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MajDonneeDaffaire</fullName>
+        <field>WO_Donnees_d_affaire__c</field>
+        <formula>IF(
+NOT(ISBLANK(ServiceContractId)),ServiceContract.SC_DonneesDAffaire__c,FSL_WO_Commande__r.ORD_DonneesDAffaire__c
+)</formula>
+        <name>MajDonneeDaffaire</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>WF23_WO_RecopieElementsSurInterventionDepuisRequete</fullName>
+        <actions>
+            <name>MAJ_Description_Intervention</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>MAJ_Objet_Intervention</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Ce workflow permet de recopier sur l&apos;intervention des éléments déjà saisis dans la requête associée : Objet, Description.</description>
+        <formula>AND ($User.USER_ByPassRegleWorkflow__c = False,
+					OR(ISNEW(),
+								ISCHANGED (Subject),
+								ISCHANGED (Description)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF26_WO_ClientSousContrat</fullName>
+        <actions>
+            <name>MAJClientSousContrat</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.USER_ByPassRegleWorkflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>WorkOrder.ServiceContractId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Ce workflow permet de cocher la case &quot;Client sous contrat&quot; si le champ &quot;CAT&quot; est renseigné.</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF27_WO_MajDonneeDaffaire</fullName>
+        <actions>
+            <name>MajDonneeDaffaire</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Mettre à jour le donnée d&apos;affaire à la création du contrat.</description>
+        <formula>AND($User.USER_ByPassRegleWorkflow__c =false,  OR(AND(ServiceContractId!=null, ServiceContract.SC_DonneesDAffaire__c !=null ),AND(  FSL_WO_Commande__c !=null,FSL_WO_Commande__r.ORD_DonneesDAffaire__c!=null )))</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

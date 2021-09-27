@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DEbours_a_zero_impossible_de_valider</fullName>
+    <active>false</active>
+    <errorConditionFormula>and(
+    or(
+        Debours__c =0, 
+        Debours__c =null
+      ),
+    left(text( Statut_avenant__c ) ,2)!=&apos;10&apos;
+   )</errorConditionFormula>
+    <errorMessage>Il n&apos;est pas possible de valider à un avenant dont la somme est zéro</errorMessage>
+</ValidationRule>

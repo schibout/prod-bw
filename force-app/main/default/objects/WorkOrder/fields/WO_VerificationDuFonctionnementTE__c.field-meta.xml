@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_VerificationDuFonctionnementTE__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Vérification du fonctionnement de l’installation TE</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Vérification du fonctionnement de l’installation TE</inlineHelpText>
+    <label>Vérification du fonctionnement TE</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

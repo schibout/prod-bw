@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR01_MP_CaseSameDateAsSCDoitEtreCochee</fullName>
+    <active>true</active>
+    <description>Cette règle de validation permet de vérifier que la case standard FSL &quot;Same Date As Service Contract &quot; est bien cochée. Ce champ de type formule, se coche automatiquement lorsque les dates du Plan de maintenance correspondent aux dates du Contrat.</description>
+    <errorConditionFormula>AND( $User.USER_ByPassRegleValidation__c = False, 
+NOT(FSL_Same_Date_As_Service_Contract__c))</errorConditionFormula>
+    <errorMessage>Vous devez saisir des dates correspondantes aux dates du contrat d&apos;assistance technique.</errorMessage>
+</ValidationRule>

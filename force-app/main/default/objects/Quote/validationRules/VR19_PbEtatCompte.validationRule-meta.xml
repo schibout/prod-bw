@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR19_PbEtatCompte</fullName>
+    <active>true</active>
+    <description>VR pour la vérification de l&apos;etat du compte</description>
+    <errorConditionFormula>AND(
+ $User.USER_ByPassRegleValidation__c = FALSE
+,$User.LastName != $Label.API
+,TEXT( $User.USER_EntiteBW__c ) == $Label.BW_ITA
+,ISPICKVAL(Status, &apos;3&apos;)
+,NOT(ISBLANK(TEXT(Opportunity.Account.ACC_EtatDuCompte__c)))
+)</errorConditionFormula>
+    <errorMessage>Le statut du compte ne permet pas de valider le DEVIS (VR19)</errorMessage>
+</ValidationRule>

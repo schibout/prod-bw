@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actif_Babcock</fullName>
+    <fields>Name</fields>
+    <fields>InstallDate</fields>
+    <fields>RecordTypeId</fields>
+    <fields>Product2Id</fields>
+    <fields>ProductCode</fields>
+    <fields>Quantity</fields>
+    <label>Actif Babcock</label>
+</CompactLayout>

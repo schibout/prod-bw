@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR06_DEV_PasDeModifStatutDevisGPIC</fullName>
+    <active>false</active>
+    <description>Cette règle permet de bloquer la modification du statut d&apos;un devis qualifié comme &quot;Devis GPIC&quot;</description>
+    <errorConditionFormula>AND(
+$User.USER_ByPassRegleValidation__c = FALSE,
+$User.LastName != $Label.API,
+ISPICKVAL( DEV_TypeDeDevis__c,&quot;2&quot;),
+ISCHANGED( Status ))</errorConditionFormula>
+    <errorMessage>Attention, vous n&apos;etes pas autorisé à modifier le statut d&apos;un devis ERP. Cette modification de statut se fera par interface.</errorMessage>
+</ValidationRule>

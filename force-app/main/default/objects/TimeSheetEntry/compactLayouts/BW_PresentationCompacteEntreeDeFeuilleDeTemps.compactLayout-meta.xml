@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BW_PresentationCompacteEntreeDeFeuilleDeTemps</fullName>
+    <fields>TimeSheetEntryNumber</fields>
+    <fields>TimeSheetId</fields>
+    <fields>TSE_NatureDuTemps__c</fields>
+    <fields>WorkOrderId</fields>
+    <fields>StartTime</fields>
+    <fields>EndTime</fields>
+    <fields>DurationInMinutes</fields>
+    <label>BW Présentation compacte Entrée de feuille de temps</label>
+</CompactLayout>

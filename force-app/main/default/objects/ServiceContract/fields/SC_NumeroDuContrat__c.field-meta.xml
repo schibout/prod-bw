@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SC_NumeroDuContrat__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Clef d&apos;identification Salesforce unique - Champ de type Numéro automatique au format &quot; CAT-{0000000} &quot; , modifié temporairement en champ de type Texte dans la cadre de la reprise de données. Ce champ devra être rétabli en type Numéro automatique lorsque la reprise de données sera terminée.</description>
+    <externalId>true</externalId>
+    <label>Numéro du contrat (ERP)</label>
+    <length>30</length>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

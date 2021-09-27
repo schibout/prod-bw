@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tech_OppProjet__c</fullName>
+    <externalId>false</externalId>
+    <formula>RecordType.Id = &quot;0120O0000003autQAA&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tech_OppProjet</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

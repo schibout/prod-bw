@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPP_Tech_Nature__c</fullName>
+    <description>Champ mis à jour selon le domaine et sous domaine réalisé, afin de permettre l’interfaçage avec l&apos;ERP .</description>
+    <externalId>false</externalId>
+    <label>OPP_Tech_Nature</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>PFI PRODUITS FINIS</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <label>CON CONTRAT</label>
+            </value>
+            <value>
+                <fullName>3</fullName>
+                <default>false</default>
+                <label>CRI COMPTE RENDU D&apos;INTERVENTION</label>
+            </value>
+            <value>
+                <fullName>4</fullName>
+                <default>false</default>
+                <label>PRE PIECES DE RECHANGE</label>
+            </value>
+            <value>
+                <fullName>5</fullName>
+                <default>false</default>
+                <label>PRO PRODUITS CONDITIONNEMENT</label>
+            </value>
+            <value>
+                <fullName>6</fullName>
+                <default>false</default>
+                <label>TFP TRAVAUX FORFAITAIRES PETIT TRAVAUX</label>
+            </value>
+            <value>
+                <fullName>7</fullName>
+                <default>false</default>
+                <label>REG REGIE</label>
+            </value>
+            <value>
+                <fullName>8</fullName>
+                <default>false</default>
+                <label>TFG GROS TRAVAUX</label>
+            </value>
+            <value>
+                <fullName>9</fullName>
+                <default>false</default>
+                <label>AUD Audit Chaufferie</label>
+            </value>
+            <value>
+                <fullName>10</fullName>
+                <default>false</default>
+                <label>FOR FORMATION</label>
+            </value>
+            <value>
+                <fullName>11</fullName>
+                <default>false</default>
+                <label>LOC LOCATION</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mode_de_calcul_de_l_avancement__c</fullName>
+    <externalId>false</externalId>
+    <formula>Case(text( Produit_SousDomaine__r.Mode_de_calcul_de_l_avancement__c ),
+   &apos;1&apos;, &apos;1- Avancement par les coûts&apos;, 
+   &apos;2&apos;, &apos;2- En fonction de la facturation client&apos;, 
+   &apos;3&apos;, &apos;3- Au prorata temporis&apos;,
+   &apos;9&apos;, &apos;9-Pas de calcul à l avancement&apos;,
+   &apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Mode de calcul de l&apos;avancement</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

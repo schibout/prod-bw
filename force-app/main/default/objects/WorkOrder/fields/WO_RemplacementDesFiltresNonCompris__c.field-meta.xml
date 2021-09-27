@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_RemplacementDesFiltresNonCompris__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Remplacement des filtres (non compris)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Remplacement des filtres (non compris)</inlineHelpText>
+    <label>Remplacement des filtres ( non compris)</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

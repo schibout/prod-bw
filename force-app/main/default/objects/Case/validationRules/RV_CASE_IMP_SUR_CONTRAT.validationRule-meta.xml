@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RV_CASE_IMP_SUR_CONTRAT</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+     $User.USER_ByPassRegleValidation__c = FALSE
+    ,$User.LastName != $Label.API
+    ,ISPICKVAL(CAS_Imputation__c,&quot;Contrat&quot;)
+    ,ISBLANK(CAS_ContratdeService__c)
+   )</errorConditionFormula>
+    <errorDisplayField>CAS_ContratdeService__c</errorDisplayField>
+    <errorMessage>Si l&apos;imputation est &quot;Sur contrat&quot; vous devez renseigner un numéro de contrat</errorMessage>
+</ValidationRule>

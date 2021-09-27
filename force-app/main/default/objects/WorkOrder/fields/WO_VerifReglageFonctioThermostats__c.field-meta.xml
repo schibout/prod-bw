@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_VerifReglageFonctioThermostats__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Vérification du réglage et du fonctionnement des thermostats</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Vérification du réglage et du fonctionnement des thermostats</inlineHelpText>
+    <label>Vérif. réglage et fonctio. thermostats</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

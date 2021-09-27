@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_cumul_IndirectShareholder__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Récapitulatif du nombre d&apos;actionnaires indirects (&quot;Groupe&quot;) disponibles dans &quot;Actionnaires&quot;</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Summary of the number of indirect shareholders (&quot;Group&quot;) available in &quot;Shareholders&quot; tab.</inlineHelpText>
+    <label>Nb d&apos;actionnaires Groupe disponibles</label>
+    <summarizedField>ELLISPHERE__Elli_Shareholder__c.ELLISPHERE__Elli_TCH_Shareho_cumul__c</summarizedField>
+    <summaryFilterItems>
+        <field>ELLISPHERE__Elli_Shareholder__c.ELLISPHERE__Elli_ShareholderUltimateRank__c</field>
+        <operation>notEqual</operation>
+        <value>1</value>
+    </summaryFilterItems>
+    <summaryForeignKey>ELLISPHERE__Elli_Shareholder__c.ELLISPHERE__Elli_JctAccShareholder_Account__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

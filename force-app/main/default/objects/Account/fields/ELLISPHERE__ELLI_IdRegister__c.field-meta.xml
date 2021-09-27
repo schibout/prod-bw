@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__ELLI_IdRegister__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Identifiant légal de l&apos;entreprise. Varie selon les pays. ex: SIREN pour la France.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>To find out the Legal ID used for each country in this field, please click on the link &quot;See the list of identifiers by country&quot; below.</inlineHelpText>
+    <label>Identifiant légal / SIREN</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PR_TECH_Quantite__c</fullName>
+    <description>Ne pas supprimer ce champ technique qui permet de faire fonctionner la règle de validation RV_QuantitePrestationNombreEntier</description>
+    <externalId>false</externalId>
+    <formula>TEXT(Quantity)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>PR_TECH_Quantite</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

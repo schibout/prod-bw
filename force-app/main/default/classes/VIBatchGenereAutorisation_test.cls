@@ -14,12 +14,13 @@ public class VIBatchGenereAutorisation_test {
         aff.Date_de_SAV_reelle__c = ListPeriode[0].date_de_fin__c;
         update aff ; 
 
-        VIBatchGenereAutorisation v = new VIBatchGenereAutorisation();
+        
+        VIBatchGenereAutorisation v = new VIBatchGenereAutorisation(true);
         v.execute(null);
 
         aff.Affaire_reouverte__c=true;
         update aff; 
-        v.execute(null);
+        Database.executeBatch(new VIBatchGenereAutorisation(true),VIBatchGenereAutorisation.NBR_LOT);
         
         v.code_coverage();
         

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR05_ACC_SIRENObligatoireEU</fullName>
+    <active>true</active>
+    <description>Cette règle de validation oblige l&apos;utilisateur à renseigner un numéro de SIREN pour les comptes de l&apos;union Européenne hors &quot;Administratif&quot; et &quot;Particulier&quot;</description>
+    <errorConditionFormula>AND($User.USER_ByPassRegleValidation__c= FALSE, NOT(ISBLANK(ACC_SIREN__c)), 
+NOT(ISPICKVAL(ACC_Region__c, &quot;6&quot;)), 				
+OR(ISPICKVAL(Type, &quot;1&quot;), ISPICKVAL(Type, &quot;2&quot;)), 
+ISBLANK( ACC_NTVAIntracommunautaire__c ), 
+NOT(ISPICKVAL( Industry, &quot;S17&quot;)), 
+NOT(ISPICKVAL( Industry, &quot;S18&quot;)), 
+(OR( 
+ISPICKVAL (ShippingCountryCode,&quot;DE&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;AT&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;BE&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;BG&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;CY&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;HR&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;DK&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;ES&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;EE&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;FI&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;GR&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;HU&quot;),
+ISPICKVAL (ShippingCountryCode,&quot;IE&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;IT&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;LV&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;LT&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;MT&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;LU&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;NL&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;PL&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;PT&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;CZ&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;RO&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;GB&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;SK&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;SI&quot;), 
+ISPICKVAL (ShippingCountryCode,&quot;SE&quot;))))</errorConditionFormula>
+    <errorDisplayField>ACC_NTVAIntracommunautaire__c</errorDisplayField>
+    <errorMessage>VR05 Attention, vous devez obligatoirement renseigner un n° de TVA Intracommunautaire pour les comptes de l&apos;union Européenne hors &quot;Administratif&quot; et &quot;Particulier&quot;</errorMessage>
+</ValidationRule>

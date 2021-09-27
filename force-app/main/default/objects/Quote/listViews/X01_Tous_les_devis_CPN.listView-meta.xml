@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X01_Tous_les_devis_CPN</fullName>
+    <columns>QUOTE.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>DEV_NumVersionGPIC__c</columns>
+    <columns>QUOTE.DESCRIPTION</columns>
+    <columns>DEV_DateDeCreation__c</columns>
+    <columns>QUOTE.STATUS</columns>
+    <columns>CreatedBy</columns>
+    <columns>QUOTE.EXPIRATIONDATE</columns>
+    <columns>QUOTE.TOTALPRICE</columns>
+    <columns>DEV_Montant__c</columns>
+    <columns>Owner</columns>
+    <columns>DEV_DateDeRelance__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>DEV_TypeDeDevis__c</field>
+        <operation>equals</operation>
+        <value>2</value>
+    </filters>
+    <label>01 - Tous les devis Type ERP</label>
+</ListView>

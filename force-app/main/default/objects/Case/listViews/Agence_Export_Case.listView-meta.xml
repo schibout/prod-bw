@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agence_Export_Case</fullName>
+    <filterScope>Queue</filterScope>
+    <label>Agence Export</label>
+    <queue>Agence_Export</queue>
+    <sharedTo>
+        <allInternalUsers></allInternalUsers>
+    </sharedTo>
+</ListView>

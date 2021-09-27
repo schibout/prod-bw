@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cle_unique</fullName>
+    <active>false</active>
+    <errorConditionFormula>and(
+    Name = VLOOKUP
+       ($ObjectType.VILigne_d_affaire_mensuelle__c.Fields.Name , $ObjectType.VILigne_d_affaire_mensuelle__c.Fields.Name, Name ),
+
+    not(
+     Id=VLOOKUP
+         ($ObjectType.VILigne_d_affaire_mensuelle__c.Fields.Id , $ObjectType.VILigne_d_affaire_mensuelle__c.Fields.Name, Name )))</errorConditionFormula>
+    <errorMessage>La référence de la ligne d&apos;affaire mensuelle existe déjà</errorMessage>
+</ValidationRule>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WorkTypeId</fullName>
+    <inlineHelpText>Attention ! Ce champ doit uniquement être renseigné si aucun équipement client n&apos;est défini pour le plan de maintenance.
+Si un équipement est soumis à ce plan de maintenance, l&apos;utilisateur doit se rendre dans la liste associée &quot;Equipement&quot;.</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

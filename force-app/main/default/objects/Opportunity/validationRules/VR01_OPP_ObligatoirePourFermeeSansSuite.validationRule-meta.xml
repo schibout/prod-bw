@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR01_OPP_ObligatoirePourFermeeSansSuite</fullName>
+    <active>false</active>
+    <description>Cette règle de validation force l&apos;utilisateur à renseigner les champs &quot;Motif de sans suite&quot; et &quot;Commentaires&quot; si l&apos;étape choisie est &quot;Fermée/Sans Suite&quot;</description>
+    <errorConditionFormula>AND (
+				ISPICKVAL( StageName,&quot;Sans Suite&quot;),
+				$User.USER_ByPassRegleValidation__c = FALSE,
+				OR(
+								ISPICKVAL( OPP_MotifSansSuite__c ,&quot;&quot;),
+								ISBLANK( OPP_Commentaires__c )
+							)
+				)</errorConditionFormula>
+    <errorMessage>Merci de renseigner les champs &quot;Motif de sans suite&quot; et &quot;Commentaires&quot; avant de passer l&apos;opportunité en &quot;Fermée/Sans Suite&quot;</errorMessage>
+</ValidationRule>

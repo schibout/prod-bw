@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR09_CAT_Type_de_contrat_obligatoire</fullName>
+    <active>true</active>
+    <description>Vous devez renseigner un type de contrat pour le passage 
+au statut &quot;Pour validation ERP&quot;.</description>
+    <errorConditionFormula>AND( 
+    ISPICKVAL(SC_Statut__c ,&quot;2&quot;)
+,$User.USER_ByPassRegleValidation__c = FALSE
+, ISBLANK( TEXT(SC_TypeDeContrat__c) )
+    )</errorConditionFormula>
+    <errorDisplayField>SC_TypeDeContrat__c</errorDisplayField>
+    <errorMessage>Vous devez renseigner un type de contrat pour le passage 
+au statut &quot;Pour validation ERP&quot;.</errorMessage>
+</ValidationRule>

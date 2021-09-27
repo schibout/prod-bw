@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PP_ContactPresent__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Contact présent</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>PP - Le contact rattaché à votre plan de prévention est Obsolète. 
+La valeur n&apos;existe pas ou ne correspond pas aux critères de filtre.</errorMessage>
+        <filterItems>
+            <field>Contact.ACC_Contact_obsolete__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Plans de prévention</relationshipLabel>
+    <relationshipName>PlansDePrevention</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
