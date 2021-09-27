@@ -5,9 +5,9 @@
       "default": true
     }
   ],
-  "name": "prod",
+  "name": "dev-sch",
   "namespace": "",
-  "sfdcLoginUrl": "https://babcock-wanson.my.salesforce.com",
+  "sfdcLoginUrl": "https://babcock-wanson--dev.my.salesforce.com",
   "sourceApiVersion": "52.0",
-  "signupTargetLoginUrl": "schibout@babcok-wanson.com"
+  "signupTargetLoginUrl": "schibout@babcock-wanson.com.dev"
 }
