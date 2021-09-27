@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BW_Presentation_compacte_CAT</fullName>
+    <fields>Name</fields>
+    <fields>ContractNumber</fields>
+    <fields>AccountId</fields>
+    <fields>ContactId</fields>
+    <fields>SC_Statut__c</fields>
+    <label>BW Présentation compacte CAT</label>
+</CompactLayout>

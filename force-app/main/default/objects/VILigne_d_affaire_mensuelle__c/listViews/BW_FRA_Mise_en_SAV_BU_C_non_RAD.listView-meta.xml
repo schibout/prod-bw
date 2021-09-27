@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BW_FRA_Mise_en_SAV_BU_C_non_RAD</fullName>
+    <columns>Periode_comptable__c</columns>
+    <columns>Affaire__c</columns>
+    <columns>Nom_de_l_affaire__c</columns>
+    <columns>Code_sous_domaine__c</columns>
+    <columns>Date_d_ouverture_d_affaire__c</columns>
+    <columns>Date_de_SAV_previsionnelle__c</columns>
+    <columns>PV_Devis_Arrondi__c</columns>
+    <columns>PV_Factur_arrondi__c</columns>
+    <columns>Taux_de_facturation__c</columns>
+    <columns>Engage_brut_l_arrete_arrondi__c</columns>
+    <columns>Dont_Comptabilis_arrondi__c</columns>
+    <columns>Cout_terminaison_arrondi__c</columns>
+    <columns>Total_Pourcentage_d_avancement_arrondi__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>FR</value>
+    </filters>
+    <filters>
+        <field>Periode_comptable_statut__c</field>
+        <operation>startsWith</operation>
+        <value>20</value>
+    </filters>
+    <filters>
+        <field>Date_de_SAV_reelle__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Code_BU__c</field>
+        <operation>equals</operation>
+        <value>C</value>
+    </filters>
+    <filters>
+        <field>PV_Total__c</field>
+        <operation>lessThan</operation>
+        <value>EUR 46000</value>
+    </filters>
+    <label>BW FRA - Mise en SAV BU=C non RAD</label>
+</ListView>

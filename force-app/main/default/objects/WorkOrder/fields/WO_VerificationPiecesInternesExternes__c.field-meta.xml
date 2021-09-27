@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_VerificationPiecesInternesExternes__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Vérification des pièces internes - externes</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Vérification des pièces internes - externes</inlineHelpText>
+    <label>Vérification pièces internes-externes</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

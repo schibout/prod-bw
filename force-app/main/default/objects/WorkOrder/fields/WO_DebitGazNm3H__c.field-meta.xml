@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_DebitGazNm3H__c</fullName>
+    <description>Débit Gaz Nm3/h</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Débit Gaz Nm3/h</inlineHelpText>
+    <label>1-Débit Gaz Nm3/h</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

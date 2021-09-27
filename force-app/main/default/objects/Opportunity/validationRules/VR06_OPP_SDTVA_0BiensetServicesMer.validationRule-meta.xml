@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR06_OPP_SDTVA_0BiensetServicesMer</fullName>
+    <active>true</active>
+    <description>0%BWF - Biens et Services Mer</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(Type,&quot;13&quot;),
+$User.USER_ByPassRegleValidation__c = FALSE,
+				NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;16&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;18&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;19&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;20&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;21&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;28&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;31&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;36&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;40&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;41&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;42&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;46&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;47&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;49&quot;)),
+NOT(ISPICKVAL( OPP_SousDomaine__c , &quot;54&quot;)))</errorConditionFormula>
+    <errorDisplayField>Type</errorDisplayField>
+    <errorMessage>Attention, le Type de TVA  ne peut pas être sélectionné pour ce Sous-domaine, merci de le corriger.</errorMessage>
+</ValidationRule>

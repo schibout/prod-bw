@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mes_notes_de_frais_du_jour</fullName>
+    <columns>NAME</columns>
+    <columns>NDF_FeuilleDeTemps__c</columns>
+    <columns>NDF_Statut__c</columns>
+    <columns>NDF_NumRDVService__c</columns>
+    <columns>RECORDTYPE</columns>
+    <columns>NDF_TypeDeFraisReels__c</columns>
+    <columns>NDF_MontantDesFraisReels__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>NDF_Tech_NoteDeFraisDuJour__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Mes notes de frais du jour</label>
+</ListView>

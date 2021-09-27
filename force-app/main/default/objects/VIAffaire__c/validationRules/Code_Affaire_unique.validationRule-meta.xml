@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Code_Affaire_unique</fullName>
+    <active>false</active>
+    <errorConditionFormula>(ISNEW() || ISCHANGED(Name)) &amp;&amp; VLOOKUP( $ObjectType.VIAffaire__c.Fields.Name, $ObjectType.VIAffaire__c.Fields.Name , Name) = Name</errorConditionFormula>
+    <errorMessage>Ce code affaire existe déjà</errorMessage>
+</ValidationRule>

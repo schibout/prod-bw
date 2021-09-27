@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ReleveDesParametresDeLaChaufferie__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Relevé des paramètres de fonctionnement de la chaufferie (température, compteurs …)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Relevé des paramètres de fonctionnement de la chaufferie (température, compteurs …)</inlineHelpText>
+    <label>Relevé des paramètres de la chaufferie</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

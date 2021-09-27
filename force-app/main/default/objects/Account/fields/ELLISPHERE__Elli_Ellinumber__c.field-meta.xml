@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_Ellinumber__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Identifiant propre à Ellisphere : &quot;Ellinumber&quot; dans le cas d&apos;un siège et &quot;Ellistab&quot; dans le cas d&apos;un établissement secondaire.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Ellisphere unique identifier: &quot;Ellinumber&quot; in the case of a head Office and &quot;Ellistab&quot; in the case of other Offices.</inlineHelpText>
+    <label>Ellinumber</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

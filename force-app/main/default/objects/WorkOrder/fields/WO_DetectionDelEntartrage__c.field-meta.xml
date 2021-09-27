@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_DetectionDelEntartrage__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Détection de l’entartrage</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Détection de l’entartrage</inlineHelpText>
+    <label>Détection de l&apos;entartrage</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

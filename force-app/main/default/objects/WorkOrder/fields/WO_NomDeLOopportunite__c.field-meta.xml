@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_NomDeLOopportunite__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Nom de l&apos;opportunité</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>$Source.AccountId</field>
+            <operation>equals</operation>
+            <valueField>Opportunity.AccountId</valueField>
+        </filterItems>
+        <filterItems>
+            <field>$Source.WO_Produit__c</field>
+            <operation>equals</operation>
+            <valueField>Opportunity.OPP_Requete__r.ProductId</valueField>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>Interventions</relationshipLabel>
+    <relationshipName>Interventions</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ClotureDeCommande__c</fullName>
+    <description>Si la &quot;Date de fermeture de l&apos;affaire&quot; de la Commande associée à l&apos;intervention est dépassée, alors la case est cochée.</description>
+    <externalId>false</externalId>
+    <formula>TODAY()&gt; FSL_WO_Commande__r.ORD_DateDeFermetureDeLAffaire__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Si la &quot;Date de fermeture de l&apos;affaire&quot; de la Commande associée à l&apos;intervention est dépassée, alors la case est cochée.</inlineHelpText>
+    <label>Clôture de commande</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

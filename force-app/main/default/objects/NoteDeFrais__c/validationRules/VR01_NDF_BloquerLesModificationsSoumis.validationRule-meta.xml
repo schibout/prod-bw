@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR01_NDF_BloquerLesModificationsSoumis</fullName>
+    <active>true</active>
+    <description>Cette régle de validation permet de bloquer le technicien s&apos;il souhaite modifier un élémént de sa note de frais</description>
+    <errorConditionFormula>AND(
+				 $User.Technicien__c = TRUE,
+				 ISPICKVAL(NDF_Statut__c,&quot;Soumis&quot;),
+				ISPICKVAL(NDF_Statut__c,&quot;Validation back office&quot;),
+				ISCHANGED( LastModifiedDate)
+				)</errorConditionFormula>
+    <errorMessage>Attention, Votre note de frais est au statut &quot;Soumis&quot;, vous ne pouvez plus la modifier. Pour ton problème merci de contacter le back-office.</errorMessage>
+</ValidationRule>

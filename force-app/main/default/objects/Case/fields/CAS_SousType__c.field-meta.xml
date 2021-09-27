@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CAS_SousType__c</fullName>
+    <description>Sous catégorie du type permettant de préciser la nature de la requête.</description>
+    <externalId>false</externalId>
+    <label>Sous-type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Panne Totale</fullName>
+                <default>false</default>
+                <label>Panne Totale</label>
+            </value>
+            <value>
+                <fullName>Dépannage</fullName>
+                <default>false</default>
+                <label>Dépannage</label>
+            </value>
+            <value>
+                <fullName>Maintenance</fullName>
+                <default>false</default>
+                <label>Maintenance</label>
+            </value>
+            <value>
+                <fullName>Mise en service</fullName>
+                <default>false</default>
+                <label>Mise en service</label>
+            </value>
+            <value>
+                <fullName>Devis simple standard</fullName>
+                <default>false</default>
+                <label>Devis simple standard</label>
+            </value>
+            <value>
+                <fullName>Contrat d&apos;assistance technique</fullName>
+                <default>false</default>
+                <label>Contrat d&apos;assistance technique</label>
+            </value>
+            <value>
+                <fullName>Devis complexe non standard</fullName>
+                <default>false</default>
+                <label>Devis complexe non standard</label>
+            </value>
+            <value>
+                <fullName>Technique</fullName>
+                <default>false</default>
+                <label>Technique</label>
+            </value>
+            <value>
+                <fullName>Commerciale</fullName>
+                <default>false</default>
+                <label>Commerciale</label>
+            </value>
+            <value>
+                <fullName>Sécurité / Plan de prévention</fullName>
+                <default>false</default>
+                <label>Sécurité / Plan de prévention</label>
+            </value>
+            <value>
+                <fullName>Comptable</fullName>
+                <default>false</default>
+                <label>Comptable</label>
+            </value>
+            <value>
+                <fullName>Livraison équipement</fullName>
+                <default>false</default>
+                <label>Livraison équipement</label>
+            </value>
+            <value>
+                <fullName>Livraison PDR</fullName>
+                <default>false</default>
+                <label>Livraison PDR</label>
+            </value>
+            <value>
+                <fullName>Suite intervention</fullName>
+                <default>false</default>
+                <label>Suite intervention</label>
+            </value>
+            <value>
+                <fullName>Appel en garantie</fullName>
+                <default>false</default>
+                <label>Appel en garantie</label>
+            </value>
+            <value>
+                <fullName>Automatisme</fullName>
+                <default>false</default>
+                <label>Automatisme</label>
+            </value>
+            <value>
+                <fullName>Chaudronnerie</fullName>
+                <default>false</default>
+                <label>Chaudronnerie</label>
+            </value>
+            <value>
+                <fullName>Electrique</fullName>
+                <default>false</default>
+                <label>Electrique</label>
+            </value>
+            <value>
+                <fullName>Instrumentation</fullName>
+                <default>false</default>
+                <label>Instrumentation</label>
+            </value>
+            <value>
+                <fullName>ElectroMécanique</fullName>
+                <default>false</default>
+                <label>ElectroMécanique</label>
+            </value>
+            <value>
+                <fullName>Autres</fullName>
+                <default>false</default>
+                <label>Autres</label>
+            </value>
+            <value>
+                <fullName>Devis pièces</fullName>
+                <default>false</default>
+                <label>Devis pièces</label>
+            </value>
+            <value>
+                <fullName>Demande de service</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demande de service</label>
+            </value>
+            <value>
+                <fullName>Demande nouveau matériel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demande nouveau matériel</label>
+            </value>
+            <value>
+                <fullName>Mise_en_service</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Mise en service</label>
+            </value>
+            <value>
+                <fullName>Panne Partielle</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Panne Partielle</label>
+            </value>
+            <value>
+                <fullName>Visite bilantaire</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Visite bilantaire</label>
+            </value>
+            <value>
+                <fullName>Visite plan de prévention</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Visite plan de prévention</label>
+            </value>
+            <value>
+                <fullName>Visite produit</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Visite produit</label>
+            </value>
+            <value>
+                <fullName>Visite périodique</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Visite périodique</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Intervention</controllingFieldValue>
+            <valueName>Dépannage</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Intervention</controllingFieldValue>
+            <valueName>Maintenance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Intervention</controllingFieldValue>
+            <valueName>Mise en service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non conformité</controllingFieldValue>
+            <valueName>Automatisme</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non conformité</controllingFieldValue>
+            <valueName>Chaudronnerie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non conformité</controllingFieldValue>
+            <valueName>Electrique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non conformité</controllingFieldValue>
+            <valueName>Instrumentation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non conformité</controllingFieldValue>
+            <valueName>ElectroMécanique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non conformité</controllingFieldValue>
+            <valueName>Autres</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Réclamation</controllingFieldValue>
+            <valueName>Comptable</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Réclamation</controllingFieldValue>
+            <valueName>Livraison équipement</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Réclamation</controllingFieldValue>
+            <valueName>Livraison PDR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Réclamation</controllingFieldValue>
+            <valueName>Suite intervention</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Réclamation</controllingFieldValue>
+            <valueName>Appel en garantie</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chiffrage</controllingFieldValue>
+            <valueName>Devis simple standard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chiffrage</controllingFieldValue>
+            <valueName>Contrat d&apos;assistance technique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chiffrage</controllingFieldValue>
+            <valueName>Devis complexe non standard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Chiffrage</controllingFieldValue>
+            <valueName>Devis pièces</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information</controllingFieldValue>
+            <valueName>Technique</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information</controllingFieldValue>
+            <valueName>Commerciale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Information</controllingFieldValue>
+            <valueName>Sécurité / Plan de prévention</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

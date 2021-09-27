@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copie_de_Affaires_RAD_CDG</fullName>
+    <columns>NAME</columns>
+    <columns>Compte__c</columns>
+    <columns>Nom_affaire__c</columns>
+    <columns>Chef_de_projet__c</columns>
+    <columns>Budget_PV__c</columns>
+    <columns>Date_ouverture_affaire__c</columns>
+    <columns>Date_de_SAV_previsionnelle__c</columns>
+    <columns>Produit_SousDomaine__c</columns>
+    <columns>Business_Unit__c</columns>
+    <columns>Date_de_derniere_revue__c</columns>
+    <columns>Etat_de_l_affaire__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Cycle_RAD__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Chef_de_projet__c</field>
+        <operation>contains</operation>
+        <value>lucien</value>
+    </filters>
+    <label>Affaires - RAD (CDG)</label>
+</ListView>

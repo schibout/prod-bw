@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>AC_DateDebutdAstreinte__c</columns>
+    <columns>AC_DateFindAstreinte__c</columns>
+    <columns>AC_AstreinteEnCours__c</columns>
+    <columns>AC_NumeroDeMobile__c</columns>
+    <columns>AC_Email__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Tous les cadres d&apos;astreinte</label>
+</ListView>

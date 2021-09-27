@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ControleSeuilsDeSecuriteEtSecurites__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contrôle des seuils de sécurité et des sécurités</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contrôle des seuils de sécurité et des sécurités</inlineHelpText>
+    <label>Contrôle seuils de sécurité et sécurités</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR03_LD_SecteurActiviteConvertion</fullName>
+    <active>true</active>
+    <description>Bloque la conversion d’une piste si le secteur d&apos;activité n’est pas renseigné. En effet le secteur d&apos;activité est obligatoire lors de la création d&apos;un prospect.</description>
+    <errorConditionFormula>AND( IsConverted = TRUE,
+				 Ispickval(Industry, &quot; &quot;))</errorConditionFormula>
+    <errorMessage>Vous devez renseigner le secteur d&apos;activité de l&apos;entreprise pour la conversion.</errorMessage>
+</ValidationRule>

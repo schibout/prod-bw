@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR13_ACC_VAT_LENGTH</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+$User.USER_ByPassRegleValidation__c= FALSE,
+TEXT(ACC_Entite_BW__c ) == $Label.BW_ITA ,
+OR(
+NOT(REGEX( LEFT( ACC_NTVAIntracommunautaire__c, 2) ,&quot;^[a-z  A-Z]*$&quot;)),
+LEN( ACC_NTVAIntracommunautaire__c) &lt;7,
+LEFT( ACC_NTVAIntracommunautaire__c, 2) &lt;&gt;  TEXT( BillingCountryCode ) 
+),
+OR(ISPICKVAL(BillingCountryCode,&quot;IT&quot;),ISPICKVAL(BillingCountryCode,&quot;AT&quot;),ISPICKVAL(BillingCountryCode,&quot;BE&quot;),ISPICKVAL(BillingCountryCode,&quot;BG&quot;),ISPICKVAL(BillingCountryCode,&quot;HR&quot;),ISPICKVAL(BillingCountryCode,&quot;CY&quot;),ISPICKVAL(BillingCountryCode,&quot;CZ&quot;),ISPICKVAL(BillingCountryCode,&quot;DK&quot;),ISPICKVAL(BillingCountryCode,&quot;EE&quot;),ISPICKVAL(BillingCountryCode,&quot;FI&quot;),ISPICKVAL(BillingCountryCode,&quot;FR&quot;),ISPICKVAL(BillingCountryCode,&quot;DE&quot;),ISPICKVAL(BillingCountryCode,&quot;GR&quot;),ISPICKVAL(BillingCountryCode,&quot;HU&quot;),ISPICKVAL(BillingCountryCode,&quot;IE&quot;),ISPICKVAL(BillingCountryCode,&quot;LV&quot;),ISPICKVAL(BillingCountryCode,&quot;LT&quot;),ISPICKVAL(BillingCountryCode,&quot;LU&quot;),ISPICKVAL(BillingCountryCode,&quot;MT&quot;),ISPICKVAL(BillingCountryCode,&quot;NL&quot;),ISPICKVAL(BillingCountryCode,&quot;PL&quot;),ISPICKVAL(BillingCountryCode,&quot;PT&quot;),ISPICKVAL(BillingCountryCode,&quot;RO&quot;),ISPICKVAL(BillingCountryCode,&quot;SK&quot;),ISPICKVAL(BillingCountryCode,&quot;SI&quot;),ISPICKVAL(BillingCountryCode,&quot;ES&quot;),ISPICKVAL(BillingCountryCode,&quot;SE&quot;),ISPICKVAL(BillingCountryCode,&quot;UK&quot;),ISPICKVAL(BillingCountryCode,&quot;SM&quot;),ISPICKVAL(BillingCountryCode,&quot;AL&quot;),ISPICKVAL(BillingCountryCode,&quot;BA&quot;),ISPICKVAL(BillingCountryCode,&quot;IS&quot;),ISPICKVAL(BillingCountryCode,&quot;MK&quot;),ISPICKVAL(BillingCountryCode,&quot;NO&quot;),ISPICKVAL(BillingCountryCode,&quot;RS&quot;),ISPICKVAL(BillingCountryCode,&quot;CH&quot;),ISPICKVAL(BillingCountryCode,&quot;TR&quot;))
+)</errorConditionFormula>
+    <errorMessage>Veuillez renseigner le format correct pour le champ TVA</errorMessage>
+</ValidationRule>

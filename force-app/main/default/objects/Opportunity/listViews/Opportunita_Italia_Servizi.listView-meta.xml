@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunita_Italia_Servizi</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPP_Domaine__c</columns>
+    <columns>OPP_SousDomaine__c</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.PROBABILITY</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>OPP_Requete__c</columns>
+    <columns>OPPORTUNITY.LAST_UPDATE</columns>
+    <columns>OPP_ChargeDAffaire__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPP_Domaine__c</field>
+        <operation>equals</operation>
+        <value>4</value>
+    </filters>
+    <filters>
+        <field>OPP_Entite_BW__c</field>
+        <operation>equals</operation>
+        <value>3</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.LAST_UPDATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>3/1/2021 12:00 AM</value>
+    </filters>
+    <label>Opportunità Italia Servizi</label>
+</ListView>

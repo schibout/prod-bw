@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ControleDeLaTemperatureDesFumees__c</fullName>
+    <description>Contrôle de la température des fumées</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contrôle de la température des fumées</inlineHelpText>
+    <label>Ctrle de la température des fumées</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Oui</fullName>
+                <default>false</default>
+                <label>Oui</label>
+            </value>
+            <value>
+                <fullName>Non</fullName>
+                <default>false</default>
+                <label>Non</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

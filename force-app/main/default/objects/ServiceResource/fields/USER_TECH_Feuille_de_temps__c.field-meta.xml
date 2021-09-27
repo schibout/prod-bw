@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>USER_TECH_Feuille_de_temps__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Ne pas supprimer ce champ technique.</description>
+    <externalId>false</externalId>
+    <label>TECH_Feuille de temps</label>
+    <referenceTo>TimeSheet</referenceTo>
+    <relationshipLabel>Ressources de service</relationshipLabel>
+    <relationshipName>Ressources_de_service</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

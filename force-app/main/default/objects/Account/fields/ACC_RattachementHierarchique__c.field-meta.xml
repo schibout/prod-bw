@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACC_RattachementHierarchique__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Cette case à cocher permet d&apos;indiquer que le Compte est rattaché à des comptes enfants.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Cette case à cocher permet d&apos;indiquer que le Compte est rattaché à des comptes enfants.</inlineHelpText>
+    <label>Rattachement hierarchique</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_NettoyageFiltresGazPotsBruleurAir__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Nettoyage des filtres gaz, des pots filtre et brûleur air comprimé</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Nettoyage des filtres gaz, des pots filtre et brûleur air comprimé</inlineHelpText>
+    <label>Nettoyage filtres gaz, pots, brûleur air</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

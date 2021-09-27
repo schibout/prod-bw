@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Italia_post_GL</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.ADDRESS1_COUNTRY_CODE</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>ACC_ERPIdITA__c</columns>
+    <columns>ACC_CRMId__c</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>ACC_Entite_BW__c</columns>
+    <columns>ACC_Region__c</columns>
+    <columns>ACC_SecteurCommercial__c</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>ELLISPHERE__Elli_Ellinumber__c</columns>
+    <columns>ACC_ModeDePaiement__c</columns>
+    <columns>ACC_DelaisDePaiement__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACC_Entite_BW__c</field>
+        <operation>equals</operation>
+        <value>3</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>2/17/2021 12:00 AM</value>
+    </filters>
+    <label>Account Italia creati post Go Live</label>
+    <language>it</language>
+</ListView>

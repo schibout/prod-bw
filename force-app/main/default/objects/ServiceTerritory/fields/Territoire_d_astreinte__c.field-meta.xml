@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Territoire_d_astreinte__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Renseigne si le territoire de service est un territoire d&apos;astreinte ou non.</description>
+    <externalId>false</externalId>
+    <label>Territoire d&apos;astreinte</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

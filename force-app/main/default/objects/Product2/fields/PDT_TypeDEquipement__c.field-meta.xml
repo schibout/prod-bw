@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDT_TypeDEquipement__c</fullName>
+    <externalId>false</externalId>
+    <label>Type d&apos;équipement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>E001</fullName>
+                <default>false</default>
+                <label>Air</label>
+            </value>
+            <value>
+                <fullName>E002</fullName>
+                <default>false</default>
+                <label>Eau</label>
+            </value>
+            <value>
+                <fullName>E003</fullName>
+                <default>false</default>
+                <label>Air comburant</label>
+            </value>
+            <value>
+                <fullName>E004</fullName>
+                <default>false</default>
+                <label>Allumage</label>
+            </value>
+            <value>
+                <fullName>E005</fullName>
+                <default>false</default>
+                <label>Analyse combustion</label>
+            </value>
+            <value>
+                <fullName>E006</fullName>
+                <default>false</default>
+                <label>Bâche</label>
+            </value>
+            <value>
+                <fullName>E007</fullName>
+                <default>false</default>
+                <label>Boisseau</label>
+            </value>
+            <value>
+                <fullName>E008</fullName>
+                <default>false</default>
+                <label>Câble</label>
+            </value>
+            <value>
+                <fullName>E009</fullName>
+                <default>false</default>
+                <label>Cartouche fioul</label>
+            </value>
+            <value>
+                <fullName>E010</fullName>
+                <default>false</default>
+                <label>Cartouche gaz</label>
+            </value>
+            <value>
+                <fullName>E011</fullName>
+                <default>false</default>
+                <label>Circulation</label>
+            </value>
+            <value>
+                <fullName>E012</fullName>
+                <default>false</default>
+                <label>Coffret electrique</label>
+            </value>
+            <value>
+                <fullName>E013</fullName>
+                <default>false</default>
+                <label>Colle</label>
+            </value>
+            <value>
+                <fullName>E014</fullName>
+                <default>false</default>
+                <label>Conductivité</label>
+            </value>
+            <value>
+                <fullName>E015</fullName>
+                <default>false</default>
+                <label>Contrôle de niveau d&apos;eau</label>
+            </value>
+            <value>
+                <fullName>E016</fullName>
+                <default>false</default>
+                <label>Cordon</label>
+            </value>
+            <value>
+                <fullName>E017</fullName>
+                <default>false</default>
+                <label>Coulis</label>
+            </value>
+            <value>
+                <fullName>E018</fullName>
+                <default>false</default>
+                <label>Cuivre</label>
+            </value>
+            <value>
+                <fullName>E019</fullName>
+                <default>false</default>
+                <label>Déconcentration</label>
+            </value>
+            <value>
+                <fullName>E020</fullName>
+                <default>false</default>
+                <label>Détection de flamme</label>
+            </value>
+            <value>
+                <fullName>E021</fullName>
+                <default>false</default>
+                <label>Divers</label>
+            </value>
+            <value>
+                <fullName>E022</fullName>
+                <default>false</default>
+                <label>Doseuse</label>
+            </value>
+            <value>
+                <fullName>E024</fullName>
+                <default>false</default>
+                <label>Entrées</label>
+            </value>
+            <value>
+                <fullName>E025</fullName>
+                <default>false</default>
+                <label>Entrées + sortie</label>
+            </value>
+            <value>
+                <fullName>E026</fullName>
+                <default>false</default>
+                <label>Etamatic</label>
+            </value>
+            <value>
+                <fullName>E027</fullName>
+                <default>false</default>
+                <label>Etanchéité gaz</label>
+            </value>
+            <value>
+                <fullName>E028</fullName>
+                <default>false</default>
+                <label>Extraction de fond</label>
+            </value>
+            <value>
+                <fullName>E029</fullName>
+                <default>false</default>
+                <label>Fibre</label>
+            </value>
+            <value>
+                <fullName>E030</fullName>
+                <default>false</default>
+                <label>Fil</label>
+            </value>
+            <value>
+                <fullName>E031</fullName>
+                <default>false</default>
+                <label>Fioul</label>
+            </value>
+            <value>
+                <fullName>E032</fullName>
+                <default>false</default>
+                <label>Fioul / eau</label>
+            </value>
+            <value>
+                <fullName>E033</fullName>
+                <default>false</default>
+                <label>Gaz</label>
+            </value>
+            <value>
+                <fullName>E034</fullName>
+                <default>false</default>
+                <label>Gaz (Bloc gaz)</label>
+            </value>
+            <value>
+                <fullName>E035</fullName>
+                <default>false</default>
+                <label>Gaz (pilote)</label>
+            </value>
+            <value>
+                <fullName>E036</fullName>
+                <default>false</default>
+                <label>Gaz (principale)</label>
+            </value>
+            <value>
+                <fullName>E037</fullName>
+                <default>false</default>
+                <label>Gaz (sécurité)</label>
+            </value>
+            <value>
+                <fullName>E038</fullName>
+                <default>false</default>
+                <label>Gaz / Fioul</label>
+            </value>
+            <value>
+                <fullName>E039</fullName>
+                <default>false</default>
+                <label>Glace de niveau</label>
+            </value>
+            <value>
+                <fullName>E040</fullName>
+                <default>false</default>
+                <label>Graphite</label>
+            </value>
+            <value>
+                <fullName>E041</fullName>
+                <default>false</default>
+                <label>IBC</label>
+            </value>
+            <value>
+                <fullName>E042</fullName>
+                <default>false</default>
+                <label>Indicateur de niveau</label>
+            </value>
+            <value>
+                <fullName>E043</fullName>
+                <default>false</default>
+                <label>Ionisation</label>
+            </value>
+            <value>
+                <fullName>E044</fullName>
+                <default>false</default>
+                <label>Ligne ethanol</label>
+            </value>
+            <value>
+                <fullName>E045</fullName>
+                <default>false</default>
+                <label>Niveau eau</label>
+            </value>
+            <value>
+                <fullName>E046</fullName>
+                <default>false</default>
+                <label>Niveau visuel</label>
+            </value>
+            <value>
+                <fullName>E047</fullName>
+                <default>false</default>
+                <label>Piston</label>
+            </value>
+            <value>
+                <fullName>E048</fullName>
+                <default>false</default>
+                <label>Pompe eau</label>
+            </value>
+            <value>
+                <fullName>E049</fullName>
+                <default>false</default>
+                <label>pompe fioul</label>
+            </value>
+            <value>
+                <fullName>E050</fullName>
+                <default>false</default>
+                <label>Présence flamme</label>
+            </value>
+            <value>
+                <fullName>E051</fullName>
+                <default>false</default>
+                <label>Pression vapeur</label>
+            </value>
+            <value>
+                <fullName>E052</fullName>
+                <default>false</default>
+                <label>Propane</label>
+            </value>
+            <value>
+                <fullName>E053</fullName>
+                <default>false</default>
+                <label>Regards</label>
+            </value>
+            <value>
+                <fullName>E054</fullName>
+                <default>false</default>
+                <label>Régulateur de pression gaz</label>
+            </value>
+            <value>
+                <fullName>E055</fullName>
+                <default>false</default>
+                <label>Régulation eau</label>
+            </value>
+            <value>
+                <fullName>E056</fullName>
+                <default>false</default>
+                <label>Robinet de niveau inf</label>
+            </value>
+            <value>
+                <fullName>E057</fullName>
+                <default>false</default>
+                <label>Robinet de niveau sup</label>
+            </value>
+            <value>
+                <fullName>E058</fullName>
+                <default>false</default>
+                <label>Servomoteur air comburant</label>
+            </value>
+            <value>
+                <fullName>E059</fullName>
+                <default>false</default>
+                <label>Servomoteur fioul</label>
+            </value>
+            <value>
+                <fullName>E060</fullName>
+                <default>false</default>
+                <label>SKP</label>
+            </value>
+            <value>
+                <fullName>E061</fullName>
+                <default>false</default>
+                <label>Sorties</label>
+            </value>
+            <value>
+                <fullName>E062</fullName>
+                <default>false</default>
+                <label>Spirale</label>
+            </value>
+            <value>
+                <fullName>E063</fullName>
+                <default>false</default>
+                <label>Température</label>
+            </value>
+            <value>
+                <fullName>E064</fullName>
+                <default>false</default>
+                <label>Temporisateur</label>
+            </value>
+            <value>
+                <fullName>E065</fullName>
+                <default>false</default>
+                <label>Testomat</label>
+            </value>
+            <value>
+                <fullName>E066</fullName>
+                <default>false</default>
+                <label>Thermoslow</label>
+            </value>
+            <value>
+                <fullName>E067</fullName>
+                <default>false</default>
+                <label>Trappe de visite</label>
+            </value>
+            <value>
+                <fullName>E068</fullName>
+                <default>false</default>
+                <label>Tresse</label>
+            </value>
+            <value>
+                <fullName>E069</fullName>
+                <default>false</default>
+                <label>Tube de fumée</label>
+            </value>
+            <value>
+                <fullName>E070</fullName>
+                <default>false</default>
+                <label>Urée</label>
+            </value>
+            <value>
+                <fullName>E071</fullName>
+                <default>false</default>
+                <label>Vapeur</label>
+            </value>
+            <value>
+                <fullName>E073</fullName>
+                <default>false</default>
+                <label>Ventilateur</label>
+            </value>
+            <value>
+                <fullName>E074</fullName>
+                <default>false</default>
+                <label>Graisse</label>
+            </value>
+            <value>
+                <fullName>E075</fullName>
+                <default>false</default>
+                <label>Gaz (évent)</label>
+            </value>
+            <value>
+                <fullName>E076</fullName>
+                <default>false</default>
+                <label>Turbine</label>
+            </value>
+            <value>
+                <fullName>E077</fullName>
+                <default>false</default>
+                <label>Kit kérozène</label>
+            </value>
+            <value>
+                <fullName>E078</fullName>
+                <default>false</default>
+                <label>Régulateur fioul</label>
+            </value>
+            <value>
+                <fullName>E079</fullName>
+                <default>false</default>
+                <label>Pompe</label>
+            </value>
+            <value>
+                <fullName>E080</fullName>
+                <default>false</default>
+                <label>Air / Ligne ethanol</label>
+            </value>
+            <value>
+                <fullName>E072</fullName>
+                <default>false</default>
+                <label>Vapeur / eau</label>
+            </value>
+            <value>
+                <fullName>Air</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Air</label>
+            </value>
+            <value>
+                <fullName>Air / Ligne ethanol</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Air / Ligne ethanol</label>
+            </value>
+            <value>
+                <fullName>Air comburant</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Air comburant</label>
+            </value>
+            <value>
+                <fullName>Allumage</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Allumage</label>
+            </value>
+            <value>
+                <fullName>Analyse combustion</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Analyse combustion</label>
+            </value>
+            <value>
+                <fullName>Boisseau</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Boisseau</label>
+            </value>
+            <value>
+                <fullName>Bâche</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bâche</label>
+            </value>
+            <value>
+                <fullName>Cartouche fioul</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cartouche fioul</label>
+            </value>
+            <value>
+                <fullName>Cartouche gaz</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cartouche gaz</label>
+            </value>
+            <value>
+                <fullName>Chaudière</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Chaudière</label>
+            </value>
+            <value>
+                <fullName>Circulation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Circulation</label>
+            </value>
+            <value>
+                <fullName>Coffret electrique</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Coffret electrique</label>
+            </value>
+            <value>
+                <fullName>Colle</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Colle</label>
+            </value>
+            <value>
+                <fullName>Conductivité</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Conductivité</label>
+            </value>
+            <value>
+                <fullName>Contrôle de niveau d&apos;eau</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contrôle de niveau d&apos;eau</label>
+            </value>
+            <value>
+                <fullName>Cordon</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cordon</label>
+            </value>
+            <value>
+                <fullName>Coulis</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Coulis</label>
+            </value>
+            <value>
+                <fullName>Cuivre</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cuivre</label>
+            </value>
+            <value>
+                <fullName>Câble</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Câble</label>
+            </value>
+            <value>
+                <fullName>Divers</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Divers</label>
+            </value>
+            <value>
+                <fullName>Doseuse</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Doseuse</label>
+            </value>
+            <value>
+                <fullName>Déconcentration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Déconcentration</label>
+            </value>
+            <value>
+                <fullName>Détection de flamme</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Détection de flamme</label>
+            </value>
+            <value>
+                <fullName>Eau</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Eau</label>
+            </value>
+            <value>
+                <fullName>Eau / Vapeur</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Eau / Vapeur</label>
+            </value>
+            <value>
+                <fullName>Entrées</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Entrées</label>
+            </value>
+            <value>
+                <fullName>Entrées + sortie</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Entrées + sortie</label>
+            </value>
+            <value>
+                <fullName>Etamatic</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Etamatic</label>
+            </value>
+            <value>
+                <fullName>Etanchéité gaz</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Etanchéité gaz</label>
+            </value>
+            <value>
+                <fullName>Etoile / triangle</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Etoile / triangle</label>
+            </value>
+            <value>
+                <fullName>Extraction de fond</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Extraction de fond</label>
+            </value>
+            <value>
+                <fullName>Fibre</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fibre</label>
+            </value>
+            <value>
+                <fullName>Fil</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fil</label>
+            </value>
+            <value>
+                <fullName>Fioul</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fioul</label>
+            </value>
+            <value>
+                <fullName>Fioul / eau</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fioul / eau</label>
+            </value>
+            <value>
+                <fullName>Gaz</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Gaz</label>
+            </value>
+            <value>
+                <fullName>Gaz (Bloc gaz)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Gaz (Bloc gaz)</label>
+            </value>
+            <value>
+                <fullName>Gaz (pilote)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Gaz (pilote)</label>
+            </value>
+            <value>
+                <fullName>Gaz (principale)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Gaz (principale)</label>
+            </value>
+            <value>
+                <fullName>Gaz (sécurité)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Gaz (sécurité)</label>
+            </value>
+            <value>
+                <fullName>Gaz (évent)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Gaz (évent)</label>
+            </value>
+            <value>
+                <fullName>Gaz / Fioul</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Gaz / Fioul</label>
+            </value>
+            <value>
+                <fullName>Glace de niveau</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Glace de niveau</label>
+            </value>
+            <value>
+                <fullName>Graisse</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Graisse</label>
+            </value>
+            <value>
+                <fullName>Graphite</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Graphite</label>
+            </value>
+            <value>
+                <fullName>Indicateur de niveau</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Indicateur de niveau</label>
+            </value>
+            <value>
+                <fullName>Ionisation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ionisation</label>
+            </value>
+            <value>
+                <fullName>Kit kérozène</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Kit kérozène</label>
+            </value>
+            <value>
+                <fullName>Niveau eau</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Niveau eau</label>
+            </value>
+            <value>
+                <fullName>Piston</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Piston</label>
+            </value>
+            <value>
+                <fullName>Pompe</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pompe</label>
+            </value>
+            <value>
+                <fullName>Pompe eau</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pompe eau</label>
+            </value>
+            <value>
+                <fullName>Pression vapeur</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Pression vapeur</label>
+            </value>
+            <value>
+                <fullName>Propane</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Propane</label>
+            </value>
+            <value>
+                <fullName>Présence flamme</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Présence flamme</label>
+            </value>
+            <value>
+                <fullName>Regards</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Regards</label>
+            </value>
+            <value>
+                <fullName>Robinet de niveau inf</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Robinet de niveau inf</label>
+            </value>
+            <value>
+                <fullName>Robinet de niveau sup</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Robinet de niveau sup</label>
+            </value>
+            <value>
+                <fullName>Régulateur de pression gaz</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Régulateur de pression gaz</label>
+            </value>
+            <value>
+                <fullName>Régulateur fioul</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Régulateur fioul</label>
+            </value>
+            <value>
+                <fullName>Régulation eau</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Régulation eau</label>
+            </value>
+            <value>
+                <fullName>SKP</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SKP</label>
+            </value>
+            <value>
+                <fullName>Servomoteur air comburant</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Servomoteur air comburant</label>
+            </value>
+            <value>
+                <fullName>Servomoteur fioul</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Servomoteur fioul</label>
+            </value>
+            <value>
+                <fullName>Sorties</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Sorties</label>
+            </value>
+            <value>
+                <fullName>Spirale</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Spirale</label>
+            </value>
+            <value>
+                <fullName>Vapeur / eau</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>TEST</label>
+            </value>
+            <value>
+                <fullName>Temporisateur</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Temporisateur</label>
+            </value>
+            <value>
+                <fullName>Température</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Température</label>
+            </value>
+            <value>
+                <fullName>Tension</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tension</label>
+            </value>
+            <value>
+                <fullName>E023</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Test1</label>
+            </value>
+            <value>
+                <fullName>Testomat</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Testomat</label>
+            </value>
+            <value>
+                <fullName>Thermoslow</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Thermoslow</label>
+            </value>
+            <value>
+                <fullName>Trappe de visite</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Trappe de visite</label>
+            </value>
+            <value>
+                <fullName>Tresse</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tresse</label>
+            </value>
+            <value>
+                <fullName>Tube de fumée</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tube de fumée</label>
+            </value>
+            <value>
+                <fullName>Turbine</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Turbine</label>
+            </value>
+            <value>
+                <fullName>Urée</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Urée</label>
+            </value>
+            <value>
+                <fullName>Vapeur</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Vapeur</label>
+            </value>
+            <value>
+                <fullName>Ventilateur</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ventilateur</label>
+            </value>
+            <value>
+                <fullName>niveau visuel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>niveau visuel</label>
+            </value>
+            <value>
+                <fullName>pompe fioul</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>pompe fioul</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

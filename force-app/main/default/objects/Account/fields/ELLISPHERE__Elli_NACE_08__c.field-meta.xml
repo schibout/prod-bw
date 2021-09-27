@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_NACE_08__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Nomenclature statistique des Activités économiques dans la Communauté Européenne (dérivée de la nomenclature internationale CITI). La NAF, nomenclature d&apos;activités française, a la même structure que la NACE afin de faciliter les comparaison (NAF = nomenclature des activités économiques productives, principalement élaborée pour faciliter l&apos;organisation de l&apos;information économique et sociale).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>European activity classification</inlineHelpText>
+    <label>NACE 08</label>
+    <length>500</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

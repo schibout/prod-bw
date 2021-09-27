@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_NomDuTechnicien__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Nom de la ressource de service.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Nom de la ressource de service.</inlineHelpText>
+    <label>Nom du technicien</label>
+    <referenceTo>ServiceResource</referenceTo>
+    <relationshipLabel>Interventions</relationshipLabel>
+    <relationshipName>Interventions</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

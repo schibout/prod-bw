@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR05_DEV_ModificationMontantTypeDevis</fullName>
+    <active>false</active>
+    <description>Cette règle permet de bloquer la modification du montant du devis pour les devis différents de &quot;Hors System&quot;</description>
+    <errorConditionFormula>AND(
+					NOT(ISPICKVAL(DEV_TypeDeDevis__c, &apos;3&apos;)),
+					ISCHANGED( DEV_Montant__c ))</errorConditionFormula>
+    <errorMessage>Attention, vous n&apos;êtes pas autorisé à modifier le montant du devis.</errorMessage>
+</ValidationRule>

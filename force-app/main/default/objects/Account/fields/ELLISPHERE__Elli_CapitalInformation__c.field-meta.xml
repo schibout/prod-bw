@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_CapitalInformation__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Ressources en numéraire et en nature définitivement apportées à une société anonyme par ses actionnaires au moment de sa création (ou d&apos;une augmentation de capital). La devise varie en fonction du pays.</description>
+    <externalId>false</externalId>
+    <label>Capital social</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

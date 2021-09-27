@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_ACC_Plus_de_Modif_Pour_Client_NEW01</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+$User.USER_ByPassRegleValidation__c = FALSE, 
+$User.LastName != $Label.API, 
+RecordType.Name = &apos;Compte Actif&apos;, 
+OR(ISCHANGED(Name)
+, ISCHANGED(ACC_CodeBlocage__c)
+, ISCHANGED(ACC_EtatDuCompte__c)
+, AND(ISCHANGED(ACC_SecteurCommercial__c),TEXT(ACC_Entite_BW__c ) != $Label.BW_ITA )
+, ISCHANGED(ACC_Siret__c)
+, ISCHANGED(ACC_SIREN__c)
+, ISCHANGED(Type)
+, ISCHANGED(ACC_NTVAIntracommunautaire__c)
+, ISCHANGED(ACC_Entite_BW__c)
+, AND(ISCHANGED(ACC_Region__c),TEXT(ACC_Entite_BW__c ) != $Label.BW_ITA )
+, ISCHANGED(ACC_DelaisDePaiement__c)
+, ISCHANGED(ACC_ModeDePaiement__c)
+, ISCHANGED(ACC_Encours__c)
+, ISCHANGED(ACC_Creances__c)
+, ISCHANGED(ACC_CreancesEchues__c)
+, ISCHANGED(ACC_ERPIdFRA__c)
+, ISCHANGED(ACC_ERPIdESP__c)
+, ISCHANGED(ACC_ERPIdGBR__c)
+, ISCHANGED(ACC_ERPIdPOL__c)
+, ISCHANGED(ACC_ERPIdNLD__c)
+, ISCHANGED(ACC_ERPIdPRT__c)
+, ISCHANGED(ACC_ERPIdUSA__c)
+, ISCHANGED(BillingCity )
+, ISCHANGED(BillingCountry )
+, ISCHANGED(BillingStreet )
+, ISCHANGED( BillingStateCode ) 
+, ISCHANGED(BillingPostalCode)), 
+AND(NOT(ISNEW())))</errorConditionFormula>
+    <errorMessage>Vous ne pouvez pas modifier ces informations propres au Client issues de GPIC. 
+Adresse principale, URL, téléphone et contact sont modifiables depuis le 13/03/2020</errorMessage>
+</ValidationRule>

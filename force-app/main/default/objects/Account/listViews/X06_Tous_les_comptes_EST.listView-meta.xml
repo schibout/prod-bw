@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X06_Tous_les_comptes_EST</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACC_ERPIdFRA__c</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>ACC_CodeBlocage__c</columns>
+    <columns>ACC_EtatDuCompte__c</columns>
+    <columns>ACC_SecteurCommercial__c</columns>
+    <columns>ACC_SIREN__c</columns>
+    <columns>ACC_Siret__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACC_Region__c</field>
+        <operation>equals</operation>
+        <value>3</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.ADDRESS2_CITY</field>
+        <operation>equals</operation>
+        <value>verdun</value>
+    </filters>
+    <label>06 - Tous les comptes EST</label>
+</ListView>

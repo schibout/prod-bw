@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_CollectiveAgreement__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Convention collective rattachée au code NACE/NAF.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Reference of the collective agreement estimated by the company according to its activity.</inlineHelpText>
+    <label>Convention collective théorique</label>
+    <length>500</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

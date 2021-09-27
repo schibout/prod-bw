@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_Type_Of_Etablishment__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <label>Type d&apos;établissement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Siège</fullName>
+                <default>false</default>
+                <label>Siège</label>
+            </value>
+            <value>
+                <fullName>Etablissement secondaire</fullName>
+                <default>false</default>
+                <label>Etablissement secondaire</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

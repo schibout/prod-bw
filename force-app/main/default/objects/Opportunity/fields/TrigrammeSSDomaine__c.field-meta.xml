@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TrigrammeSSDomaine__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(TEXT(OPP_SousDomaine__c), &apos;1&apos;,&apos;ADO&apos;, &apos;2&apos;,&apos;AMK&apos;, &apos;3&apos;,&apos;CHF&apos;, &apos;4&apos;,&apos;AUA&apos;, &apos;5&apos;,&apos;DIA&apos;, &apos;6&apos;,&apos;AEP&apos;, &apos;7&apos;,&apos;AET&apos;, &apos;8&apos;,&apos;BAG&apos;, &apos;9&apos;,&apos;BRU&apos;, &apos;10&apos;,&apos;BWB&apos;, &apos;11&apos;,&apos;BWD&apos;, &apos;12&apos;,&apos;BWR&apos;, &apos;13&apos;,&apos;CFE&apos;,&apos;14&apos;,&apos;CEC&apos;, &apos;15&apos;, &apos;VBP&apos;, &apos;16&apos;, &apos;COC&apos;, &apos;17&apos;, &apos;TEC&apos;, &apos;18&apos;, &apos;CLC&apos;, &apos;19&apos;, &apos;COA&apos;, &apos;20&apos;, &apos;COE&apos;, &apos;21&apos;, &apos;OFG&apos;, &apos;22&apos;, &apos;CBM&apos;, &apos;23&apos;, &apos;DEG&apos;, &apos;24&apos;, &apos;DMN&apos;, &apos;25&apos;, &apos;EQF&apos;, &apos;26&apos;, &apos;EQU&apos;, &apos;27&apos;, &apos;FLT&apos;, &apos;28&apos;, &apos;FOR&apos;, &apos;30&apos;, &apos;THB&apos;, &apos;31&apos;, &apos;TFG&apos;, &apos;32&apos;, &apos;GDO&apos;, &apos;33&apos;, &apos;INC&apos;, &apos;34&apos;, &apos;ICH&apos;, &apos;36&apos;, &apos;LOC&apos;, &apos;37&apos;, &apos;MUP&apos;, &apos;38&apos;, &apos;OCC&apos;, &apos;39&apos;, &apos;OSM&apos;, &apos;40&apos;, &apos;PTF&apos;, &apos;41&apos;, &apos;PRE&apos;, &apos;42&apos;, &apos;PRO&apos;, &apos;45&apos;, &apos;REC&apos;, &apos;46&apos;, &apos;REG&apos;, &apos;47&apos;, &apos;GTN&apos;, &apos;49&apos;, &apos;GTS&apos;, &apos;51&apos;, &apos;TPC&apos;, &apos;52&apos;, &apos;VAP&apos;, &apos;53&apos;, &apos;ITE&apos;, &apos;54&apos;, &apos;AUD&apos;,&apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Trigramme SS Domaine</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

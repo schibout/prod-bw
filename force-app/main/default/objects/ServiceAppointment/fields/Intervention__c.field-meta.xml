@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intervention__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Ce champ permet de pouvoir ensuite faire le lien entre l&apos;adresse du SA et du WO</description>
+    <externalId>false</externalId>
+    <label>Tech_Intervention</label>
+    <referenceTo>WorkOrder</referenceTo>
+    <relationshipLabel>Rendez-vous de service</relationshipLabel>
+    <relationshipName>Rendez_vous_de_service</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

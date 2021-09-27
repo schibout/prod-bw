@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Centre_Section__c</columns>
+    <columns>CURRENCY_ISO_CODE</columns>
+    <columns>Date_de_debut__c</columns>
+    <columns>Date_de_fin__c</columns>
+    <columns>taux_devis_horaire__c</columns>
+    <columns>Taux_devis_conversion_PRI__c</columns>
+    <columns>Taux_devis_conversion_Complet__c</columns>
+    <columns>Entite_BW__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Centre_Section__c</field>
+        <operation>startsWith</operation>
+        <value>420</value>
+    </filters>
+    <label>Tout</label>
+</ListView>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_AnalyseDeCombustionReglementaire__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Analyse de combustion : réglage des débits, contrôle excès d’air, aspect et forme de la flamme, opacité, relevé des paramètres des fumées - Suivant articles R224-16 à R224-41 du Code de l&apos;Environnement</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Analyse de combustion : réglage des débits, contrôle excès d’air, aspect et forme de la flamme, opacité, relevé des paramètres des fumées - Suivant articles R224-16 à R224-41 du Code de l&apos;Environnement</inlineHelpText>
+    <label>Analyse de combustion réglementaire</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

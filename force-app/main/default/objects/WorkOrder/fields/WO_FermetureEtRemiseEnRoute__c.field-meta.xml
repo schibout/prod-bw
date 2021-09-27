@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_FermetureEtRemiseEnRoute__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Fermeture et remise en route</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Fermeture et remise en route</inlineHelpText>
+    <label>Fermeture et remise en route</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

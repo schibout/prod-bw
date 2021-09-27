@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Equipements_crees__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  Nbre_Equipement_restant_a_creer__c   = 0,TRUE,FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Cette case à cocher permet de signaler que vous avez créé l&apos; (tous les) équipement(s) lié(s) à cette commande.</inlineHelpText>
+    <label>Equipement(s) créé(s)</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MotifDeLaDemande__c</fullName>
+    <externalId>false</externalId>
+    <label>Motif de la demande</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Demande de devis</fullName>
+                <default>false</default>
+                <label>Demande de devis</label>
+            </value>
+            <value>
+                <fullName>Demande d&apos;information</fullName>
+                <default>false</default>
+                <label>Demande d&apos;information</label>
+            </value>
+            <value>
+                <fullName>Inscription Newsletter</fullName>
+                <default>false</default>
+                <label>Inscription Newsletter</label>
+            </value>
+            <value>
+                <fullName>Autres</fullName>
+                <default>false</default>
+                <label>Autres</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

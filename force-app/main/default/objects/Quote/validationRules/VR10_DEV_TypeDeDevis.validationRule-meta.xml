@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR10_DEV_TypeDeDevis</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$User.USER_ByPassRegleValidation__c = FALSE,
+ISPICKVAL($User.USER_EntiteBW__c , &quot;3&quot;), 
+TEXT(DEV_TypeDeDevis__c) = $Label.Devis_ERP
+)</errorConditionFormula>
+    <errorMessage>Le type de devis ne peut pas être &quot;Devis ERP&quot; si l&apos;Entité BW est &quot;BW ITA&quot;</errorMessage>
+</ValidationRule>

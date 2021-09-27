@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR01_ASS_MiseEnServiceObligSiEnService</fullName>
+    <active>true</active>
+    <description>Si le statut de l&apos;équipement est en &quot;En Service&quot;, alors une date de mise en service doit être obligatoirement renseignée.</description>
+    <errorConditionFormula>(ISPICKVAL(Status,&quot;En_service&quot;)) &amp;&amp;
+(ISBLANK(InstallDate))</errorConditionFormula>
+    <errorMessage>Le statut de l&apos;équipement est &quot;En service&quot;, veuillez renseigner une Date de mise en service.</errorMessage>
+</ValidationRule>

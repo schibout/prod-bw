@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ASS_CommentaireNonConformite__c</fullName>
+    <externalId>false</externalId>
+    <label>Commentaire sur la non conformité</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <type>TextArea</type>
+</CustomField>

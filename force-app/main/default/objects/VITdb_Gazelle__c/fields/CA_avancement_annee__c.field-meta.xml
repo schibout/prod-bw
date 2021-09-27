@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CA_avancement_annee__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>somme de tous les CA de l&apos;année (ne pas prendre en compte les CA à l&apos;avancement des années passées)</inlineHelpText>
+    <label>CA à l&apos;avancement de l&apos;annee</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

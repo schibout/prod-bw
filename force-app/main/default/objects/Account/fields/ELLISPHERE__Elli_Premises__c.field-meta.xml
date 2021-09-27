@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_Premises__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Information qui est le plus souvent déduite des postes de l’actif immobilisé. Valeurs possibles : « Locataire », « Propriétaire des locaux », « Propriétaire du terrain », « Propriétaire Locaux et terrain»</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Information that is most often deducted from fixed assets items. Possible values: &quot;Tenant&quot;, &quot;Premises owner&quot;, &quot;Land owner&quot;, &quot;Premises and land owner&quot;.</inlineHelpText>
+    <label>Surface immobilière</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactName__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF (OPP_Contact__r.FirstName == NULL, OPP_Contact__r.LastName,
+IF (OPP_Contact__r.LastName == NULL, OPP_Contact__r.FirstName, 
+OPP_Contact__r.FirstName + &apos; &apos; + OPP_Contact__r.LastName))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ContactName</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

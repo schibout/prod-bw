@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facture_sur_affaire_SAV</fullName>
+    <columns>NAME</columns>
+    <columns>Affaire__c</columns>
+    <columns>BU__c</columns>
+    <columns>Sous_Domaine__c</columns>
+    <columns>Date_d_ouverture_d_affaire__c</columns>
+    <columns>Date_de_SAV_reelle__c</columns>
+    <columns>Date_de_comptabilisation__c</columns>
+    <columns>Montant_HT__c</columns>
+    <columns>PV_de_l_affaire__c</columns>
+    <columns>Facture_SAV_Comptabilisee__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Facture_sur_Affaire_SAV__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Facture_SAV_traitee__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>FAC</value>
+    </filters>
+    <filters>
+        <field>Statut_periode_comptable__c</field>
+        <operation>startsWith</operation>
+        <value>20</value>
+    </filters>
+    <label>Factures sur affaires SAV non traitées</label>
+</ListView>

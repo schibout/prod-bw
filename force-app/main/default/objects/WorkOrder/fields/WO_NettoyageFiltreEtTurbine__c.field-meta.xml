@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_NettoyageFiltreEtTurbine__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Vérification et nettoyage filtre et turbine</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Vérification et nettoyage filtre et turbine</inlineHelpText>
+    <label>Vérification nettoyage filtre et turbine</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

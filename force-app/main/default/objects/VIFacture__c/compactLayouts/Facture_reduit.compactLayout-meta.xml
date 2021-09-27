@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facture_reduit</fullName>
+    <fields>Name</fields>
+    <fields>Compte__c</fields>
+    <fields>Affaire__c</fields>
+    <fields>Date__c</fields>
+    <fields>Type__c</fields>
+    <fields>CurrencyIsoCode</fields>
+    <fields>Montant_HT__c</fields>
+    <label>Facture réduit</label>
+</CompactLayout>

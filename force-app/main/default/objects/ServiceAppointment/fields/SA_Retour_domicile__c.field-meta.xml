@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SA_Retour_domicile__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Ce champ indique que le technicien rentre chez lui tous les soirs en cas d&apos;intervention Multidays</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Ce champ indique que le technicien rentre chez lui tous les soirs en cas d&apos;intervention Multidays. 
+Si ce champ est décoché/coché, la fin planifiée sera recalculée.</inlineHelpText>
+    <label>Retour domicile</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

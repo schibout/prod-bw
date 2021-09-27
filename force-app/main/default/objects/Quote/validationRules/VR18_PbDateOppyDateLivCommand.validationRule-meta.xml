@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR18_PbDateOppyDateLivCommand</fullName>
+    <active>true</active>
+    <description>VR pour la vérification des date de l&apos;oppy et date livraison commande</description>
+    <errorConditionFormula>AND(
+ $User.USER_ByPassRegleValidation__c = FALSE
+,$User.LastName != $Label.API
+,ISPICKVAL(Status, &apos;3&apos;)
+,TEXT( $User.USER_EntiteBW__c ) == $Label.BW_ITA
+,NOT(AND ( Opportunity.CloseDate &lt;= TODAY()
+     , Opportunity.CloseDate &gt; TODAY()-7)
+)
+)</errorConditionFormula>
+    <errorMessage>Merci de vérifier les date de clotûre et date de commande envisagée (VR18)</errorMessage>
+</ValidationRule>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR04_ACC_CreationPreclient</fullName>
+    <active>false</active>
+    <description>Cette règle empêche l&apos;utilisateur de créer un compte au statut &quot;Pré-client&quot;.</description>
+    <errorConditionFormula>AND(ISNEW(),	
+				TEXT(Type) = &quot;2&quot;, 
+$User.USER_ByPassRegleValidation__c = FALSE, 
+$User.Username &lt;&gt; &apos;api@bw.com&apos;)</errorConditionFormula>
+    <errorMessage>Vous ne pouvez pas créer un compte au statut &quot;Pré-client&quot;, merci de le laisser au statut &quot;Prospect&quot;</errorMessage>
+</ValidationRule>

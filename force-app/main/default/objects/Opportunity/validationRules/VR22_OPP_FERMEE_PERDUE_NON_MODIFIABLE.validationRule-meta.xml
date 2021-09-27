@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR22_OPP_FERMEE_PERDUE_NON_MODIFIABLE</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND($User.USER_ByPassRegleValidation__c = FALSE
+    ,$User.LastName != $Label.API
+    ,ISPICKVAL(  StageName ,&quot;Fermée perdue&quot;)
+    ,OR ( ISCHANGED(OPP_Domaine__c)
+         ,ISCHANGED(OPP_SousDomaine__c)
+         )
+   )</errorConditionFormula>
+    <errorMessage>VR22 - Vous n&apos;êtes pas autorisés à modifier une opportunité Fermée/Perdue</errorMessage>
+</ValidationRule>

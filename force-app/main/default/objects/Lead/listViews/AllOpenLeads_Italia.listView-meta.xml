@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllOpenLeads_Italia</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>LD_EntiteBW__c</columns>
+    <columns>LEAD.COMPANY</columns>
+    <columns>LEAD.STATE</columns>
+    <columns>LEAD.EMAIL</columns>
+    <columns>LEAD.STATUS</columns>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>PIS_Commentaires__c</columns>
+    <columns>LEAD.CREATED_DATE</columns>
+    <columns>LEAD.LEAD_SOURCE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>LD_EntiteBW__c</field>
+        <operation>equals</operation>
+        <value>3</value>
+    </filters>
+    <label>Tutti i Lead Italia Aperti</label>
+    <language>it</language>
+</ListView>

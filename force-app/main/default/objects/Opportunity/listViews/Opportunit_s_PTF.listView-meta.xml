@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunit_s_PTF</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>OPP_NumDevisGPIC__c</columns>
+    <columns>TrigrammeSSDomaine__c</columns>
+    <columns>OPP_ChargeDAffaire__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>OPPORTUNITY.CLOSE_DATE</columns>
+    <columns>OPP_DateDeCommandeEnvisagee__c</columns>
+    <columns>OPPORTUNITY.AMOUNT</columns>
+    <columns>Description__c</columns>
+    <columns>OPPORTUNITY.CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OPP_SousDomaine__c</field>
+        <operation>equals</operation>
+        <value>31,40,47,49</value>
+    </filters>
+    <label>BWF_Opportunités PTF</label>
+</ListView>

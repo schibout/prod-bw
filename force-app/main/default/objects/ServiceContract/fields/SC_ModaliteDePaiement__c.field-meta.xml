@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SC_ModaliteDePaiement__c</fullName>
+    <description>Correspond à la fréquence de paiement du contrat de service</description>
+    <externalId>false</externalId>
+    <label>Modalité de paiement</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mensuel</fullName>
+                <default>false</default>
+                <label>Mensuel</label>
+            </value>
+            <value>
+                <fullName>Trimestriel</fullName>
+                <default>false</default>
+                <label>Trimestriel</label>
+            </value>
+            <value>
+                <fullName>Annuel</fullName>
+                <default>false</default>
+                <label>Annuel</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

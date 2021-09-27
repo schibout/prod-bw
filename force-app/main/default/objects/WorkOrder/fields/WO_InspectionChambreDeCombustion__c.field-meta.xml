@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_InspectionChambreDeCombustion__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Inspection de la chambre de combustion, des réfractaires, du serpentin dans ses parties visibles</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Inspection de la chambre de combustion, des réfractaires, du serpentin dans ses parties visibles</inlineHelpText>
+    <label>Inspection chambre de combustion</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

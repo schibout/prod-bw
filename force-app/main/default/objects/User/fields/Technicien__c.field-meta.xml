@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Technicien__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Permet d&apos;indiquer que l&apos;utilisateur sera soumis aux règles de validation de l&apos;intervention.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Permet d&apos;indiquer que l&apos;utilisateur sera soumis aux règles de validation de l&apos;intervention.</inlineHelpText>
+    <label>Technicien</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

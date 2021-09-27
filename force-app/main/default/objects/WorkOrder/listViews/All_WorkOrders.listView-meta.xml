@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_WorkOrders</fullName>
+    <columns>Name</columns>
+    <columns>StartDate</columns>
+    <columns>Status</columns>
+    <columns>Account</columns>
+    <columns>ServiceTerritory</columns>
+    <columns>Contact</columns>
+    <columns>WorkType</columns>
+    <columns>RecordType</columns>
+    <columns>Asset</columns>
+    <columns>CreatedDate</columns>
+    <columns>CreatedBy</columns>
+    <columns>COUNTRY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ServiceTerritory</field>
+        <operation>equals</operation>
+        <value>export</value>
+    </filters>
+    <filters>
+        <field>COUNTRY</field>
+        <operation>notContain</operation>
+        <value>Luxembourg,Belgium,Italy</value>
+    </filters>
+    <filters>
+        <field>Status</field>
+        <operation>notEqual</operation>
+        <value>Annulé,Impossible de terminer,Fermé</value>
+    </filters>
+    <label>Interventions Export à prévoir</label>
+</ListView>

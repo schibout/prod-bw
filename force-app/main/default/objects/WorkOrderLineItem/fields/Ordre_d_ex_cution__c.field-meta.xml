@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ordre_d_ex_cution__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Ordre d&apos;exécution</label>
+    <referenceTo>WorkOrder</referenceTo>
+    <relationshipLabel>Éléments d&apos;ordre d&apos;exécution</relationshipLabel>
+    <relationshipName>l_ments_d_ordre_d_ex_cution</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

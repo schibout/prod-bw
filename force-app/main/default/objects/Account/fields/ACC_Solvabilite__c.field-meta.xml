@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ACC_Solvabilite__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(  ACC_Creances__c   &lt;  ACC_LimitationDeCredit__c,IMAGE(&quot;/resource/IconeSolvabiliteVert&quot;, &quot;green&quot;, 30, 30),
+IF(  ACC_Creances__c   &gt;  ACC_LimitationDeCredit__c,IMAGE(&quot;/resource/IconeSolvabiliteRouge&quot;, &quot;red&quot;, 30, 30),
+IMAGE(&quot;/resource/IconeSolvabiliteInconnue&quot;, &quot;black&quot;, 30, 30)
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Solvabilité</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

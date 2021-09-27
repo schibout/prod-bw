@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_StatutDuCAT__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(ServiceContract.SC_Statut__c,&quot;Actif&quot;, &quot;Actif&quot;, &quot;Avant projet&quot;, &quot;Avant projet&quot;,&quot;Contrat signé&quot;, &quot;Contrat signé&quot;,&quot;Suspendu&quot;,&quot;Suspendu&quot;,&quot;Résilié&quot;,&quot;Résilié&quot;,&quot;Terminé&quot;,&quot;Terminé&quot;,&quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Statut du CAT</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

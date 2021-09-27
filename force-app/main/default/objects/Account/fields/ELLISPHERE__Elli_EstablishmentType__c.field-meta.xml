@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_EstablishmentType__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Désigne si l&apos;établissement consulté est le siège social ou un établissement secondaire de l&apos;entreprise.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Refers to whether the  consulted company is the  Head office or a branch .</inlineHelpText>
+    <label>Type d&apos;établissement</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

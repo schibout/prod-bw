@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_ProductTransfers</fullName>
+    <columns>Name</columns>
+    <columns>LastModifiedDate</columns>
+    <columns>LastModifiedBy</columns>
+    <columns>ProductRequestLineItem</columns>
+    <columns>SourceProductItem</columns>
+    <columns>Product2</columns>
+    <columns>SourceLocation</columns>
+    <columns>DestinationLocation</columns>
+    <columns>Shipment</columns>
+    <columns>ReturnOrderLineItem</columns>
+    <filterScope>Everything</filterScope>
+    <label>Tous les transferts de produit</label>
+    <language>fr</language>
+</ListView>

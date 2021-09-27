@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_PressionAirBruleurMmCE100__c</fullName>
+    <description>Pression Air Brûleur (mm CE) (100%)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Pression Air Brûleur (mm CE) (100%)</inlineHelpText>
+    <label>3-Press Air Brûleur(mm CE)</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

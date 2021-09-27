@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_ActivityTypeAndCode__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Le code APE (activité principale exercée) permet d&apos;identifier la branche d&apos;activité principale de l&apos;entreprise ou du travailleur indépendant. Sa fonction principale est statistique (attribué par l&apos;INSEE). Il est composé de 4 chiffres + 1 lettre, en référence à la nomenclature statistique nationale d&apos;activités française (NAF).</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Code from the French Nomenclature of Activities (NAF).</inlineHelpText>
+    <label>APE 2008</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

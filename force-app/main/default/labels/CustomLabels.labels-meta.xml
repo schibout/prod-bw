@@ -1,0 +1,1674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ACC_CreationACCError</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>ACC_CreationACCError</shortDescription>
+        <value>Pour créer un prospect ou un pré-client vous devez passer par la recherche ELLISPHERE</value>
+    </labels>
+    <labels>
+        <fullName>AP01_QLI_ErrorMsg1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP01_QLI_ErrorMsg1</shortDescription>
+        <value>Au moins une ligne du devis doit contenir le produit principal</value>
+    </labels>
+    <labels>
+        <fullName>AP01_QLI_ErrorMsg2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AP01_QLI_ErrorMsg2</shortDescription>
+        <value>Une seule ligne du devis peut contenir le produit principal</value>
+    </labels>
+    <labels>
+        <fullName>API</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>API</shortDescription>
+        <value>API</value>
+    </labels>
+    <labels>
+        <fullName>Acc_RecordTypeID</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Acc RecordTypeID</shortDescription>
+        <value>0120O000000kqi1QAA</value>
+    </labels>
+    <labels>
+        <fullName>Acc_RecordTypeProsPre</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Acc_RecordTypeProsPre</shortDescription>
+        <value>Compte Prospect ou pré client</value>
+    </labels>
+    <labels>
+        <fullName>Accepte</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Accepté</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Actif</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Actif</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Air</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Air</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>Ap01_Opp_ErrorMsg</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Ap01_Opp_ErrorMsg</shortDescription>
+        <value>Merci de choisir un contact associé au compte.</value>
+    </labels>
+    <labels>
+        <fullName>BW_FRA</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>BW FRA</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>BW_ITA</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>BW ITA</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Chaudieres</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chaudières</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Code_12</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Code_12</shortDescription>
+        <value>12</value>
+    </labels>
+    <labels>
+        <fullName>Code_26</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Code_26</shortDescription>
+        <value>26</value>
+    </labels>
+    <labels>
+        <fullName>Code_9</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Code_9</shortDescription>
+        <value>9</value>
+    </labels>
+    <labels>
+        <fullName>CommentaireSansSuite</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CommentaireSansSuite</shortDescription>
+        <value>Automated Process</value>
+    </labels>
+    <labels>
+        <fullName>CompteActif</fullName>
+        <categories>VR05_CheckERP</categories>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>CompteActif</shortDescription>
+        <value>Compte Actif</value>
+    </labels>
+    <labels>
+        <fullName>DEV_delaiLivraison01</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEV_delaiLivraison01</shortDescription>
+        <value>semaines à partir de la commande</value>
+    </labels>
+    <labels>
+        <fullName>DEV_delaiLivraison02</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEV_delaiLivraison02</shortDescription>
+        <value>semaines à partir du paiement</value>
+    </labels>
+    <labels>
+        <fullName>DEV_unite_Bidon</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEV_unite_Bidon</shortDescription>
+        <value>Bidon</value>
+    </labels>
+    <labels>
+        <fullName>DEV_unite_Fut</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEV_unite_Fût</shortDescription>
+        <value>Fût</value>
+    </labels>
+    <labels>
+        <fullName>DEV_unite_Heure</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEV_unite_Heure</shortDescription>
+        <value>Heure</value>
+    </labels>
+    <labels>
+        <fullName>DEV_unite_Metre</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEV_unite_Mètre</shortDescription>
+        <value>Mètre</value>
+    </labels>
+    <labels>
+        <fullName>DEV_unite_Sac</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEV_unite_Sac</shortDescription>
+        <value>Sac</value>
+    </labels>
+    <labels>
+        <fullName>DEV_unite_Tonneau</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEV_unite_Tonneau</shortDescription>
+        <value>Tonneau</value>
+    </labels>
+    <labels>
+        <fullName>DEV_unite_unite</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DEV_unite_unite</shortDescription>
+        <value>Unité</value>
+    </labels>
+    <labels>
+        <fullName>Dev_Status_Cree</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Dev_Status_Créé</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>Devis_ERP</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Devis ERP</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>Draft</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Draft</shortDescription>
+        <value>Draft</value>
+    </labels>
+    <labels>
+        <fullName>En_cours</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>En cours</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>Envoye</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Envoyé</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>Equipement</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Equipement</shortDescription>
+        <value>Equipement</value>
+    </labels>
+    <labels>
+        <fullName>Erreur_ClonageDevis</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Erreur_ClonageDevis</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Facturee</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Facturée</shortDescription>
+        <value>2</value>
+    </labels>
+    <labels>
+        <fullName>FileEnglish</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>FileEnglish</shortDescription>
+        <value>Tariffe Interco_ eng</value>
+    </labels>
+    <labels>
+        <fullName>FileFrench</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>FileFrench</shortDescription>
+        <value>Tariffe Interco_ fra</value>
+    </labels>
+    <labels>
+        <fullName>FileItalian</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>FileItalian</shortDescription>
+        <value>Tariffe estero_ita</value>
+    </labels>
+    <labels>
+        <fullName>ItalieDescriptionDelai01</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>ItalieDescriptionDelai01</shortDescription>
+        <value>settimane dalla ricezione dell&apos;ordine</value>
+    </labels>
+    <labels>
+        <fullName>ItalieDescriptionDelai02</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>ItalieDescriptionDelai02</shortDescription>
+        <value>settimane dalla ricezione dell&apos;ordine e del pagamento</value>
+    </labels>
+    <labels>
+        <fullName>OPP_CreationOppError</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>OPP_CreationOppError</shortDescription>
+        <value>Impossible de créer une opportunité depuis la vue de liste.</value>
+    </labels>
+    <labels>
+        <fullName>Oxidizers</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Oxidizers</shortDescription>
+        <value>6</value>
+    </labels>
+    <labels>
+        <fullName>PRO</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>PRO</shortDescription>
+        <value>42</value>
+    </labels>
+    <labels>
+        <fullName>Reglee</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Réglée</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>Remise_chauffage</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Remise chauffage</shortDescription>
+        <value>Remise chauffage :</value>
+    </labels>
+    <labels>
+        <fullName>Remise_mat_riel_traitement_de_l_eau_standard</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Remise matériel traitement de l&apos;eau standard</shortDescription>
+        <value>Remise matériel traitement de l&apos;eau standard :</value>
+    </labels>
+    <labels>
+        <fullName>Remise_pieces</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Remise pièces</shortDescription>
+        <value>Remise pièces :</value>
+    </labels>
+    <labels>
+        <fullName>Remise_produit_de_conditionnement</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Remise produit de conditionnement</shortDescription>
+        <value>Remise produit de conditionnement :</value>
+    </labels>
+    <labels>
+        <fullName>ReturnLine</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ReturnLine</shortDescription>
+        <value>-
+-</value>
+    </labels>
+    <labels>
+        <fullName>SA_Expedie</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>SA_Expedie</shortDescription>
+        <value>Expédié</value>
+    </labels>
+    <labels>
+        <fullName>SA_Planifie</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>SA_Planifie</shortDescription>
+        <value>Planifié</value>
+    </labels>
+    <labels>
+        <fullName>SA_Programme</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>SA_Programme</shortDescription>
+        <value>A programmer</value>
+    </labels>
+    <labels>
+        <fullName>SA_Status_EnCours</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SA_Status_EnCours</shortDescription>
+        <value>En cours</value>
+    </labels>
+    <labels>
+        <fullName>SA_Status_Termine</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>SA_Status_Termine</shortDescription>
+        <value>Terminé</value>
+    </labels>
+    <labels>
+        <fullName>SA_status_Journ_e_Termin_e</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>SA status Journée Terminée</shortDescription>
+        <value>Journée Terminée</value>
+    </labels>
+    <labels>
+        <fullName>Serie_ASC</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Serie_ASC</shortDescription>
+        <value>ASC</value>
+    </labels>
+    <labels>
+        <fullName>Serie_BWB</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Serie_BWB</shortDescription>
+        <value>BWB</value>
+    </labels>
+    <labels>
+        <fullName>Serie_LNTA</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Serie_LNTA</shortDescription>
+        <value>LNTA</value>
+    </labels>
+    <labels>
+        <fullName>Serie_REC</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Serie_REC</shortDescription>
+        <value>REC</value>
+    </labels>
+    <labels>
+        <fullName>Serie_RIGE</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Serie_RIGE</shortDescription>
+        <value>RIGE</value>
+    </labels>
+    <labels>
+        <fullName>Services</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Services</shortDescription>
+        <value>4</value>
+    </labels>
+    <labels>
+        <fullName>Temp_Bonjour</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_Bonjour</shortDescription>
+        <value>Bonjour</value>
+    </labels>
+    <labels>
+        <fullName>Temp_Case</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_Case</shortDescription>
+        <value>Case</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityAsyncVerification_1</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityAsyncVerification_1</shortDescription>
+        <value>Vérifier votre identité dans</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityAsyncVerification_2</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityAsyncVerification_2</shortDescription>
+        <value>Pour vérifier l&apos;adresse e-mail que vous utilisez avec</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityAsyncVerification_3</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityAsyncVerification_3</shortDescription>
+        <value>cliquez sur ce lien</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityForgotPassword_1</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityForgotPassword_1</shortDescription>
+        <value>Votre nouveau mot de passe</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityForgotPassword_2</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityForgotPassword_2</shortDescription>
+        <value>Votre mot de passe</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityForgotPassword_3</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityForgotPassword_3</shortDescription>
+        <value>a été réinitialisé</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityForgotPassword_4</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityForgotPassword_4</shortDescription>
+        <value>Accédez à</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityLockout_1</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityLockout_1</shortDescription>
+        <value>Vous avez été déconnecté(e) de</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityLockout_2</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityLockout_2</shortDescription>
+        <value>Nous avons reçu votre demande de réinitialisation de votre mot de passe</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityLockout_3</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityLockout_3</shortDescription>
+        <value>Nous ne pouvons pas réinitialiser votre mot de passe actuellement. Votre compte est verrouillé en raison d’un nombre de tentatives de connexion excessif</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityLockout_4</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityLockout_4</shortDescription>
+        <value>Réessayez dans</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityLockout_5</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityLockout_5</shortDescription>
+        <value>minutes</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityLockout_6</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityLockout_6</shortDescription>
+        <value>Contactez votre administrateur</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityLockout_7</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityLockout_7</shortDescription>
+        <value>pour déverrouiller votre compte</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityLockout_8</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityLockout_8</shortDescription>
+        <value>Si vous n’avez pas demandé la réinitialisation du mot de passe ou si vous n’avez pas essayé récemment de vous connecter à votre compte, contactez votre administrateur</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityLockout_9</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityLockout_9</shortDescription>
+        <value>ou répondez à cet e-mail</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityVerification_1</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityVerification_1</shortDescription>
+        <value>Vérifier votre identité dans</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityVerification_10</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityVerification_10</shortDescription>
+        <value>ou si vous ne reconnaissez pas ce navigateur ou ce système d&apos;exploitation, contactez votre administrateur</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityVerification_2</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityVerification_2</shortDescription>
+        <value>Vous avez récemment tenté une action dans</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityVerification_3</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityVerification_3</shortDescription>
+        <value>Action</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityVerification_4</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityVerification_4</shortDescription>
+        <value>Navigateur</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityVerification_5</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityVerification_5</shortDescription>
+        <value>Système d&apos;exploitation</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityVerification_6</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityVerification_6</shortDescription>
+        <value>Nom d&apos;utilisateur</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityVerification_7</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityVerification_7</shortDescription>
+        <value>Pour garantir la sécurité de votre compte, nous devons vérifier votre identité. Saisissez le code ci-dessous à l&apos;invite de</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityVerification_8</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityVerification_8</shortDescription>
+        <value>Code de vérification</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityVerification_9</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityVerification_9</shortDescription>
+        <value>Si vous n&apos;avez pas tenté récemment cette action dans</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityWelcomeEmailTemplate_1</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityWelcomeEmailTemplate_1</shortDescription>
+        <value>Bienvenue dans</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityWelcomeEmailTemplate_2</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityWelcomeEmailTemplate_2</shortDescription>
+        <value>Bienvenue dans le portail client de</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityWelcomeEmailTemplate_3</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityWelcomeEmailTemplate_3</shortDescription>
+        <value>Pour commencer, accédez à</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CommunityWelcomeEmailTemplate_4</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CommunityWelcomeEmailTemplate_4</shortDescription>
+        <value>Votre nom d&apos;utilisateur est le suivant</value>
+    </labels>
+    <labels>
+        <fullName>Temp_Company</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_Company</shortDescription>
+        <value>Company</value>
+    </labels>
+    <labels>
+        <fullName>Temp_ContactFollowUpSAMPLE_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_ContactFollowUpSAMPLE_1</shortDescription>
+        <value>Following up on our discussion today</value>
+    </labels>
+    <labels>
+        <fullName>Temp_ContactFollowUpSAMPLE_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_ContactFollowUpSAMPLE_2</shortDescription>
+        <value>I really enjoyed speaking with you today. I think that</value>
+    </labels>
+    <labels>
+        <fullName>Temp_ContactFollowUpSAMPLE_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_ContactFollowUpSAMPLE_3</shortDescription>
+        <value>has a lot to offer</value>
+    </labels>
+    <labels>
+        <fullName>Temp_ContactFollowUpSAMPLE_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_ContactFollowUpSAMPLE_4</shortDescription>
+        <value>and I look forward to our next meeting</value>
+    </labels>
+    <labels>
+        <fullName>Temp_ContactName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_ContactName</shortDescription>
+        <value>Contact Name</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CustomerAdvocateTeam</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CustomerAdvocateTeam</shortDescription>
+        <value>Customer Advocate Team</value>
+    </labels>
+    <labels>
+        <fullName>Temp_CustomerSupport</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_CustomerSupport</shortDescription>
+        <value>Customer Support</value>
+    </labels>
+    <labels>
+        <fullName>Temp_Dear</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_Dear</shortDescription>
+        <value>Dear</value>
+    </labels>
+    <labels>
+        <fullName>Temp_Description</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_Description</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>Temp_EquipeSupport</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_EquipeSupport</shortDescription>
+        <value>Equipe support</value>
+    </labels>
+    <labels>
+        <fullName>Temp_From</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_From</shortDescription>
+        <value>from</value>
+    </labels>
+    <labels>
+        <fullName>Temp_LeadsNewassignmentnotif_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_LeadsNewassignmentnotif_1</shortDescription>
+        <value>New lead assigned to you</value>
+    </labels>
+    <labels>
+        <fullName>Temp_LeadsNewassignmentnotif_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_LeadsNewassignmentnotif_2</shortDescription>
+        <value>NEW LEAD ASSIGNMENT NOTIFICATION</value>
+    </labels>
+    <labels>
+        <fullName>Temp_LeadsNewassignmentnotif_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_LeadsNewassignmentnotif_3</shortDescription>
+        <value>The following lead has been assigned to you</value>
+    </labels>
+    <labels>
+        <fullName>Temp_LeadsNewassignmentnotif_5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_LeadsNewassignmentnotif_5</shortDescription>
+        <value>Lead Name</value>
+    </labels>
+    <labels>
+        <fullName>Temp_LeadsNewassignmentnotif_6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_LeadsNewassignmentnotif_6</shortDescription>
+        <value>Click on the link to access the lead directly</value>
+    </labels>
+    <labels>
+        <fullName>Temp_LeadsWebtoLead_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_LeadsWebtoLead_1</shortDescription>
+        <value>Thank you for your inquiry</value>
+    </labels>
+    <labels>
+        <fullName>Temp_LeadsWebtoLead_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_LeadsWebtoLead_2</shortDescription>
+        <value>Thank you for your interest in</value>
+    </labels>
+    <labels>
+        <fullName>Temp_LeadsWebtoLead_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_LeadsWebtoLead_3</shortDescription>
+        <value>We will be contacting you shortly</value>
+    </labels>
+    <labels>
+        <fullName>Temp_LeadsWebtoLead_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_LeadsWebtoLead_4</shortDescription>
+        <value>The Team at</value>
+    </labels>
+    <labels>
+        <fullName>Temp_Merci</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_Merci</shortDescription>
+        <value>Merci</value>
+    </labels>
+    <labels>
+        <fullName>Temp_Owner</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_Owner</shortDescription>
+        <value>Owner</value>
+    </labels>
+    <labels>
+        <fullName>Temp_Regards</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_Regards</shortDescription>
+        <value>Regards</value>
+    </labels>
+    <labels>
+        <fullName>Temp_Remerciements</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Temp_Remerciements</shortDescription>
+        <value>Avec nos remerciements</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTCaseResponsewithSolution_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTCaseResponsewithSolution_1</shortDescription>
+        <value>Your comment</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTCaseescalationnotif_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTCaseescalationnotif_1</shortDescription>
+        <value>has been escalated</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTCaseescalationnotif_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTCaseescalationnotif_2</shortDescription>
+        <value>CASE ESCALATION ALERT</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTCaseescalationnotif_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTCaseescalationnotif_3</shortDescription>
+        <value>The following case has been escalated</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTCaseescalationnotif_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTCaseescalationnotif_4</shortDescription>
+        <value>Click on the link to access the case</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTNewassignmentnotif_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTNewassignmentnotif_1</shortDescription>
+        <value>has been assigned to you</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTNewassignmentnotif_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTNewassignmentnotif_2</shortDescription>
+        <value>NEW CASE ASSIGNMENT NOTIFICATION</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTNewassignmentnotif_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTNewassignmentnotif_3</shortDescription>
+        <value>The following case has been assigned to you</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTNewassignmentnotif_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTNewassignmentnotif_4</shortDescription>
+        <value>Click on the link to access the case</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTSelfServiceNewComment_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTSelfServiceNewComment_1</shortDescription>
+        <value>Your case</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTSelfServiceNewComment_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTSelfServiceNewComment_2</shortDescription>
+        <value>has been updated</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTSelfServiceNewComment_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTSelfServiceNewComment_3</shortDescription>
+        <value>Please click on the link below
+to view this case on the Self-Service portal</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTSelfServiceNewComment_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTSelfServiceNewComment_4</shortDescription>
+        <value>insert the link to your Self-Service portal login page here</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTSelfServiceNewUserLogin_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTSelfServiceNewUserLogin_1</shortDescription>
+        <value>Your</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTSelfServiceNewUserLogin_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTSelfServiceNewUserLogin_2</shortDescription>
+        <value>Self-Service username and password</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTSelfServiceNewUserLogin_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTSelfServiceNewUserLogin_3</shortDescription>
+        <value>Self-Service portal login and password information is below</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTSelfServiceResetPass_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTSelfServiceResetPass_1</shortDescription>
+        <value>Your new</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTSelfServiceResetPass_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTSelfServiceResetPass_2</shortDescription>
+        <value>Self-Service password</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTSelfServiceResetPass_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTSelfServiceResetPass_3</shortDescription>
+        <value>Thank you for contacting customer support</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTSelfServiceResetPass_4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTSelfServiceResetPass_4</shortDescription>
+        <value>Your new Self-Service portal password can be found below</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTWebtoCaseResponse_1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTWebtoCaseResponse_1</shortDescription>
+        <value>Thank you for submitting your question to us online</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTWebtoCaseResponse_2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTWebtoCaseResponse_2</shortDescription>
+        <value>has been created and a</value>
+    </labels>
+    <labels>
+        <fullName>Temp_SUPPORTWebtoCaseResponse_3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_SUPPORTWebtoCaseResponse_3</shortDescription>
+        <value>Customer Advocate will respond to you shortly</value>
+    </labels>
+    <labels>
+        <fullName>Temp_Sincerely</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_Sincerely</shortDescription>
+        <value>Sincerely</value>
+    </labels>
+    <labels>
+        <fullName>Temp_Subject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_Subject</shortDescription>
+        <value>Subject</value>
+    </labels>
+    <labels>
+        <fullName>Temp_ThankYou</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Temp_ThankYou</shortDescription>
+        <value>Thank you</value>
+    </labels>
+    <labels>
+        <fullName>Traitement_de_leau</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Traitement de l&apos;eau</shortDescription>
+        <value>1</value>
+    </labels>
+    <labels>
+        <fullName>VFE001_Clone_DevisAccepter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VFE001_Clone_DevisAccepter</shortDescription>
+        <value>Le devis ne peut pas être cloner s&apos;il est deja accepter.</value>
+    </labels>
+    <labels>
+        <fullName>VIAchats</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIAchats</shortDescription>
+        <value>Achats</value>
+    </labels>
+    <labels>
+        <fullName>VIAffaire</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VIAffaire</shortDescription>
+        <value>Case</value>
+    </labels>
+    <labels>
+        <fullName>VIAncienneValeur</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIAncienneValeur</shortDescription>
+        <value>Ancienne Valeur</value>
+    </labels>
+    <labels>
+        <fullName>VIAttentionPeriodeSuivante</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIAttentionPeriodeSuivante</shortDescription>
+        <value>Attention ! Il s&apos;agit de la période suivante !</value>
+    </labels>
+    <labels>
+        <fullName>VIAvenant</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIAvenant</shortDescription>
+        <value>Avenant</value>
+    </labels>
+    <labels>
+        <fullName>VICAalavancement</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VICAalavancement</shortDescription>
+        <value>CA à l&apos;avancement</value>
+    </labels>
+    <labels>
+        <fullName>VICentreSection</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VICentreSection</shortDescription>
+        <value>Centre / Section</value>
+    </labels>
+    <labels>
+        <fullName>VIChamp</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIChamp</shortDescription>
+        <value>Champ</value>
+    </labels>
+    <labels>
+        <fullName>VIComplet</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIComplet</shortDescription>
+        <value>Complet</value>
+    </labels>
+    <labels>
+        <fullName>VIComptabilise</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIComptabilise</shortDescription>
+        <value>Comptabilisé</value>
+    </labels>
+    <labels>
+        <fullName>VICoutATerminaison</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VICoutATerminaison</shortDescription>
+        <value>Coût à terminaison</value>
+    </labels>
+    <labels>
+        <fullName>VIDate</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIDate</shortDescription>
+        <value>Date</value>
+    </labels>
+    <labels>
+        <fullName>VIDateEcheance</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIDateEcheance</shortDescription>
+        <value>Date d&apos;échéance</value>
+    </labels>
+    <labels>
+        <fullName>VIDate_de_valeur</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VIDate_de_valeur</shortDescription>
+        <value>Value date</value>
+    </labels>
+    <labels>
+        <fullName>VIDate_maximum</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIDate_maximum</shortDescription>
+        <value>Date maximum</value>
+    </labels>
+    <labels>
+        <fullName>VIDate_minimum</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIDate_minimum</shortDescription>
+        <value>Date minimum</value>
+    </labels>
+    <labels>
+        <fullName>VIDebours</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIDebours</shortDescription>
+        <value>Débours</value>
+    </labels>
+    <labels>
+        <fullName>VIDevis</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIDevis</shortDescription>
+        <value>Devis</value>
+    </labels>
+    <labels>
+        <fullName>VIDevise_a_recalculer</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIDevise_a_recalculer</shortDescription>
+        <value>Devise à recalculer</value>
+    </labels>
+    <labels>
+        <fullName>VIDifference</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIDifference</shortDescription>
+        <value>Différence</value>
+    </labels>
+    <labels>
+        <fullName>VIDontComptaibilise</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIDontComptaibilise</shortDescription>
+        <value>Dont comptabilisé</value>
+    </labels>
+    <labels>
+        <fullName>VIEcartCAF</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIEcartCAF</shortDescription>
+        <value>Ecart CAF</value>
+    </labels>
+    <labels>
+        <fullName>VIEcartRAD</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIEcartRAD</shortDescription>
+        <value>Ecart RAD (M) - (M-1)</value>
+    </labels>
+    <labels>
+        <fullName>VIEngageBrut</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIEngageBrut</shortDescription>
+        <value>Engagé Brut</value>
+    </labels>
+    <labels>
+        <fullName>VIEntite_bw</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIEntite_bw</shortDescription>
+        <value>Entité BW</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur001</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur001</shortDescription>
+        <value>001 Le statut de l&apos;affaire ne permet plus de modifier le budget</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur002</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur002</shortDescription>
+        <value>002 Date minimum vide</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur003</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur003</shortDescription>
+        <value>003 Date maximum vide</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur005</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur005</shortDescription>
+        <value>005 Il n&apos;est pas possible de supprimer cette ligne</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur006</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur006</shortDescription>
+        <value>006 Pas de période ouverte</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur007</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur007</shortDescription>
+        <value>007 La date d&apos;ouverture est sur une période fermée</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur008</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur008</shortDescription>
+        <value>008 La date  est hors de la période d ouverture pour cette affaire</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur009</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur009</shortDescription>
+        <value>009 Le pointage est en 99 ou 98 alors qu&apos;il n&apos;y a pas de date de SAV</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur010</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur010</shortDescription>
+        <value>010 Le pointage est en 00 et après la date de SAV</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur011</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur011</shortDescription>
+        <value>011 La date de SAV doit être la fin du mois ouvert</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur012</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur012</shortDescription>
+        <value>012 Il n&apos;est pas possible de changer la date de fin après saisie</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur013</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur013</shortDescription>
+        <value>013 Il reste des écritures en brouillon. On ne peut pas lancer la cloture. Il faut les envoyer pour pouvoir clore</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur014</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur014</shortDescription>
+        <value>014 L&apos;affaire n&apos;est plus modifiable</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur015</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur015</shortDescription>
+        <value>015 La date d&apos;ouverture ne peut pas dépasser la date du jour + 1 jour</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur017</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur017</shortDescription>
+        <value>Vous ne pouvez pas créer ce type d&apos;avenant</value>
+    </labels>
+    <labels>
+        <fullName>VIErreur018</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIErreur018</shortDescription>
+        <value>Ce code avenant existe déjà</value>
+    </labels>
+    <labels>
+        <fullName>VIFacture</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIFacture</shortDescription>
+        <value>Facture</value>
+    </labels>
+    <labels>
+        <fullName>VIGarantieinitiale</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIGarantieinitiale</shortDescription>
+        <value>Garantie initiale</value>
+    </labels>
+    <labels>
+        <fullName>VIGarantiereprise</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIGarantiereprise</shortDescription>
+        <value>Garantie reprise</value>
+    </labels>
+    <labels>
+        <fullName>VIHeures</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIHeures</shortDescription>
+        <value>Heures</value>
+    </labels>
+    <labels>
+        <fullName>VIHeuresEngagees</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VIHeuresEngagees</shortDescription>
+        <value>Hours commited</value>
+    </labels>
+    <labels>
+        <fullName>VILancement</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VILancement</shortDescription>
+        <value>Lancement</value>
+    </labels>
+    <labels>
+        <fullName>VILancementEnvoiEcritures</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VILancementEnvoiEcritures</shortDescription>
+        <value>Lancement de l&apos;envoi des écritures</value>
+    </labels>
+    <labels>
+        <fullName>VILancementEnvoiEcritures_explication</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VILancementEnvoiEcritures_explication</shortDescription>
+        <value>Les écritures en mode brouillon sont envoyés à la comptabilité. Quand on envoie les écritures de reprise de garantie, les autorisations de dépenses et de pointage sont envoyées aussi</value>
+    </labels>
+    <labels>
+        <fullName>VILancement_cloture_explication</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VILancement_cloture_explication</shortDescription>
+        <value>Ce programme clos la période précédente, ouvre la nouvelle et transfère les ecarts CAF du mois précédent sur le nouveau mois.
+Si vous ne trouvez pas votre période dans la liste, c&apos;est qu&apos;il y a des écritures comptables non-traitées en attente. Il faut soit les envoyer, soit les supprimer</value>
+    </labels>
+    <labels>
+        <fullName>VILancement_cloture_mensuelle</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VILancement_cloture_mensuelle</shortDescription>
+        <value>Lancement clôture mensuelle</value>
+    </labels>
+    <labels>
+        <fullName>VILancement_generation_ecriture</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VILancement_generation_ecriture</shortDescription>
+        <value>Génération des écritures comptables en cours</value>
+    </labels>
+    <labels>
+        <fullName>VILancement_generation_ecriture_explication</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VILancement_generation_ecriture_explication</shortDescription>
+        <value>Ce programme est lancé automatiquement tous les matins à 7h00. Il peut aussi être lancé dans la journée.
+Il génère les écritures à l&apos;avancement, de SAV, de Factures sur affaire en SAV, puis les écritures de contrepartie</value>
+    </labels>
+    <labels>
+        <fullName>VILancement_recalcul_devise</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VILancement_recalcul</shortDescription>
+        <value>Lancement recalcul</value>
+    </labels>
+    <labels>
+        <fullName>VILigneBudget</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VILigneBudget</shortDescription>
+        <value>Lignes budgétaires</value>
+    </labels>
+    <labels>
+        <fullName>VIMaJFactureSAV</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIMaJFactureSAV</shortDescription>
+        <value>Factures sur affaires en SAV</value>
+    </labels>
+    <labels>
+        <fullName>VIMarges</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIMarges</shortDescription>
+        <value>Marges</value>
+    </labels>
+    <labels>
+        <fullName>VIModifiePar</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIModifiePar</shortDescription>
+        <value>Modifié par</value>
+    </labels>
+    <labels>
+        <fullName>VIMontant</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIMontant</shortDescription>
+        <value>Montant</value>
+    </labels>
+    <labels>
+        <fullName>VIMontant_HT</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIMontant_HT</shortDescription>
+        <value>Montant HT</value>
+    </labels>
+    <labels>
+        <fullName>VIMontant_TTC</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIMontant_TTC</shortDescription>
+        <value>Montant TTC</value>
+    </labels>
+    <labels>
+        <fullName>VINouvelleValeur</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VINouvelleValeur</shortDescription>
+        <value>Nouvelle valeur</value>
+    </labels>
+    <labels>
+        <fullName>VIOuvrirDansUnRapport</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIOuvrirDansUnRapport</shortDescription>
+        <value>Ouvrir dans un rapport</value>
+    </labels>
+    <labels>
+        <fullName>VIPRI</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIPRI</shortDescription>
+        <value>PRI</value>
+    </labels>
+    <labels>
+        <fullName>VIPVActualise</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIPVActualise</shortDescription>
+        <value>PV actualisé</value>
+    </labels>
+    <labels>
+        <fullName>VIPVEncaisse</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIPVEncaisse</shortDescription>
+        <value>Encaissé</value>
+    </labels>
+    <labels>
+        <fullName>VIPVFacture</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIPVFacture</shortDescription>
+        <value>Facturé</value>
+    </labels>
+    <labels>
+        <fullName>VIPVaTerminaison</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIPVaTerminaison</shortDescription>
+        <value>A terminaison</value>
+    </labels>
+    <labels>
+        <fullName>VIPassageEnSav</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIPassageEnSav</shortDescription>
+        <value>Passage en SAV</value>
+    </labels>
+    <labels>
+        <fullName>VIPays</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIPays</shortDescription>
+        <value>Pays</value>
+    </labels>
+    <labels>
+        <fullName>VIPeriode_en_cours</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VIPeriode_en_cours</shortDescription>
+        <value>Current Period</value>
+    </labels>
+    <labels>
+        <fullName>VIPourCentMargeSurPV</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIPourCentMargeSurPV</shortDescription>
+        <value>% Marges / P.V.</value>
+    </labels>
+    <labels>
+        <fullName>VIPourcentagedavancement</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIPourcentagedavancement</shortDescription>
+        <value>% d&apos;avancement</value>
+    </labels>
+    <labels>
+        <fullName>VIPrecedent</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIPrecedent</shortDescription>
+        <value>&lt;&lt;</value>
+    </labels>
+    <labels>
+        <fullName>VIProcess_en_cours</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIProcess en cours</shortDescription>
+        <value>Process en cours</value>
+    </labels>
+    <labels>
+        <fullName>VIProcess_pas_en_cours</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIProcess pas en cours</shortDescription>
+        <value>Aucun process en cours</value>
+    </labels>
+    <labels>
+        <fullName>VIRecalcul</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIRecalcul</shortDescription>
+        <value>Recalcul</value>
+    </labels>
+    <labels>
+        <fullName>VIRefAchat</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIRefAchat</shortDescription>
+        <value>Référence d&apos;achat</value>
+    </labels>
+    <labels>
+        <fullName>VISalarie</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VISalarie</shortDescription>
+        <value>Employee</value>
+    </labels>
+    <labels>
+        <fullName>VISur</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VISur</shortDescription>
+        <value>Sur</value>
+    </labels>
+    <labels>
+        <fullName>VITotalPV</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VITotalPV</shortDescription>
+        <value>Total PV</value>
+    </labels>
+    <labels>
+        <fullName>VITotauxdumoisencours</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VITotauxdumoisencours</shortDescription>
+        <value>Totaux du mois en cours</value>
+    </labels>
+    <labels>
+        <fullName>VITotauxdumoisprecedent</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VITotauxdumoisprecedent</shortDescription>
+        <value>Totaux du mois précédent</value>
+    </labels>
+    <labels>
+        <fullName>VITotauxjusquaumoisde</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VITotauxjusquaumoisde</shortDescription>
+        <value>Totaux jusqu&apos;au mois de</value>
+    </labels>
+    <labels>
+        <fullName>VITypeDeDepense</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VITypeDeDepense</shortDescription>
+        <value>Type de dépense</value>
+    </labels>
+    <labels>
+        <fullName>VIValiderEtEnvoyer</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIValiderEtEnvoyer</shortDescription>
+        <value>Valider et envoyer</value>
+    </labels>
+    <labels>
+        <fullName>VIsuivant</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>VIsuivant</shortDescription>
+        <value>&gt;&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Value_not_in_table_de_transcodage</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>Value not in table de transcodage</shortDescription>
+        <value>Veuillez choisir une valeur dans la table de transcodage.</value>
+    </labels>
+    <labels>
+        <fullName>ViCommande</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>ViCommande</shortDescription>
+        <value>Commandé</value>
+    </labels>
+    <labels>
+        <fullName>ViEnregistrer</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>ViEnregistrer</shortDescription>
+        <value>Enregistrer</value>
+    </labels>
+    <labels>
+        <fullName>ViNumeroDeFacture</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>ViNumeroDeFacture</shortDescription>
+        <value>Numéro de facture</value>
+    </labels>
+    <labels>
+        <fullName>X0_BWI</fullName>
+        <language>fr</language>
+        <protected>false</protected>
+        <shortDescription>0%BWI</shortDescription>
+        <value>71</value>
+    </labels>
+</CustomLabels>

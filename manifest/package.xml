@@ -12,6 +12,33 @@
         <members>*</members>
         <name>ApexPage</name>
     </types>
+    
+    <types>
+        <members>*</members>
+        <name>CustomMetadata</name>
+    </types>
+     <types>
+        <members>*</members>
+        <name>CustomLabels</name>
+    </types>
+     <types>
+        <members>*</members>
+        <name>CustomObject</name>
+    </types>
+     <types>
+        <members>*</members>
+        <name>Workflow</name>
+    </types>
+     <types>
+        <members>*</members>
+        <name>CustomField</name>
+    </types>
+    
+     <types>
+        <members>*</members>
+        <name>ListView</name>
+    </types>
+
     <types>
         <members>*</members>
         <name>ApexTestSuite</name>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPP_CompteClientFinal__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Compte Livré</label>
+    <lookupFilter>
+        <active>false</active>
+        <booleanFilter>(((1 AND 2 AND 3) OR (4 AND 5)) OR 6) OR 7</booleanFilter>
+        <errorMessage>Ce client est bloqué ou n&apos;existe pas pour votre pays (ERP id inexistant) !
+Veuillez contacter votre Administrateur Système (OPP Filtre compte livré)</errorMessage>
+        <filterItems>
+            <field>$User.USER_EntiteBW__c</field>
+            <operation>equals</operation>
+            <value>BW ITA</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.ACC_ERPIdITA__c</field>
+            <operation>notEqual</operation>
+            <value>&apos;&apos;</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.ACC_EtatDuCompte__c</field>
+            <operation>equals</operation>
+            <value>&apos;&apos;</value>
+        </filterItems>
+        <filterItems>
+            <field>$User.USER_EntiteBW__c</field>
+            <operation>equals</operation>
+            <value>BW FRA</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.ACC_ERPIdFRA__c</field>
+            <operation>notEqual</operation>
+            <value>&apos;&apos;</value>
+        </filterItems>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value>Compte Actif</value>
+        </filterItems>
+        <filterItems>
+            <field>$User.LastName</field>
+            <operation>equals</operation>
+            <value>API</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Opportunités</relationshipLabel>
+    <relationshipName>Opportunites</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

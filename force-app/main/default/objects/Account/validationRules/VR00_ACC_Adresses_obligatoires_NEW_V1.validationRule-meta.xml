@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR00_ACC_Adresses_obligatoires_NEW_V1</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$User.USER_ByPassRegleValidation__c = FALSE
+,Tech_ProvenancePiste__c = False
+,ISNEW()= False
+,OR( ISBLANK(ShippingCity)
+     ,ISBLANK(BillingCity)
+    )
+)</errorConditionFormula>
+    <errorMessage>VR00 - Veuillez renseigner les adresses complètes de livraison (Rue, Ville, Code Postal) et de facturation (Rue, Ville, Code Postal). 
+Pour les pays étrangers sans code postal, veuillez renseigner &quot;0000&quot;</errorMessage>
+</ValidationRule>

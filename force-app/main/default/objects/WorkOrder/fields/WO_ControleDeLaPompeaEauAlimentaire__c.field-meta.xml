@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ControleDeLaPompeaEauAlimentaire__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Contrôle de la pompe à eau alimentaire</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contrôle de la pompe à eau alimentaire</inlineHelpText>
+    <label>Ctrle de la pompe à eau alimentaire</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

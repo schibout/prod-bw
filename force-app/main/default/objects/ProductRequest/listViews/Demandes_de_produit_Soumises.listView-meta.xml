@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Demandes_de_produit_Soumises</fullName>
+    <columns>Name</columns>
+    <columns>Status</columns>
+    <columns>LastModifiedDate</columns>
+    <columns>LastModifiedBy</columns>
+    <columns>WorkOrder</columns>
+    <columns>WorkOrderLineItem</columns>
+    <columns>DestinationLocation</columns>
+    <columns>SourceLocation</columns>
+    <columns>Case</columns>
+    <columns>Account</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Status</field>
+        <operation>equals</operation>
+        <value>Soumis</value>
+    </filters>
+    <label>Demandes de produit Soumises</label>
+</ListView>

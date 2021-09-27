@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PRD_Combustible__c</fullName>
+    <externalId>false</externalId>
+    <label>Combustible</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Combustible spécifique</fullName>
+                <default>false</default>
+                <label>Combustible spécifique</label>
+            </value>
+            <value>
+                <fullName>Electricité</fullName>
+                <default>false</default>
+                <label>Electricité</label>
+            </value>
+            <value>
+                <fullName>Fioul Lourd</fullName>
+                <default>false</default>
+                <label>Fioul Lourd</label>
+            </value>
+            <value>
+                <fullName>FOD</fullName>
+                <default>false</default>
+                <label>FOD</label>
+            </value>
+            <value>
+                <fullName>Mix fod/Gaz</fullName>
+                <default>false</default>
+                <label>Mix fod/Gaz</label>
+            </value>
+            <value>
+                <fullName>Gaz naturel</fullName>
+                <default>false</default>
+                <label>Gaz naturel</label>
+            </value>
+            <value>
+                <fullName>Gaz liquefié</fullName>
+                <default>false</default>
+                <label>Gaz liquefié</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR10_WO_VerifiMaterielElectEtAutomatisme</fullName>
+    <active>false</active>
+    <description>Cette règle de validation force l&apos;utilisateur à completer le champ commentaire lié à cette case à cocher.</description>
+    <errorConditionFormula>AND( ISPICKVAL(WO_VerifMaterielsElectriqEtdAutomaticite__c,&quot;Oui&quot;),
+				ISBLANK ( WO_CommentairesVerifMatElect__c ),
+				$User.USER_ByPassRegleValidation__c = FALSE, 
+    $User.Technicien__c = TRUE)</errorConditionFormula>
+    <errorDisplayField>WO_CommentairesVerifMatElect__c</errorDisplayField>
+    <errorMessage>Si vous n&apos;avez pas effectué la tâche &quot; Vérification du matériel électronique et automatisme&quot;, merci de compléter ce commentaire.</errorMessage>
+</ValidationRule>

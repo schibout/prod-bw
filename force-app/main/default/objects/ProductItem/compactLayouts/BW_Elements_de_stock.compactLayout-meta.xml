@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BW_Elements_de_stock</fullName>
+    <fields>Code_article__c</fields>
+    <fields>ProductItemNumber</fields>
+    <fields>LocationId</fields>
+    <fields>Product2Id</fields>
+    <fields>QuantityOnHand</fields>
+    <fields>QuantityUnitOfMeasure</fields>
+    <label>BW Eléments de stock</label>
+</CompactLayout>

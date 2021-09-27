@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_TypeDeTraitementdEau__c</fullName>
+    <externalId>false</externalId>
+    <label>Type de traitement d&apos;eau</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adoucisseur</fullName>
+                <default>false</default>
+                <label>Adoucisseur</label>
+            </value>
+            <value>
+                <fullName>Osmoseur</fullName>
+                <default>false</default>
+                <label>Osmoseur</label>
+            </value>
+            <value>
+                <fullName>Déminéralisation</fullName>
+                <default>false</default>
+                <label>Déminéralisation</label>
+            </value>
+            <value>
+                <fullName>Décarbonatation</fullName>
+                <default>false</default>
+                <label>Décarbonatation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

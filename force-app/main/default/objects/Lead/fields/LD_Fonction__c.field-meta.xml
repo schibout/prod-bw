@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LD_Fonction__c</fullName>
+    <externalId>false</externalId>
+    <label>Fonction</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Production</fullName>
+                <default>false</default>
+                <label>Production</label>
+            </value>
+            <value>
+                <fullName>Entretien Maintenance</fullName>
+                <default>false</default>
+                <label>Entretien Maintenance</label>
+            </value>
+            <value>
+                <fullName>Projet/Ingénierie</fullName>
+                <default>false</default>
+                <label>Projet/Ingénierie</label>
+            </value>
+            <value>
+                <fullName>Achat/Logistique</fullName>
+                <default>false</default>
+                <label>Achat/Logistique</label>
+            </value>
+            <value>
+                <fullName>Commerce/Marketing</fullName>
+                <default>false</default>
+                <label>Commerce/Marketing</label>
+            </value>
+            <value>
+                <fullName>Qualité</fullName>
+                <default>false</default>
+                <label>Qualité</label>
+            </value>
+            <value>
+                <fullName>R&amp;D</fullName>
+                <default>false</default>
+                <label>R&amp;D</label>
+            </value>
+            <value>
+                <fullName>Direction Générale</fullName>
+                <default>false</default>
+                <label>Direction Générale</label>
+            </value>
+            <value>
+                <fullName>Administratif/RH</fullName>
+                <default>false</default>
+                <label>Administratif/RH</label>
+            </value>
+            <value>
+                <fullName>Autres</fullName>
+                <default>false</default>
+                <label>Autres</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

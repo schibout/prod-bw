@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>JCO_NEW_ACCOUNT</fullName>
+        <description>Nouveau prospect ou client</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>api@babcock-wanson.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/JCO_NEW_ACCOUNT</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Compte_TechTalendExport</fullName>
+        <description>Workflow WF_ACC_TechTalendExport</description>
+        <field>Tech_Talend_Export__c</field>
+        <literalValue>1</literalValue>
+        <name>Compte_TechTalendExport</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJCP</fullName>
+        <field>BillingPostalCode</field>
+        <formula>ShippingPostalCode</formula>
+        <name>MAJ CP</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJPays</fullName>
+        <field>BillingCountry</field>
+        <formula>ShippingCountry</formula>
+        <name>MAJPays</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJRegionProvince</fullName>
+        <field>BillingState</field>
+        <formula>ShippingState</formula>
+        <name>MAJ Région/Province</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJRue</fullName>
+        <field>BillingStreet</field>
+        <formula>ShippingStreet</formula>
+        <name>MAJ Rue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJVille</fullName>
+        <field>BillingCity</field>
+        <formula>ShippingCity</formula>
+        <name>MAJ Ville</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_ACCEntiteBW_FRA</fullName>
+        <field>ACC_Entite_BW__c</field>
+        <literalValue>1</literalValue>
+        <name>MAJ_ACCEntiteBW_FRA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_ACCEntiteBW_ITA</fullName>
+        <field>ACC_Entite_BW__c</field>
+        <literalValue>3</literalValue>
+        <name>MAJ_ACCEntiteBW_ITA</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MajAdresseFacturation</fullName>
+        <field>BillingStreet</field>
+        <formula>SUBSTITUTE( BillingStreet ,
+SUBSTITUTE($Label.ReturnLine,&apos;-&apos;,&apos;&apos;),
+&apos;&apos;
+)</formula>
+        <name>MajAdresseFacturation</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MajAdresseLivraison</fullName>
+        <field>ShippingStreet</field>
+        <formula>SUBSTITUTE( ShippingStreet ,
+SUBSTITUTE($Label.ReturnLine,&apos;-&apos;,&apos;&apos;),
+&apos;&apos;
+)</formula>
+        <name>MajAdresseLivraison</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Maj_ACC_Nomducompte</fullName>
+        <field>Name</field>
+        <formula>UPPER(Name)</formula>
+        <name>Maj_ACC_Nomducompte</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Maj_ACC_RTClientActif</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>CompteActif</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Maj_ACC_RTClientActif</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>WF08_ACC_MajNom</fullName>
+        <actions>
+            <name>Maj_ACC_Nomducompte</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Mise à jour du nom de l&apos;entreprise</description>
+        <formula>AND ( $User.USER_ByPassRegleWorkflow__c = False, OR (ISNEW(), ISCHANGED (Name)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF12_ACC_MAJAdresseFacturation</fullName>
+        <actions>
+            <name>MAJCP</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>MAJPays</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>MAJRegionProvince</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>MAJRue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>MAJVille</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.USER_ByPassRegleWorkflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Account.BillingCity</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <description>Ce workflow permet de mettre à jour l&apos;adresse de facturation automatiquement à la création d&apos;un compte depuis l&apos;adresse d&apos;expédition.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF30_ACC_EntiteBW_FRA</fullName>
+        <actions>
+            <name>MAJ_ACCEntiteBW_FRA</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(  $User.USER_ByPassRegleWorkflow__c = FALSE, TEXT($User.USER_EntiteBW__c) ==  $Label.BW_FRA			 )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF31_ACC_EntiteBW_ITA</fullName>
+        <actions>
+            <name>MAJ_ACCEntiteBW_ITA</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(     $User.USER_ByPassRegleWorkflow__c = FALSE,     TEXT($User.USER_EntiteBW__c) == $Label.BW_ITA   )</formula>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF32_ACC_adresseLivraison</fullName>
+        <actions>
+            <name>MajAdresseLivraison</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND($User.USER_ByPassRegleWorkflow__c =false,  ShippingStreet!=null, OR(ISNEW(),ISCHANGED(ShippingStreet)))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF33_ACC_adresseFacturation</fullName>
+        <actions>
+            <name>MajAdresseFacturation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND($User.USER_ByPassRegleWorkflow__c =false, BillingStreet!=null, OR(ISNEW(),ISCHANGED(BillingStreet)) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF_ACC_MajRTClient</fullName>
+        <actions>
+            <name>Maj_ACC_RTClientActif</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>Mise à jour du Recordtype Client &apos;Actif&apos;</description>
+        <formula>AND ( $User.USER_ByPassRegleWorkflow__c = False, OR (AND (ISNEW(),  CreatedBy.Username = &apos;api@bw.com&apos;), (AND (OR (ISCHANGED(ACC_ERPIdFRA__c), ISCHANGED(ACC_ERPIdGBR__c), ISCHANGED(ACC_ERPIdESP__c), ISCHANGED(	ACC_ERPIdITA__c), ISCHANGED(ACC_ERPIdNLD__c), ISCHANGED(ACC_ERPIdPOL__c), ISCHANGED(ACC_ERPIdPRT__c)),  LastModifiedBy.Username = &apos;api@bw.com&apos;))))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF_ACC_TechTalendExport</fullName>
+        <actions>
+            <name>Compte_TechTalendExport</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Ce workflow coche la case Tech_Talend_Export__c</description>
+        <formula>OR (AND (ISNEW(), $User.LastName != $Label.API, RecordType.Name == &apos;Compte Prospect ou pré client&apos;), AND (OR(ISCHANGED( Name),ISCHANGED( Type ), ISCHANGED( ACC_Entite_BW__c), ISCHANGED( ACC_SecteurCommercial__c), ISCHANGED( Phone), ISCHANGED( ACC_Siret__c), ISCHANGED( ACC_NTVAIntracommunautaire__c), ISCHANGED( ACC_Region__c), ISCHANGED( Industry), ISCHANGED(ShippingCountry), ISCHANGED( ShippingAddress), ISCHANGED(ShippingPostalCode), ISCHANGED(ShippingCity), ISCHANGED(ShippingStateCode), ISCHANGED(BillingCountry), ISCHANGED( BillingAddress), ISCHANGED(BillingPostalCode), ISCHANGED(BillingCity), ISCHANGED(BillingStateCode)) , $User.LastName != $Label.API, RecordType.Name == &apos;Compte Prospect ou pré client&apos;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR03_MP_contratDSnonModifiable</fullName>
+    <active>true</active>
+    <description>Le contrat de service n&apos;est pas modifiable.</description>
+    <errorConditionFormula>AND(ISCHANGED( ServiceContractId ),NOT(ISNEW()))</errorConditionFormula>
+    <errorMessage>Le contrat de service n&apos;est pas modifiable.</errorMessage>
+</ValidationRule>

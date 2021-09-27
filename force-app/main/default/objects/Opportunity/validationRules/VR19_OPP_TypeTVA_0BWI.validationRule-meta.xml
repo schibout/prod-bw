@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR19_OPP_TypeTVA_0BWI</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ $User.USER_ByPassRegleValidation__c = FALSE,
+ TEXT(Account.ACC_Entite_BW__c ) ==  $Label.BW_ITA,
+ NOT( TEXT(Type ) == $Label.X0_BWI )
+)</errorConditionFormula>
+    <errorDisplayField>Type</errorDisplayField>
+    <errorMessage>Attention, le type de TVA ne peut que être &quot;0%BWI&quot; si l&apos;Entité BW sur le compte est &quot;BW ITA&quot;.</errorMessage>
+</ValidationRule>

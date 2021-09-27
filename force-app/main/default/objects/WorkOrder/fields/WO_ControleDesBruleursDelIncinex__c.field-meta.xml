@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ControleDesBruleursDelIncinex__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contrôle des brûleurs de l’incinex</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contrôle des brûleurs de l’incinex</inlineHelpText>
+    <label>Contrôle des brûleurs de l’incinex</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

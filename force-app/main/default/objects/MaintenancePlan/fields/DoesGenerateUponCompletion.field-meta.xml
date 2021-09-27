@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DoesGenerateUponCompletion</fullName>
+    <inlineHelpText>Si cochée, un nouveau lot d&apos;interventions est généré lorsque le précédent lot d&apos;interventions est terminé, dans les mêmes conditions définies dans le lot précédent.</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+</CustomField>

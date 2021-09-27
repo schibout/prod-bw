@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Babcock_Wanson_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACC_CRMId__c</columns>
+    <columns>ACC_ERPIdFRA__c</columns>
+    <columns>ACC_ERPIdITA__c</columns>
+    <columns>ACC_Entite_BW__c</columns>
+    <columns>ACC_Region__c</columns>
+    <columns>ACC_SecteurCommercial__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>startsWith</operation>
+        <value>Babcock Wanson</value>
+    </filters>
+    <label>Babcock Wanson Accounts</label>
+    <language>it</language>
+</ListView>

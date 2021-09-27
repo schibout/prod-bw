@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR04_WO_PurgeIndicateurDeNiveau</fullName>
+    <active>false</active>
+    <description>Cette règle de validation force l&apos;utilisateur à completer le champ commentaire lié à cette case à cocher.</description>
+    <errorConditionFormula>AND( 
+				ISPICKVAL(WO_PurgeIndicateursDeNiveau__c,&quot;Oui&quot;),
+				ISBLANK( WO_CommentairesPurge__c),
+    $User.USER_ByPassRegleValidation__c = FALSE, 
+    $User.Technicien__c = TRUE)</errorConditionFormula>
+    <errorDisplayField>WO_CommentairesPurge__c</errorDisplayField>
+    <errorMessage>Si vous n&apos;avez pas effectué la tâche &quot; Purge indicateur de niveaux&quot;, merci de compléter ce commentaire.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SC_Statut__c</fullName>
+    <externalId>false</externalId>
+    <label>Etat</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1</fullName>
+                <default>true</default>
+                <label>Avant projet</label>
+            </value>
+            <value>
+                <fullName>2</fullName>
+                <default>false</default>
+                <label>Pour validation ERP</label>
+            </value>
+            <value>
+                <fullName>3</fullName>
+                <default>false</default>
+                <label>Actif</label>
+            </value>
+            <value>
+                <fullName>4</fullName>
+                <default>false</default>
+                <label>Suspendu</label>
+            </value>
+            <value>
+                <fullName>5</fullName>
+                <default>false</default>
+                <label>Résilié</label>
+            </value>
+            <value>
+                <fullName>6</fullName>
+                <default>false</default>
+                <label>Terminé</label>
+            </value>
+            <value>
+                <fullName>Clos</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Clos</label>
+            </value>
+            <value>
+                <fullName>Proposition</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proposition</label>
+            </value>
+            <value>
+                <fullName>Proposition gagnée</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proposition gagnée</label>
+            </value>
+            <value>
+                <fullName>Proposition perdue</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proposition perdue</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

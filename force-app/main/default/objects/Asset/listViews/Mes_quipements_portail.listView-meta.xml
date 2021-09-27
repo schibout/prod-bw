@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mes_quipements_portail</fullName>
+    <columns>ASSET.NAME</columns>
+    <columns>ASSET.SERIAL_NUMBER</columns>
+    <columns>PRODUCT2.NAME</columns>
+    <columns>EQ_SousContrat__c</columns>
+    <columns>ASS_URL__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ASSET.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Asset.Equipement</value>
+    </filters>
+    <label>Mes équipements (portail)</label>
+</ListView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ASS_VR01_ModificationInfoEquipment</fullName>
+    <active>true</active>
+    <description>Les informations d&apos;un équipment créé ne peuvent pas être modifiées.</description>
+    <errorConditionFormula>AND(
+!$User.USER_ByPassRegleValidation__c,
+!ISBLANK( Produit_command__c  ) ,
+ 
+ OR(ISCHANGED(AccountId),
+ ISCHANGED(Product2Id),
+ISCHANGED(ASS_Commande__c),
+ISCHANGED(RecordTypeId)  
+)
+)</errorConditionFormula>
+    <errorMessage>Les informations d&apos;un équipment créé sur un produit commandé ne peuvent pas être modifiées.</errorMessage>
+</ValidationRule>

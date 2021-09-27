@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ajustement_Marge_indus__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Sommes des ecarts CAF des lignes de l&apos;année</inlineHelpText>
+    <label>Ajustement Marge indus</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

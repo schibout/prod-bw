@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR05_CheckERP</fullName>
+    <active>true</active>
+    <description>Si le type d&apos;enregistrement est Compte Actif, il faut vérifier que l&apos;un des champs ERP est saisi.</description>
+    <errorConditionFormula>AND( RecordType.DeveloperName == $Label.CompteActif ,
+     $User.LastName =$Label.API,
+				  ISBLANK(ACC_ERPIdESP__c), 
+						ISBLANK(ACC_ERPIdFRA__c), 
+						ISBLANK(ACC_ERPIdGBR__c), 
+						ISBLANK(ACC_ERPIdITA__c), 
+						ISBLANK(ACC_ERPIdNLD__c), 
+						ISBLANK(ACC_ERPIdPOL__c),
+			   ISBLANK(ACC_ERPIdPRT__c))</errorConditionFormula>
+    <errorMessage>VR05 Impossible de sauvegarder un client actif sans le code ERP de l&apos;entité correspondant.</errorMessage>
+</ValidationRule>

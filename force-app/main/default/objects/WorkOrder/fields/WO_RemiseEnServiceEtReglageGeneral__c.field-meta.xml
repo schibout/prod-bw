@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_RemiseEnServiceEtReglageGeneral__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Remise en service, réglage général</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Remise en service, réglage général</inlineHelpText>
+    <label>Remise en service, réglage général</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

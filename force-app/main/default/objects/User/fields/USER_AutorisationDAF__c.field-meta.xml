@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>USER_AutorisationDAF__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Cette case permet de signaler que l&apos;utilisateur ne sera pas soumis aux règles de duplication liées aux comptes.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Cette case permet de signaler que l&apos;utilisateur ne sera pas soumis aux règles de duplication liées aux comptes.</inlineHelpText>
+    <label>Autorisation DAF</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

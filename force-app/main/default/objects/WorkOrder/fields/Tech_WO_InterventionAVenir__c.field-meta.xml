@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tech_WO_InterventionAVenir__c</fullName>
+    <externalId>false</externalId>
+    <formula>Today()&lt; DATEVALUE(StartDate)</formula>
+    <label>Tech_WO_InterventionAVenir</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

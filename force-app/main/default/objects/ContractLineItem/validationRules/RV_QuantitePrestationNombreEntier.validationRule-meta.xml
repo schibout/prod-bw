@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RV_QuantitePrestationNombreEntier</fullName>
+    <active>true</active>
+    <errorConditionFormula>NOT(REGEX(PR_TECH_Quantite__c,&quot;[0-9]{1,2}&quot;))</errorConditionFormula>
+    <errorDisplayField>Quantity</errorDisplayField>
+    <errorMessage>La quantité doit être un chiffre ou un nombre entier compris entre 1 et 99.</errorMessage>
+</ValidationRule>

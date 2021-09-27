@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tech_DateAnniversaire__c</fullName>
+    <description>Ne pas supprimer ce champ technique binaire permettant de déclencher le processus de renouvellement automatique du plan de maintenance.</description>
+    <externalId>false</externalId>
+    <formula>IF( (EndDate = Today()), 1, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tech_DateAnniversaire</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

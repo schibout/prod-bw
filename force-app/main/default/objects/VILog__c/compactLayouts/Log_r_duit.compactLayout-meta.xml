@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Log_r_duit</fullName>
+    <fields>Nom_du_process__c</fields>
+    <fields>Status__c</fields>
+    <label>Log réduit</label>
+</CompactLayout>

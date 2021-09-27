@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactId</fullName>
+    <inlineHelpText>Ce champs vous permet de sélectionner un contact dans la liste globale des contacts existants.
+Assurez vous que le contact renseigné fait parti des contacts associés (direct ou indirect) au compte. 
+Un contrôle de cohérence sera ajouter prochainement.</inlineHelpText>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>PM - Le contact rattaché à votre plan de maintenance est Obsolète. 
+La valeur n&apos;existe pas ou ne correspond pas aux critères de filtre.</errorMessage>
+        <filterItems>
+            <field>Contact.ACC_Contact_obsolete__c</field>
+            <operation>notEqual</operation>
+            <value>True</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_VerificationDeLaBonneCombustion__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Vérification de la bonne combustion</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Vérification de la bonne combustion</inlineHelpText>
+    <label>Vérification de la bonne combustion</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

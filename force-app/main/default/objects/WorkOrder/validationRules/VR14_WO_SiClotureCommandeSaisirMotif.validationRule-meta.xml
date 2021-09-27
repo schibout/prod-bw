@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR14_WO_SiClotureCommandeSaisirMotif</fullName>
+    <active>true</active>
+    <description>La date de clôture de l&apos;affaire associée à l&apos;intervention est dépassée, vous devez saisir un Motif d&apos;intervention sur affaire clôturée.</description>
+    <errorConditionFormula>AND(
+				$User.USER_ByPassRegleValidation__c = FALSE,
+				WO_ClotureDeCommande__c = TRUE,
+				ISPICKVAL(WO_MotifInterventionSurAffaireCloturee__c,&quot;&quot;)
+				)</errorConditionFormula>
+    <errorMessage>La date de clôture de l&apos;affaire associée à l&apos;intervention est dépassée, vous devez saisir un Motif d&apos;intervention sur affaire clôturée.</errorMessage>
+</ValidationRule>

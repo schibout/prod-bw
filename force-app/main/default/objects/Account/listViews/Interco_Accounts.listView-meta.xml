@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interco_Accounts</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACC_CRMId__c</columns>
+    <columns>ACC_ERPIdFRA__c</columns>
+    <columns>ACC_ERPIdITA__c</columns>
+    <columns>ACC_Entite_BW__c</columns>
+    <columns>ACC_Region__c</columns>
+    <columns>ACC_SecteurCommercial__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACC_CRMId__c</field>
+        <operation>equals</operation>
+        <value>ACC-039213,ACC-033988,ACC-033987,ACC-033985,ACC-047143,ACC-040881</value>
+    </filters>
+    <label>Interco Accounts</label>
+    <language>it</language>
+</ListView>

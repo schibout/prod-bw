@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ControleTubulureDePriseDePression__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contrôle de la tubulure de prise de pression vapeur</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contrôle de la tubulure de prise de pression vapeur</inlineHelpText>
+    <label>Contrôle tubulure prise de press vapeur</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Frequency</fullName>
+    <inlineHelpText>Intervalle de temps entre 2 interventions.
+
+Exemple : 
+Pour 2 interventions par an
+Intervalle = 6
+Type d&apos;intervalle = mois
+Durée = 12
+Type de durée = mois</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pourcent_avancement__c</fullName>
+    <externalId>false</externalId>
+    <label>% à l&apos;avancement</label>
+    <summarizedField>VILigne_d_affaire_mensuelle__c.Dont_comptabiliseC__c</summarizedField>
+    <summaryForeignKey>VILigne_d_affaire_mensuelle__c.Affaire__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

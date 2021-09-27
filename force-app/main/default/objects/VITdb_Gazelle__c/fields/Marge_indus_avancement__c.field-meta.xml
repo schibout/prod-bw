@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marge_indus_avancement__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>pareil quel  CA mais sur la marge (somme de tous les CA de l&apos;année (ne pas prendre en compte les CA à l&apos;avancement des années passées)</inlineHelpText>
+    <label>Marge indus à l&apos;avancement</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

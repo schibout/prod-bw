@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_SurveillanceEtatCalorifuges__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Surveillance de l’état général des calorifuges</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Surveillance de l’état général des calorifuges</inlineHelpText>
+    <label>Surveillance de l’état des calorifuges</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

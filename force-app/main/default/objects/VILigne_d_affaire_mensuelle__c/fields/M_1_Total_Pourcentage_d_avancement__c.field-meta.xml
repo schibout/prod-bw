@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>M_1_Total_Pourcentage_d_avancement__c</fullName>
+    <externalId>false</externalId>
+    <formula>if(Ligne_d_affaire_mensuelle_precedente__c=null,null,Ligne_d_affaire_mensuelle_precedente__r.Total_Pourcentage_d_avancement__c)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>(M -1) Total Pourcentage d&apos;avancement</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

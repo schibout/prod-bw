@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_EVT_104__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Abonnement aux alertes Ellisphere de type Publication au BODACC.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Subscription to Ellisphere alerts such as BODACC Publication.</inlineHelpText>
+    <label>Publication au BODACC</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

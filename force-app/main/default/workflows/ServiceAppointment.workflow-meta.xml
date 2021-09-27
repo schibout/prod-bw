@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Alerte_RDS_imp_a_terminer</fullName>
+        <description>Alerte : RDS impossible à terminer</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/MOD_MAIL_RDS_IMP_A_TERMINER</template>
+    </alerts>
+    <alerts>
+        <fullName>Alerte_RDS_rejet</fullName>
+        <description>Alerte : RDS rejeté</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/MOD_MAIL_RDS_REJETE</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>MAJEtiquetteGANTT</fullName>
+        <field>FSL__GanttLabel__c</field>
+        <formula>Contact.Account.Name&amp;&quot; - &quot;&amp; Contact.LastName</formula>
+        <name>MAJEtiquetteGANTT</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Case_Plusieurs_Jours_coch_e</fullName>
+        <description>La case &quot;Plusieurs jours&quot; est cochée.</description>
+        <field>FSL__IsMultiDay__c</field>
+        <literalValue>1</literalValue>
+        <name>MAJ Case Plusieurs Jours cochée</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Nom_du_rendez_vous</fullName>
+        <field>FSL__GanttLabel__c</field>
+        <formula>UPPER(&quot;SA-&quot;&amp;LEFT(Account.Name, 6)&amp;&quot;-&quot;&amp;RIGHT(AppointmentNumber, LEN(AppointmentNumber)-3))</formula>
+        <name>MAJ_Nom du rendez vous</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Numero_du_type_de_travail</fullName>
+        <field>FSL__GanttColor__c</field>
+        <formula>Intervention__r.WorkType.WT_NumeroDuTypeDeTravail__c</formula>
+        <name>MAJ Numéro du type de travail</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>MAJ_Plusieurs_jours</fullName>
+        <field>FSL__IsMultiDay__c</field>
+        <name>MAJ Plusieurs jours</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>WF10_Update_SA_COmmande</fullName>
+        <field>SA_Commande__c</field>
+        <formula>Intervention__r.FSL_WO_Commande__c</formula>
+        <name>WF10_Update SA _COmmande</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>WF10_MAJEtiquetteGANTT</fullName>
+        <actions>
+            <name>MAJEtiquetteGANTT</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>ServiceAppointment.AccountId</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.USER_ByPassRegleWorkflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <description>Ce workflow met à jour l&apos;étiquette GANTT du rendez-vous de service pour afficher plus d&apos;informations dans l&apos;étiquette du calendrier</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF22_SA_CasePlusieursJoursCocheeSelonDuree</fullName>
+        <actions>
+            <name>MAJ_Case_Plusieurs_Jours_coch_e</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 AND 2 AND 3 AND (4 OR 5 OR 6)</booleanFilter>
+        <criteriaItems>
+            <field>User.USER_ByPassRegleWorkflow__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>ServiceAppointment.Duration</field>
+            <operation>greaterOrEqual</operation>
+            <value>3</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>ServiceAppointment.DurationType</field>
+            <operation>equals</operation>
+            <value>Heures</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>ServiceAppointment.Status</field>
+            <operation>equals</operation>
+            <value>Planifié</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>ServiceAppointment.Status</field>
+            <operation>equals</operation>
+            <value>A programmer</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>ServiceAppointment.Status</field>
+            <operation>equals</operation>
+            <value>Expédié</value>
+        </criteriaItems>
+        <description>Ce workflow permet de cocher la case &quot;Plusieurs jours&quot; selon la durée prévue du rendez-vous de service. Lorsque la durée d&apos;une intervention est supérieure à 3 heures, la case est cochée.</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>WF_SA_MiseAJourNom</fullName>
+        <actions>
+            <name>MAJ_Nom_du_rendez_vous</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND ( $User.USER_ByPassRegleWorkflow__c = False, OR(ISNEW(), ISCHANGED( FSL__GanttLabel__c )))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

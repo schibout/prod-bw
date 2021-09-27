@@ -68,9 +68,7 @@ public class VILancementBatchController_Test {
 
 
         testlb.Entite_bw1='1';
-        testlb.callBatchGenerate(); 
-        testlb.callBatchGenereAutorisation(); 
-        
+        testlb.callBatchGenerate();         
         
         
 /*        

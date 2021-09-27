@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_EssaisAppareilsDeControleEtSecurite__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Essais des appareils de contrôle et de sécurité</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Essais des appareils de contrôle et de sécurité</inlineHelpText>
+    <label>Essais appareils de contrôle et sécurité</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

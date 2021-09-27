@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Garantie_Solde__c</fullName>
+    <externalId>false</externalId>
+    <formula>if( year(Periode_comptable__r.Date_de_debut__c)*100 + month(Periode_comptable__r.Date_de_debut__c)= year( Affaire__r.Date_de_fin_de_garantie__c )*100 + month(Affaire__r.Date_de_fin_de_garantie__c ) ,
+
+ if( Garantie_dotation__c &gt; Garantie_Depense__c, 
+       Garantie_dotation__c -  Garantie_Depense__c,
+       0
+   ),
+0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Garantie - Solde à liquider</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

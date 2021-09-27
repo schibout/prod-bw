@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR_ORD_Plus_de_Modif_Pour_Commande_GPIC</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+$User.USER_ByPassRegleValidation__c = FALSE, 
+$User.LastName != $Label.API, 
+OR(ISCHANGED(PoNumber), ISCHANGED(OrderReferenceNumber),ISCHANGED(ORD_ReferenceCommande__c), ISCHANGED(AccountId), ISCHANGED(ORD_CompteFacture__c), ISCHANGED(Status), ISCHANGED(	EffectiveDate), ISCHANGED(ORD_DonneesDAffaire__c), ISCHANGED(TotalAmount), ISCHANGED(ORD_MontantERP__c), ISCHANGED(ORD_MontantHT_ERP__c), ISCHANGED(ORD_VolumeDHeuresDIntervention__c), ISCHANGED(ORD_DateDInterventionPlanifiee__c), ISCHANGED(QuoteId), ISCHANGED(ORD_BusinessUnit__c), ISCHANGED(ORD_SousDomaine__c), ISCHANGED( ShippingCountry ), ISCHANGED( ShippingStreet ), ISCHANGED( ShippingPostalCode ), ISCHANGED( BillingCity ), ISCHANGED( BillingCountry ), ISCHANGED( BillingStreet ), ISCHANGED( BillingPostalCode ), ISCHANGED( BillingCity )), 
+AND(NOT(ISNEW())))</errorConditionFormula>
+    <errorMessage>Vous ne pouvez pas modifier les informations de la Commande issues de GPIC</errorMessage>
+</ValidationRule>

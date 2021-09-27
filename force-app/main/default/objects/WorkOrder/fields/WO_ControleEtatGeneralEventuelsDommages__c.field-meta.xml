@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ControleEtatGeneralEventuelsDommages__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contrôle de l&apos;état général et des éventuels dommages</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contrôle de l&apos;état général et des éventuels dommages</inlineHelpText>
+    <label>Contrôle état général, éventuels dommage</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

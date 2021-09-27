@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GenerationHorizon</fullName>
+    <inlineHelpText>Indiquer le nombre de jours avant génération d&apos;un nouveau lot.
+Exemple: Si j&apos;indique 30 jrs dans ce champ avec une Date de 1ère intervention dans le prochain lot au 15/01/19, les interventions du prochain lot seront générées automatiquement le 15/12/18.</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+</CustomField>

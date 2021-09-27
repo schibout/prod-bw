@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_InspectionBruleurEtCircuitdAllumage__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Inspection du brûleur et du circuit d&apos;allumage</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Inspection du brûleur et du circuit d&apos;allumage</inlineHelpText>
+    <label>Inspection brûleur et circuit d&apos;allumage</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

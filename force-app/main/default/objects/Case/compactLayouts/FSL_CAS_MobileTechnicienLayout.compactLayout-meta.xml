@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FSL_CAS_MobileTechnicienLayout</fullName>
+    <fields>Subject</fields>
+    <fields>CaseNumber</fields>
+    <fields>Priority</fields>
+    <fields>Status</fields>
+    <fields>CAS_Actif__c</fields>
+    <label>Mobile Technicien Layout</label>
+</CompactLayout>

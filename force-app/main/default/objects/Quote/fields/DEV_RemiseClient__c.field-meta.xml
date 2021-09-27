@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DEV_RemiseClient__c</fullName>
+    <externalId>false</externalId>
+    <formula>$Label.Remise_chauffage &amp; &quot; &quot; &amp;  TEXT((Opportunity.Account.ACC_RemiseChauffage__c*100))&amp;&quot;%&quot;
+&amp;
+BR()
+&amp;
+$Label.Remise_pieces &amp;&quot; &quot; &amp;  TEXT((Opportunity.Account.ACC_RemisePieces__c*100))&amp;&quot;%&quot;
+&amp;
+BR()
+&amp;
+$Label.Remise_produit_de_conditionnement &amp;&quot; &quot; &amp; TEXT((Opportunity.Account.ACC_RemiseTraitementDeLEau__c*100))&amp;&quot;%&quot;
+&amp;
+BR()
+&amp;
+$Label.Remise_mat_riel_traitement_de_l_eau_standard &amp;&quot; &quot; &amp; TEXT((Opportunity.Account.ACC_RemiseTraitementEauStandard__c*100))&amp;&quot;%&quot;</formula>
+    <label>Remises client prévues</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

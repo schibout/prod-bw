@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_ControleEtReglageReglementaire__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Contrôle et réglage de combustion, dans le respect notamment des articles R224-16 à R224-41 de la partie réglementaire du Code de l&apos;Environnement</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Contrôle et réglage de combustion, dans le respect notamment des articles R224-16 à R224-41 de la partie réglementaire du Code de l&apos;Environnement</inlineHelpText>
+    <label>Contrôle et réglage réglementaires</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OPP_MotifDeLaPerte__c</fullName>
+    <externalId>false</externalId>
+    <label>Motif de la perte</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Perdu face à la concurrence</fullName>
+                <default>false</default>
+                <label>Perdu face à la concurrence</label>
+            </value>
+            <value>
+                <fullName>Pas de budget / Perte des fonds</fullName>
+                <default>false</default>
+                <label>Pas de budget / Perte des fonds</label>
+            </value>
+            <value>
+                <fullName>Autre</fullName>
+                <default>false</default>
+                <label>Autre</label>
+            </value>
+            <value>
+                <fullName>Spécifications</fullName>
+                <default>false</default>
+                <label>Spécifications</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

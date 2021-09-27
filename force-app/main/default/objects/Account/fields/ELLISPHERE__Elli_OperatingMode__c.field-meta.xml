@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_OperatingMode__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Précise le mode d&apos;exploitation du fonds. Valeurs possibles : « Propriétaire-exploitant direct », « Locataire-gérant », « Loueur de fonds »</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Specifies how the fund is to be operated. Possible values: &quot;Direct owner-operator&quot;, &quot;Tenant manager&quot;, &quot;business lease&quot;.</inlineHelpText>
+    <label>Mode d&apos;exploitation</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

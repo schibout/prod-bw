@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>RAD__c</columns>
+    <columns>Code_fiche_affaire__c</columns>
+    <columns>Type_d_imputation__c</columns>
+    <columns>Code_BU__c</columns>
+    <columns>libelle_BU__c</columns>
+    <columns>Code_Domaine__c</columns>
+    <columns>Libelle_Domaine__c</columns>
+    <columns>Code_sous_domaine__c</columns>
+    <columns>Libelle_sous_domaine__c</columns>
+    <columns>Compte__c</columns>
+    <columns>Duree_garantie__c</columns>
+    <columns>Mode_de_calcul_de_l_avancement__c</columns>
+    <columns>FGX__c</columns>
+    <columns>K3__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Tout</label>
+</ListView>

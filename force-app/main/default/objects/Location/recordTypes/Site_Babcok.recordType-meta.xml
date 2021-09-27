@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Site_Babcok</fullName>
+    <active>true</active>
+    <label>StockAssocié</label>
+    <picklistValues>
+        <picklist>LOC_Statut__c</picklist>
+        <values>
+            <fullName>Actif</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Fermé</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactif</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LocationType</picklist>
+        <values>
+            <fullName>Stock client</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stock client Consigne</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Stock client Contrat</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vanstock</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

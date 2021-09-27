@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VR03_CAT_IndicePourValidationERP</fullName>
+    <active>true</active>
+    <description>Cette règle de validation permet de vérifier que le champ &quot;Indice de révision&quot; est bien renseigné lorsque le statut &quot;Pour validation ERP&quot; est sélectionné.</description>
+    <errorConditionFormula>AND(
+ISPICKVAL(SC_Statut__c ,&quot;2&quot;),
+$User.USER_ByPassRegleValidation__c = FALSE,
+ISPICKVAL(SC_IndiceDeRevision__c, &apos;&apos;)
+)</errorConditionFormula>
+    <errorMessage>Vous devez renseigner le champ &quot;Indice de révision&quot; avant de mettre à jour au statut &quot;Pour validation ERP&quot;.</errorMessage>
+</ValidationRule>

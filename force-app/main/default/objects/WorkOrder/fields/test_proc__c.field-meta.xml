@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>test_proc__c</fullName>
+    <externalId>false</externalId>
+    <formula>If (AND(NOT(ISPICKVAL(CreatedBy.UserType, &apos;Standard&apos;)), NOT(ISPICKVAL(CreatedBy.UserType, &apos;Partner&apos;)), NOT(ISPICKVAL(CreatedBy.UserType, &apos;Customer Portal User&apos;)), NOT(ISPICKVAL(CreatedBy.UserType, &apos;Customer Portal Manager&apos;))), true, False)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>test proc</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

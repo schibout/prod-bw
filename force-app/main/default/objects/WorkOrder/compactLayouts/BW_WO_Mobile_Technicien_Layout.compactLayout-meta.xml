@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BW_WO_Mobile_Technicien_Layout</fullName>
+    <fields>AccountId</fields>
+    <fields>WorkTypeId</fields>
+    <fields>WorkOrderNumber</fields>
+    <fields>AssetId</fields>
+    <fields>Status</fields>
+    <fields>StartDate</fields>
+    <fields>Subject</fields>
+    <fields>FSL_WO_Commande__c</fields>
+    <label>BW WO Mobile Technicien Layout</label>
+</CompactLayout>

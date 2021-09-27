@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ELLISPHERE__Elli_cumul_branches__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Indique le nombre d&apos;établissements disponibles dans Ellisphere</description>
+    <externalId>false</externalId>
+    <label>Nb d&apos;établissements</label>
+    <summarizedField>ELLISPHERE__Elli_Branches__c.ELLISPHERE__Elli_Branch_TCH_cumul__c</summarizedField>
+    <summaryForeignKey>ELLISPHERE__Elli_Branches__c.ELLISPHERE__Elli_Branch_ParentAccount__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

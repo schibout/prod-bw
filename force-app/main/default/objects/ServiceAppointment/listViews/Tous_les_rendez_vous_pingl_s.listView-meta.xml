@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tous_les_rendez_vous_pingl_s</fullName>
+    <columns>Name</columns>
+    <columns>Account</columns>
+    <columns>Status</columns>
+    <columns>Subject</columns>
+    <columns>ZIP</columns>
+    <columns>LatestEndTime</columns>
+    <columns>SchedStartTime</columns>
+    <columns>ActualStartTime</columns>
+    <columns>EstDuration</columns>
+    <columns>FSL__Pinned__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>FSL__Pinned__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Tous les rendez vous épinglés</label>
+</ListView>

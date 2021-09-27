@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WO_NettoyageDeLaPartieInterne__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Nettoyage de la partie interne</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Nettoyage de la partie interne</inlineHelpText>
+    <label>Nettoyage de la partie interne</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>
