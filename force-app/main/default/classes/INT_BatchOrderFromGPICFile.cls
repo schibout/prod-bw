@@ -17,7 +17,13 @@ global class  INT_BatchOrderFromGPICFile  implements Database.Batchable<sObject>
     
     }
     
-    global void execute(Database.BatchableContext BC, List<SObject> accountList){
+    global void execute(Database.BatchableContext BC, List<SObject> fileDataList){
+
+  /*      for (GpicOordersInFiles__c data : fileDataList) {
+
+            
+        }
+*/
 
     }
 

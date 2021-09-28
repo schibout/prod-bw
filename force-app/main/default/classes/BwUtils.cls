@@ -34,7 +34,7 @@ public with sharing class BwUtils {
     **/
     public static Boolean usedcutomerSegment(Order ord ) {
         for (VISousDomaine__c visDom : usedcutomerSegmentList) {
-            if ((ord.ORD_SousDomaine__c   == visDom.Code_API_Sous_domaine__c)||(ord.ORD_BusinessUnit__c  == visDom.Code_BU__c)) return true ;
+            if ((ord.ORD_SousDomaine__c   == visDom.Code_API_Sous_domaine__c)||(ord.Ord_Domaine__c  == visDom.Code_BU__c)) return true ;
         }
         return false ;
     }
