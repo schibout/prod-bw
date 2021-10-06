@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : SCHIBOUT
  * @group             : 
- * @last modified on  : 29-09-2021
+ * @last modified on  : 01-10-2021
  * @last modified by  : SCHIBOUT
 **/
 public with sharing class BwUtils {
@@ -19,7 +19,7 @@ public with sharing class BwUtils {
     **/
     public static String getTranscoVisionValue(String dataType,String lookupValue ) {
         if ((dataType ==null )||(lookupValue ==null )) return null ;
-        for (BwTranscodification__c transco : transcoList) {
+        for (  BwTranscodification__c  transco : transcoList) {
 
             if ((transco.dataType__c == dataType ) && (transco.MbApi__c == lookupValue)) return transco.VsApi__c;
         }
