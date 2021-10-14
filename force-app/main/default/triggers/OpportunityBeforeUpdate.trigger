@@ -11,10 +11,9 @@ trigger OpportunityBeforeUpdate on Opportunity (before update) {
             if (opp.OPP_Contact__c != (trigger.oldMap.get(Opp.id).OPP_Contact__c)){
                 oppList.add (opp);
             }
-            system.debug('oppList : '+ oppList);
         }        
         if (oppList.size() > 0){
-         AP01_Opportunity.oppErrorMSg(oppList);
+            AP01_Opportunity.oppErrorMSg(oppList);
         }
     }
 }
