@@ -1,3 +1,10 @@
+/**
+ * @description       : 
+ * @author            : SCHIBOUT
+ * @group             : 
+ * @last modified on  : 11-10-2021
+ * @last modified by  : SCHIBOUT
+**/
 @isTest
 public class BatchAccountVisionSynchroTest {
 		@IsTest
@@ -25,6 +32,7 @@ public class BatchAccountVisionSynchroTest {
         ACC_Region__c = '1',
         ACC_SIREN__c='123456789');
         insert newAccount;
+        
         
         List<Account> acctListResult =[SELECT Name FROM Account WHERE Name LIKE 'BatchAccountVisionSynchroTest'];
         System.assertEquals(1, acctListResult.size() , 'Not Good' );
