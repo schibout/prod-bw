@@ -1,0 +1,7 @@
+IsPrivate,Name,Description,StageName,Amount,Probability,TotalOpportunityQuantity,CloseDate,Type,NextStep,LeadSource,CampaignId,Budget_Confirmed__c,Discovery_Completed__c,ROI_Analysis_Completed__c,OPP_RevueDOffre__c,OPP_NumDevisGPIC__c,OPP_TermesDePaiement__c,OPP_Tech_Nature__c,OPP_Classification__c,OPP_Domaine__c,OPP_DateDeCreationDeCommande__c,OPP_NumeroDeCommandeClient__c,OPP_DateValideeDeMAD__c,OPP_DateReceptionDevisSouhaitee__c,OPP_DateDeCommandeEnvisagee__c,OPP_DateDeLivraisonEnvisagee__c,OPP_ProvenancePiste__c,Description__c,DB_Competitor__c,OPP_Concurrent__c,OPP_Type_de_concurrent__c,OPP_Type_DS029__c,OPP_Special_Project__c,First_Quote__c
+false,TEST_1,TEST_1,Qualification,431.35,70,,2020-02-07,,,,,false,false,false,false,158366,,,,4,,,,,,,false,,,,,false,false,
+false,TEST_2,TEST_2,Qualification,97.26,70,,2020-03-04,,,,,false,false,false,false,159501,,,,4,,,,,,,false,,,,,false,false,
+false,TEST_3,TEST_3,Qualification,0,10,2,2019-08-03,1,,,,false,false,false,false,,,,,3,,,,2019-06-14,2020-12-31,,false,,,,,false,false,
+false,TEST_4,TEST_4,Qualification,424915,70,2,2021-10-20,1,,,,false,false,false,false,,,,,3,,,,,2021-12-30,,false,,,,,false,false,
+false,TEST_5,TEST_5,Qualification,283110,0,1,2020-05-06,1,,,,false,false,false,false,,,,,3,,,,,,,false,,,Autres,Constructeur,false,false,
+false,TEST_6,TEST_6,Qualification,148992,25,2,2020-04-26,1,,,,false,false,false,false,,,,,3,,,,,2020-09-30,,false,,,,,false,false,

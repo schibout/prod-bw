@@ -1,0 +1,18 @@
+ContractId,AccountId,Pricebook2Id,OriginalOrderId,OpportunityId,QuoteId,EffectiveDate,EndDate,IsReductionOrder,Status,Description,CustomerAuthorizedById,CompanyAuthorizedById,ShippingStreet,ShippingCity,ShippingState,ShippingPostalCode,ShippingCountry,ShippingStateCode,ShippingCountryCode,ShippingLatitude,ShippingLongitude,ShippingGeocodeAccuracy,PoNumber,ActivatedDate,ActivatedById,StatusCode,CurrencyIsoCode,ORD_ClientLivre__c,ORD_RequeteLiee__c,ORD_DateReelleExecutionLivraison__c,ORD_DateDeFacturation__c,ORD_DateEcheanceDePaiement__c,ORD_DateEncaissement__c,ORD_ReferenceCommande__c,ORD_MontantERP__c,ORD_EquipementCree__c,ORD_InterventionCree__c,ORD_DateDeFermetureDeLAffaire__c,ORD_DonneesDAffaire__c,ORD_VolumeDHeuresDIntervention__c,ORD_DateDInterventionPlanifiee__c,ORD_BusinessUnit__c,ORD_SousDomaine__c,ORD_CompteFacture__c,ORD_Astreinte__c,ORD_MontantHT_ERP__c,TECH_INTEGREE_PRIME_TE__c
+,0010O00002PhZFuQAN,,,,,2019-02-27,,false,2,,,,"255 ROUTE D'ALBON
+QUARTIER FONDEVILLE",ANNEYRON,,26140,France,,FR,,,,BPA M. LAFUMA 26.02.19 - Offre n° 20129,,,Draft,EUR,0010O00002PhZFuQAN,,2019-03-18,,,,PFI28199,,false,false,,B65778-0000,,,1,1,,,2605,false
+,0010O00002PhR6uQAF,,,,0Q00O000002JCOfSAO,2018-06-19,,false,2,,,,"rue de l antenne 
+clos st yon
+les essarts",GRAND COURONNE,,76530,France,,FR,,,,bdc 540341.00/sc,,,Draft,EUR,0010O00002PhR6uQAF,,2018-06-21,,,,PRE76495,,false,false,2018-06-30,B57143-0000,,,4,41,,,511.27,false
+,0010O00002PhV5yQAF,,,,,2019-04-11,,false,2,,,,6 RUE JEAN MERMOZ,ROANNE,,42300,France,,FR,,,,PG0070-19,,,Draft,EUR,0010O00002PhV5yQAF,,2019-04-11,,,,PRO29684,,false,false,2019-04-30,B67448-0000,,,4,42,,,498.96,false
+,0010O00002PhgvjQAB,,,,0Q00O000002J98USAS,2018-09-27,,false,2,,,,745 ROUTE DE L'ELECTROCHIMIE,JARRIE,,38560,France,,FR,,,,17529399,,,Draft,EUR,0010O00002PhgvjQAB,,2018-10-02,,,,PRE78041,,false,false,2018-10-31,B60302-0000,,,4,41,,,586.45,false
+,0010O00002PhZyxQAF,,,,0Q00O000002JCvsSAG,2019-04-12,,false,2,,,,"MCOMMUSIQUE
+4 BIS RUE DE L EPINE",ORGERES,,35230,France,,FR,,,,43567,,,Draft,EUR,0010O00002PhZyxQAF,,2019-04-12,,,,PRO29688,,false,false,2019-04-30,B67513-0000,,,4,42,,,568.08,false
+,0010O00002PhW6JQAV,,,,0Q00O000002JD0GSAW,2018-09-27,,false,2,,,,ROUTE D'OSTREVILLE,ST POL SUR TERNOISE CEDEX,,62166,France,,FR,,,,BDC 33,,,Draft,EUR,0010O00002PhW6JQAV,,2018-10-02,,,,PRE78049,,false,false,2018-10-31,B60327-0000,,,4,41,,,152.32,false
+,0010O00002PhgLOQAZ,,,,,2019-04-12,,false,2,,,,"2 RUE DE LA GARE
+CS 50002",ROCHECHOUART,,87600,France,,FR,,,,51734,,,Draft,EUR,0010O00002PhgLOQAZ,,2019-04-12,,,,PRO29685,,false,false,2019-04-30,B67514-0000,,,4,42,,,1032.5,false
+,0010O00002PhR5QQAV,,,,0Q00O000002JC4QSAW,2019-04-11,,false,2,,,,"16 RUE DU GENERAL CASSAGNOU
+CS 80070",SAINT LOUIS CEDEX,,68302,France,,FR,,,,bon pour accord le 11/04/2019,,,Draft,EUR,0010O00002PhR5QQAV,,2019-04-12,,,,PRO29680,,false,false,2019-04-30,B67494-0000,,,4,42,,,1579.2,false
+,0010O00002PhghNQAR,,,,,2019-04-12,,false,2,,,,ROUTE DE GUEMENE,PLOURAY,,56770,France,,FR,,,,9002780-AO-00267,,,Draft,EUR,0010O00002PhghNQAR,,2019-04-12,,,,PRO29689,,false,false,2019-04-30,B67504-0000,,,4,42,,,1250,false
+,0010O00002PhV1fQAF,,,,,2017-05-24,,false,1,,,,"13 BLD DE L'INDUSTRIE
+BP 30210",VENDOME CEDEX,,41103,France,,FR,,,,BPA du 24/05/17,,,Draft,EUR,0010O00002PhV1fQAF,,2017-05-30,,,,TFP33636,,false,false,2017-06-30,B44016-0000,,,4,40,,,2297,false

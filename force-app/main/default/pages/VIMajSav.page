@@ -1,0 +1,100 @@
+<apex:page lightningStylesheets="true" docType="html-5.0" standardController="VILigne_d_affaire_mensuelle__c" recordSetVar="Lams" extensions="VIMajSavController">
+  <style type="text/css">
+table {
+  border-collapse: collapse;
+}
+      
+td {
+  border: 1px solid #999;      
+  text-align: Right;
+  padding: 3px;      
+      
+}    
+th {
+  padding: 2px;
+  text-align: Center;
+  font-weight: bold; 
+  height: 10px;      
+}    
+tfoot {
+  padding: 2px;
+  font-weight: bold;      
+}    
+
+.noBorder {
+    border:none !important;
+}
+
+
+      
+  </style>
+
+   <apex:form >
+       <apex:pageMessages />
+
+       <apex:sectionHeader title="{!$Label.VIPassageEnSav} " subtitle="" />
+       <apex:outputpanel id="Panel" >
+         <apex:commandButton value="Enregistrer" action="{!Enregistrer}"/>
+         <apex:commandButton value="Annuler" action="{!cancel}"/>
+         <table style="width: 100%;" >
+              <colgroup>
+                <col span="1" style="width: 40%;" />
+                <col span="1" style="width: 10%;" />                                    
+                <col span="1" style="width: 50%;" />                  
+             </colgroup>
+             <tbody >
+                <td  style="text-align:left;" class="noBorder">
+                     <table style="width: 100%; " >
+                         <colgroup>
+                             <col span="1" style="width: 10%;" />
+                             <col span="1" style="width: 30%;" />                  
+                             <col span="1" style="width: 7%;" />                  
+                         </colgroup>
+                         <tbody >
+                            <apex:repeat var="lam" value="{!ListLam1}"  >          
+                                <tr>
+                                    <td style="text-align:left;">                                 
+                                       <apex:outputText value="{!lam.Affaire__r.name}" />         
+                                    </td>
+                                    <td style="text-align:left;"> 
+                                       <apex:outputText value="{!lam.Nom_de_l_affaire__c }" />
+                                    </td>
+                                    <td style="text-align:Center; vertical-align: middle;">                                 
+                                       <apex:inputField value="{!lam.Affaire_a_fermer__c}"/>
+                                    </td>                                   
+                                </tr>    
+                            </apex:repeat>     
+                         </tbody>
+                     </table>
+                 </td> 
+                <td class="noBorder"></td> 
+                <td  style="Text-align:left;vertical-align: top;" class="noBorder">
+                    <div>
+                        Date de fin par Entité 
+                     </div>
+                    <table style="width: 10%;" >
+                       <colgroup>
+                          <col span="1" style="width: 5%;" />
+                          <col span="1" style="width: 10%;" />                  
+                       </colgroup>
+                       <tbody >
+                          <apex:repeat var="a" value="{!ListPeriode}">
+                             <tr >
+                                <td class="noBorder" >
+                                   <apex:outputText value="{!a.Entite_BW__c}" styleclass="t" />                 
+                                </td>
+                                <td class="noBorder" >
+                                   <apex:outputText value="{0,date,dd/MM/yyyy}">
+                                     <apex:param value="{!a.Date_de_fin__c}" />                                         
+                                   </apex:outputText>                 
+                                </td>
+                             </tr>
+                          </apex:repeat>              
+                      </tbody>                 
+                   </table>
+                 </td>
+             </tbody>
+          </table>
+      </apex:outputpanel>
+   </apex:form>
+</apex:page>

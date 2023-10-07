@@ -1,0 +1,148 @@
+<apex:page lightningStylesheets="true" docType="html-5.0" controller="VIZoomAchatsPieceController" title="Cde  {!num_cde }">
+  <style type="text/css">
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #999;
+  padding: 0.5rem!important;
+  text-align: right;
+}    
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: center!important;
+}    
+
+.noBorder {
+    border:none !important;
+}
+
+p.AlignRight {
+    text-align: right
+}
+ 
+
+  </style>
+  <apex:slds />      
+  <apex:form >
+    <apex:pageMessages id="msgId"></apex:pageMessages>
+      
+      <apex:sectionHeader title="Pièce" subtitle="" />
+
+
+       <div class="slds-grid slds-gutters slds-p-around_large">
+           <div class="slds-form-element slds-col slds-size_1-of-6">
+               <label class="slds-form-element__label" for="form-element-01">Pièce </label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                      {!num_cde}
+                   </div>                    
+               </div>
+           </div>
+           <div class="slds-form-element slds-col slds-size_1-of-6">
+               <label class="slds-form-element__label" for="form-element-01"></label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       <apex:selectList value="{!Valeur}" label="Valeur" multiselect="false" size="1">
+                       <apex:actionSupport event="onchange"  action="{!ReadAchat}" rerender="TableResult"/>
+                            <apex:selectOptions value="{!ValeurOptions}"/>
+                       </apex:selectList>
+                       
+                       
+                   </div>                    
+               </div>
+           </div>
+      </div>
+
+      
+      <apex:outputPanel id="TableResult">
+       <table class="slds-m-around_large"  >
+           <colgroup>
+               <col span="1" style="width: 8%;" />
+               <col span="1" style="width: 8%;" />               
+               <col span="1" style="width: 6%;" />
+               <col span="1" style="width: 6%;" />               
+               <col span="1" style="width: 6%;" />                              
+               <col span="1" style="width: 13%;" />
+               <col span="1" style="width: 19%;" />
+               <col span="1" style="width: 8%;" />               
+               <col span="1" style="width: 8%;" />
+           </colgroup>
+           <thead>
+             <tr>
+              <th>
+                 {!$Label.VIRefAchat}
+              </th>
+               <th >
+                 {!$ObjectType.VIAchat__c.fields.num_fac__c.label}
+              </th>
+               <th >
+                 {!$ObjectType.VIAchat__c.fields.num_cde__c.label}
+              </th>
+               <th >
+                 {!$ObjectType.VIAchat__c.fields.Date__c.label}
+              </th>
+               <th  >
+                 {!$ObjectType.VIAchat__c.fields.Date_de_comptabilisation__c.label}
+              </th>
+               <th >
+                 {!$ObjectType.VIAchat__c.fields.Nom_du_fournisseur__c.label}
+              </th>
+               <th >
+                 {!$ObjectType.VIAchat__c.fields.Description_de_la_commande__c.label}                   
+              </th>
+              <th >
+                 {!$Label.VICommande} {!Valeur} 
+              </th>   
+              <th >
+                 {!$Label.VIComptabilise}  {!Valeur} 
+              </th>   
+
+             </tr>
+           </thead>           
+           <tbody>
+            <apex:repeat var="a" value="{!ListLigne}">               
+               <tr>
+                 <td >
+                     {!a.ref_achat}                     
+                 </td>    
+                 <td >
+                     <apex:outputText value="{!a.num_fac}" escape="false" />
+                 </td>    
+                 <td >
+                     {!a.num_cde}                     
+                 </td>    
+                <td style="text-align: Left;">                        
+                     <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                         <apex:param value="{!a.Date_achat}" />
+                     </apex:outputText>                                            
+                 </td>       
+                 <td style="text-align: Left;">                        
+                     <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                         <apex:param value="{!a.Date_de_comptabilisation}" />
+                     </apex:outputText>                                            
+                 </td>       
+
+                 <td style="text-align: Left;">
+                     {!a.Nom_du_fournisseur }                     
+                 </td>    
+                 <td style="text-align: Left!important;">
+                     {!a.Des_commande }                     
+                 </td>    
+                 <td style="text-align: Right!important;">
+                     <apex:outputtext value="{!a.Commande_conv}"   />                     
+                 </td>    
+                 <td style="text-align: Right!important;">
+                     <apex:outputtext value="{!a.Comptabilise_conv}"  />                       
+                 </td>
+                   
+               </tr>       
+               </apex:repeat>                               
+           </tbody>        
+       </table>      
+      </apex:outputPanel>
+   </apex:form>
+
+</apex:page>

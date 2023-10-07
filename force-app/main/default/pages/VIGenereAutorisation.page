@@ -1,0 +1,44 @@
+<apex:page lightningStylesheets="true" docType="html-5.0" standardController="VIAffaire__c" extensions="VIGenereAutorisationController">
+  <style type="text/css">
+table { 
+  border-collapse: collapse; 
+}
+      
+td {
+  border: 1px solid #999;      
+  text-align: Right;
+  padding: 3px;      
+      
+}    
+th {
+  border: 1px solid #999;            
+  padding: 2px;
+  text-align: Center;
+  font-weight: bold; 
+  height: 10px;      
+}    
+tfoot {
+  padding: 2px;
+  font-weight: bold;      
+}    
+
+.noBorder {
+    border:none !important;
+}
+
+
+      
+  </style>
+
+   <apex:form >
+       <apex:pageMessages />
+ 
+       <!--apex:commandButton value="Supprimer toutes les autorisations de cette affaire "  action="{!SupprimerTout}" /> 
+       <br/><br/>
+       <apex:commandButton value="Ferme toutes les autorisations de cette affaire "  action="{!CreerFerme}" />                            
+       <br/><br/>
+        <apex:commandButton value="Créer toutes les autorisations ouvertes comme sur l'affaire suivante "  action="{!CreerOuvert}" /-->                     
+
+                    <apex:outputLabel >Code affaire : </apex:outputLabel> <apex:input type="text" size="10" value="{!Affaire}" />
+   </apex:form>
+</apex:page>

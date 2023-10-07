@@ -1,0 +1,202 @@
+<apex:page lightningStylesheets="true" docType="html-5.0" controller="VIZoomBudgetController" title="Bud. {!lam.affaire__r.Nom_affaire__c }">
+  <style type="text/css">
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #999;
+  padding: 0.5rem!important;
+  text-align: right!important;
+}    
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: center!important;
+}    
+
+.noBorder {
+    border:none !important;
+}
+
+p.AlignRight {
+    text-align: right
+}
+ 
+
+  </style>
+  <apex:slds />  
+  <apex:form >
+    <apex:pageMessages id="msgId"></apex:pageMessages>
+      
+      <apex:sectionHeader title="{!$Label.VILigneBudget}" subtitle="" />
+      <p class="slds-text-align_right slds-p-right_large" >
+          <a class="slds-button slds-button_neutral" href="/lightning/r/Report/00O3Y00000AIxwiUAD/view?fv0={!lam.affaire__r.Name }&fv1={!Centre.name }&fv2={!td.name }" target="_blank" >{!$label.VIOuvrirDansUnRapport}</a>
+      </p>    
+		
+       <div class="slds-grid slds-gutters slds-p-around_large">
+           <div class="slds-form-element slds-col slds-size_1-of-5">
+               <label class="slds-form-element__label" for="form-element-01">{!$Label.VIAffaire}</label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       {!lam.affaire__r.Name } {!lam.affaire__r.Nom_affaire__c }
+                   </div>                    
+               </div>
+           </div>
+           <div class="slds-form-element slds-col slds-size_1-of-5">
+               <label class="slds-form-element__label" for="form-element-01">{!$Label.VIDate_de_valeur}</label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                            <apex:param value="{!lam.periode_comptable__r.Date_de_fin__c}" />
+                       </apex:outputText>  
+                   </div>                    
+               </div>
+           </div>
+            <div class="slds-form-element slds-col slds-size_1-of-5">
+               <label class="slds-form-element__label" for="form-element-01">{!$Label.VICentreSection}</label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       {!Centre.name }
+                   </div>                    
+               </div>
+           </div>
+            <div class="slds-form-element slds-col slds-size_1-of-5">
+               <label class="slds-form-element__label" for="form-element-01">{!$Label.VITypedeDepense}</label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       {!td.name }
+                   </div>                    
+               </div>
+           </div>
+           <div class="slds-form-element slds-col slds-size_1-of-5">
+               <label class="slds-form-element__label" for="form-element-01"></label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       <apex:selectList value="{!Valeur}" label="Valeur" multiselect="false" size="1">
+                       <apex:actionSupport event="onchange"  action="{!ReadLigneBudget}" rerender="TableResult"/>
+                            <apex:selectOptions value="{!ValeurOptions}"/>
+                       </apex:selectList>
+                   </div>                    
+               </div>
+           </div>
+      </div>
+        <!--h2>
+            
+        <table style="width: 70%;" class="noBorder" >
+           <colgroup>
+               <col span="1" style="width: 20%;" />
+               <col span="1" style="width: 50%;" />
+           </colgroup>
+           <tbody>
+               <tr>
+                   <td  style="text-align:right;" class="noBorder">     
+                       {!$label.VIAffaire} 
+                   </td>
+                   <td  style="text-align:left;" class="noBorder">     
+                       {!lam.affaire__r.Nom_affaire__c }
+                   </td>
+               </tr>                   
+               <tr>
+                   <td  style="text-align:right;" class="noBorder">     
+                       {!$label.VIDate_de_valeur} 
+                   </td>
+                   <td  style="text-align:left;" class="noBorder">
+                       <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                            <apex:param value="{!lam.periode_comptable__r.Date_de_fin__c}" />
+                       </apex:outputText>                       
+                   </td>                   
+               </tr>                   
+               <tr>
+                   <td  style="text-align:right;" class="noBorder">     
+                       {!$label.VICentreSection} 
+                   </td>
+                   <td  style="text-align:left" class="noBorder">    
+                       {!Centre.name }
+                   </td>
+               </tr>                   
+               <tr>
+                   <td  style="text-align:right;" class="noBorder">     
+                       {!$label.VITypedeDepense} 
+                   </td>
+                   <td  style="text-align:left;" class="noBorder">     
+                       {!td.name }
+                   </td>
+               </tr>                   
+               <tr>
+                   <td  style="text-align:right;" class="noBorder">     
+                       
+                   </td>
+                   <td  style="text-align:left;" class="noBorder">     
+                       <apex:selectList value="{!Valeur}" label="Valeur" multiselect="false" size="1">
+                       <apex:actionSupport event="onchange"  action="{!ReadLigneBudget}" rerender="TableResult"/>
+                            <apex:selectOptions value="{!ValeurOptions}"/>
+                       </apex:selectList>
+
+                   </td>
+               </tr>                   
+
+            </tbody>        
+       </table>      
+      </h2-->
+      
+      <apex:outputPanel id="TableResult">
+       <table class="slds-m-around_large">
+           <colgroup>
+               <col span="1" style="width: 10%;" />
+               <col span="1" style="width: 10%;" />
+               <col span="1" style="width: 10%;" />
+               <col span="1" style="width: 10%;" />               
+               <col span="1" style="width: 37%;" />                                             
+           </colgroup>
+           <thead>
+             <tr>  
+              <th>
+                  <apex:commandLink action="{!sortByAvenant}" reRender="TableResult">
+                      {!$Label.VIAvenant}
+                  </apex:commandLink>                                    
+              </th>
+              <th>
+                  <apex:commandLink action="{!sortByDate}" reRender="TableResult">
+                     {!$Label.VIDate}
+                  </apex:commandLink>                                    
+              </th>
+
+              <th >
+                     {!$Label.VIHeures}
+              </th>
+              <th >
+                     {!Valeur} {!lam.CurrencyIsoCode}
+              </th>    
+
+               <th class="noBorder">
+               </th>
+             </tr>
+           </thead>           
+           <tbody>
+            <apex:repeat var="a" value="{!ListLigne}">               
+               <tr>
+                 <td  style="text-align:left;">     
+                     <apex:outputText value="{!a.avenant}" />
+                 </td>
+                 <td  style="text-align:left;">                        
+                     <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                         <apex:param value="{!a.Date_avenant}" />
+                     </apex:outputText>                                            
+                 </td>       
+                 <td  style="text-align:Right;">                        
+                     <apex:outputtext value="{!a.Heure_conv}" />                     
+                 </td>                          
+                 <td  style="text-align:right;">
+                     <apex:outputtext value="{!a.Debours_conv}" rendered="{!Valeur='Debours'}" />                     
+                     <apex:outputtext value="{!a.PRI_conv}"     rendered="{!Valeur='Industriel'}"/>                                          
+                     <apex:outputtext value="{!a.Complet_conv}" rendered="{!Valeur='Complet'}"/>                     
+                   </td>                          
+               </tr>       
+               </apex:repeat>                               
+           </tbody>        
+       </table>      
+      </apex:outputPanel>
+   </apex:form>
+
+</apex:page>

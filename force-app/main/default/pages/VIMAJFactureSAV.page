@@ -1,0 +1,160 @@
+<apex:page lightningStylesheets="true" docType="html-5.0" standardController="VIFacture__c" recordSetVar="Factures" extensions="VIMajFactureSAVController">
+  <style type="text/css">
+table {
+  border-collapse: collapse;
+}
+      
+td {
+  border: 1px solid #999;      
+  text-align: Right;
+  padding: 3px;      
+      
+}    
+th {
+  border: 1px solid #999;            
+  padding: 2px;
+  text-align: Center;
+  font-weight: bold; 
+  height: 10px;      
+}    
+tfoot {
+  padding: 2px;
+  font-weight: bold;      
+}    
+
+.noBorder {
+    border:none !important;
+}
+
+
+      
+  </style>
+
+   <apex:form >
+       <apex:pageMessages />
+
+       <apex:sectionHeader title="{!$Label.VIMaJFactureSAV} " subtitle="" />
+       <apex:outputpanel id="Panel" >
+         <apex:commandButton value="{!$Label.VIValiderEtEnvoyer}" action="{!Enregistrer}"/>
+         <apex:commandButton value="Annuler" action="{!cancel}"/>
+         <table style="width: 100%;" >
+              <colgroup>
+                <col span="1" style="width: 60%;" />
+                <col span="1" style="width: 10%;" />                                    
+                <col span="1" style="width: 30%;" />                  
+             </colgroup>
+             <tbody >
+                <td  style="text-align:left;" class="noBorder">
+                     <table style="width: 100%; " >
+                         <colgroup>
+                             <col span="1" style="width: 12%;" />
+                             <col span="1" style="width: 12%;" />
+                             <col span="1" style="width: 12%;" />
+                             <col span="1" style="width: 12%;" />
+                             <col span="1" style="width: 10%;" />       
+                             <col span="1" style="width: 10%;" />                  
+                             <col span="1" style="width: 10%;" />                  
+                             <col span="1" style="width: 10%;" />                  
+                             <col span="1" style="width: 10%;" />                  
+
+                             <col span="1" style="width: 7%;" />                  
+                         </colgroup>
+                         <tr>
+                             <th>{!$ObjectType.VIFacture__c.fields.name.label}</th>
+                             <th>{!$ObjectType.VIFacture__c.fields.affaire__c.label}</th>                             
+                             <th>{!$ObjectType.VIFacture__c.fields.BU__c.label}</th>                             
+                             <th>{!$ObjectType.VIFacture__c.fields.sous_domaine__c.label}</th>                             
+                             <th>{!$ObjectType.VIFacture__c.fields.Date_d_ouverture_d_affaire__c.label}</th>                                                          
+                             <th>{!$ObjectType.VIFacture__c.fields.Date_de_SAV_reelle__c.label}</th>  
+                             <th>{!$ObjectType.VIFacture__c.fields.Date__c.label }</th>
+                             <th>{!$ObjectType.VIFacture__c.fields.Date_de_comptabilisation__c.label }</th>
+                             <th>{!$ObjectType.VIFacture__c.fields.Montant_HT__c.label}</th>     
+                             <th>Traitement et génération d'écriture</th>
+                             <th>Traitement et pas de génération d'écriture</th>                             
+                         </tr>
+                         <tbody >
+                            <apex:repeat var="fac" value="{!Listfac1}"  >          
+                                <tr>
+                                    <td style="text-align:left;">                                 
+                                       <apex:outputText value="{!fac.name}" />         
+                                    </td>
+                                    <td style="text-align:left;">                                 
+                                       <apex:outputText value="{!fac.Affaire__r.name}" />         
+                                    </td>
+                                    <td style="text-align:left;"> 
+                                       <apex:outputText value="{!fac.BU__c}" />
+                                    </td>
+                                    <td style="text-align:left;"> 
+                                       <apex:outputText value="{!fac.Sous_Domaine__c}" />
+                                    </td>
+                                    <td style="text-align:center;"> 
+                                       <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                                           <apex:param value="{!fac.Date_d_ouverture_d_affaire__c }" />
+                                       </apex:outputText>                                            
+ 
+                                    </td>
+                                    <td style="text-align:center;"> 
+                                       <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                                           <apex:param value="{!fac.Date_de_SAV_reelle__c }" />
+                                       </apex:outputText>                                            
+ 
+                                    </td>
+                                    
+                                    <td style="text-align:center;"> 
+                                       <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                                           <apex:param value="{!fac.Date__c}" />
+                                       </apex:outputText>                                            
+ 
+                                    </td>
+                                    
+                                    <td style="text-align:center;"> 
+                                       <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                                           <apex:param value="{!fac.Date_de_comptabilisation__c}" />
+                                       </apex:outputText>                                            
+ 
+                                    </td>
+                                    <td style="text-align:Right;"> 
+                                       <apex:outputText value="{!fac.Montant_HT__c}" />
+                                    </td>
+                                    <td style="text-align:Center; vertical-align: middle;">                                 
+                                       <apex:inputField value="{!fac.Facture_SAV_traitee__c}"/>
+                                    </td>                                   
+                                    <td style="text-align:Center; vertical-align: middle;">                                 
+                                       <apex:inputField value="{!fac.Facture_SAV_Comptabilisee__c }"/>
+                                    </td>                                   
+                                </tr>    
+                            </apex:repeat>     
+                         </tbody>
+                     </table>
+                 </td> 
+                <td class="noBorder"></td> 
+                <td  style="Text-align:left;vertical-align: top;" class="noBorder">
+                    <div>
+                        Date de fin par Entité 
+                     </div>
+                    <table style="width: 100%;" >
+                       <colgroup>
+                          <col span="1" style="width: 30%;" />
+                          <col span="1" style="width: 70%;" />                  
+                       </colgroup>
+                       <tbody >
+                          <apex:repeat var="a" value="{!ListPeriode}">
+                             <tr >
+                                <td class="noBorder" style="text-align:left;">
+                                   <apex:outputText value="{!a.Entite_BW__c}" styleclass="t" />                 
+                                </td>
+                                <td class="noBorder" style="text-align:left;" >
+                                   <apex:outputText value="{0,date,dd/MM/yyyy}">
+                                     <apex:param value="{!a.Date_de_fin__c}" />                                         
+                                   </apex:outputText>                 
+                                </td>
+                             </tr>
+                          </apex:repeat>              
+                      </tbody>                 
+                   </table>
+                 </td>
+             </tbody>
+          </table>
+      </apex:outputpanel>
+   </apex:form>
+</apex:page>

@@ -1,0 +1,214 @@
+<apex:page lightningStylesheets="true" docType="html-5.0" controller="VIZoomAchatsController" title="Ach  {!lam.affaire__r.Nom_affaire__c } - {!centre.name }">
+  <style type="text/css">
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid #999;
+  padding: 0.5rem!important;
+  text-align: right;
+}    
+th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: center!important;
+}    
+
+.noBorder {
+    border:none !important;
+}
+
+p.AlignRight {
+    text-align: right
+}
+ 
+
+  </style>
+  <apex:slds />      
+  <apex:form >
+    <apex:pageMessages id="msgId"></apex:pageMessages>
+      
+      <apex:sectionHeader title="{!$Label.VIAchats}" subtitle="" />
+      <p class="slds-text-align_right slds-p-right_large" >
+          <a class="slds-button slds-button_neutral" href="/lightning/r/Report/00O3Y00000AIxwhUAD/view?fv0={!lam.affaire__r.Name }&fv1={!Centre.name }&fv2={!TD.name }&fv3={!td.name }" target="_blank" >{!$label.VIOuvrirDansUnRapport}</a>
+      </p>    
+
+
+       <div class="slds-grid slds-gutters slds-p-around_large">
+           <div class="slds-form-element slds-col slds-size_1-of-6">
+               <label class="slds-form-element__label" for="form-element-01">{!$label.VIAffaire} </label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                      {!lam.affaire__r.Name } {!lam.affaire__r.Nom_affaire__c }
+                   </div>                    
+               </div>
+           </div>
+           <div class="slds-form-element slds-col slds-size_1-of-6">
+               <label class="slds-form-element__label" for="form-element-01">{!$Label.VIDate_de_valeur}</label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                            <apex:param value="{!lam.periode_comptable__r.Date_de_fin__c}" />
+                       </apex:outputText>  
+                   </div>                    
+               </div>
+           </div>
+            <div class="slds-form-element slds-col slds-size_1-of-6">
+               <label class="slds-form-element__label" for="form-element-01">{!$Label.VICentreSection}</label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       {!Centre.name }
+                   </div>                    
+               </div>
+           </div>
+            <div class="slds-form-element slds-col slds-size_1-of-6">
+               <label class="slds-form-element__label" for="form-element-01">{!$Label.VITypedeDepense}</label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       {!td.name }
+                   </div>                    
+               </div>
+           </div>
+           <div class="slds-form-element slds-col slds-size_1-of-6">
+               <label class="slds-form-element__label" for="form-element-01"></label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       <apex:selectList value="{!Valeur}" label="Valeur" multiselect="false" size="1">
+                       <apex:actionSupport event="onchange"  action="{!MajProv}" rerender="TableResult"/>
+                            <apex:selectOptions value="{!ValeurOptions}"/>
+                       </apex:selectList>
+                       
+                       
+                   </div>                    
+               </div>
+           </div>
+           <div class="slds-form-element slds-col slds-size_1-of-6">
+               <label class="slds-form-element__label" for="form-element-01"></label>
+               <div class="slds-form-element__control">
+                   <div class="slds-form-element__static">
+                       <apex:selectList value="{!Prov}" label="Prov" multiselect="false" size="1">
+                       <apex:actionSupport event="onchange"  action="{!MajProv}" rerender="TableResult"/>
+                            <apex:selectOptions value="{!ProvOptions}"/>
+                       </apex:selectList>
+                       
+                       
+                   </div>                    
+               </div>
+           </div>
+      </div>
+
+      
+      <apex:outputPanel id="TableResult">
+       <table class="slds-m-around_large"  >
+           <colgroup>
+               <col span="1" style="width: 8%;" />
+               <col span="1" style="width: 8%;" />
+               <col span="1" style="width: 4%;" />               
+               <col span="1" style="width: 6%;" />
+               <col span="1" style="width: 6%;" />               
+               <col span="1" style="width: 13%;" />
+               <col span="1" style="width: 19%;" />
+               <col span="1" style="width: 8%;" />               
+               <col span="1" style="width: 8%;" />
+               <col span="1" style="width: 20%;" />
+               
+           </colgroup>
+           <thead>
+             <tr>
+              <th  >
+                  <apex:commandLink action="{!sortByRefAchat}" reRender="TableResult">                  
+                      {!$Label.VIRefAchat}
+                  </apex:commandLink>    
+              </th>
+               <th >
+                  <apex:commandLink action="{!sortByNum_fac}" reRender="TableResult">                  
+                      {!$ObjectType.VIAchat__c.fields.num_fac__c.label}
+                  </apex:commandLink>    
+              </th>
+              <th  >
+                  {!$ObjectType.VIAchat__c.fields.sous_chapitre__c.label}
+              </th>
+               <th >
+                  <apex:commandLink action="{!sortByDate}" reRender="TableResult">                  
+                      {!$ObjectType.VIAchat__c.fields.Date__c.label}
+                  </apex:commandLink>    
+              </th>
+               <th  >
+                  <apex:commandLink action="{!sortByDateComptabilisation}" reRender="TableResult">                  
+                      {!$ObjectType.VIAchat__c.fields.Date_de_comptabilisation__c.label}
+                  </apex:commandLink>    
+              </th>
+               <th >
+                  <apex:commandLink action="{!sortByNomFrn}" reRender="TableResult">                  
+                      {!$ObjectType.VIAchat__c.fields.Nom_du_fournisseur__c.label}
+                  </apex:commandLink>    
+              </th>
+               <th >
+                  <apex:commandLink action="{!sortByDesc}" reRender="TableResult">                  
+                      {!$ObjectType.VIAchat__c.fields.Description_de_la_commande__c.label}                   
+                  </apex:commandLink>    
+              </th>
+              <th >
+                 {!$Label.VICommande} {!Valeur} 
+              </th>   
+              <th >
+                 {!$Label.VIComptabilise}  {!Valeur} 
+              </th>   
+              <th class="noBorder">
+              </th>                  
+             </tr>
+           </thead>           
+           <tbody>
+            <apex:repeat var="a" value="{!ListLigne}">               
+               <tr>
+                 <td >
+                     <apex:outputPanel rendered="{!left(a.ref_achat,2)='GW'}">
+                         <a target="_blank"  href="/apex/VIZoomAchatPiece?ref={!a.ref_achat}&aff={!lam.affaire__r.Name}" > {!a.ref_achat}  </a>                     
+                     </apex:outputPanel>    
+                     <apex:outputPanel rendered="{!left(a.ref_achat,2)!='GW'}">
+                         {!a.ref_achat} 
+                     </apex:outputPanel>    
+                 </td>    
+                 <td >
+                     {!a.num_fac}                     
+                     <apex:outputPanel rendered="{!a.plusieurs_factures}">
+                         (*) 
+                     </apex:outputPanel>    
+                 </td>    
+                 <td >
+                     {!a.sous_chapitre}                     
+                     
+                 </td>    
+                <td style="text-align: Left;">                        
+                     <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                         <apex:param value="{!a.Date_achat}" />
+                     </apex:outputText>                                            
+                 </td>       
+                 <td style="text-align: Left;">                        
+                     <apex:outputText value="{0, date, dd'/'MM'/'yyyy }">
+                         <apex:param value="{!a.Date_de_comptabilisation}" />
+                     </apex:outputText>                                            
+                 </td>       
+
+                 <td style="text-align: Left;">
+                     {!a.Nom_du_fournisseur }                     
+                 </td>    
+                 <td style="text-align: Left!important;">
+                     {!a.Des_commande }                     
+                 </td>    
+                 <td style="text-align: Right!important;">
+                     <apex:outputtext value="{!a.Commande_conv}"   />                     
+                 </td>    
+                 <td style="text-align: Right!important;">
+                     <apex:outputtext value="{!a.Comptabilise_conv}"  />                       
+                 </td>
+                   
+               </tr>       
+               </apex:repeat>                               
+           </tbody>        
+       </table>      
+      </apex:outputPanel>
+   </apex:form>
+
+</apex:page>

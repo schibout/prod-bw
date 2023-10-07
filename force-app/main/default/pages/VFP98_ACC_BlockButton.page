@@ -1,0 +1,3 @@
+<apex:page standardcontroller="Account" action="{!ShowError}" extensions="VFC98_ACC_ADDError">
+    <apex:pageMessages ></apex:pageMessages>
+</apex:page>
